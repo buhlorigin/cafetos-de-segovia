@@ -2,17 +2,16 @@
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen relative flex items-center justify-center">
-      {/* Video Background */}
+      {/* YouTube Video Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <video 
-          className="w-full h-full object-cover"
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-        >
-          <source src="https://drive.google.com/uc?export=download&id=1FYy8hsUXmgMdUfpz8cZX2y4l2KDDHs6h" type="video/mp4" />
-        </video>
+        <iframe
+          className="w-full h-full object-cover scale-150"
+          src="https://www.youtube.com/embed/MkDChW801tU?autoplay=1&mute=1&loop=1&playlist=MkDChW801tU&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+          title="Coffee farm background video"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        ></iframe>
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
