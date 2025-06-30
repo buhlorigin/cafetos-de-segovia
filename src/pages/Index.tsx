@@ -1,10 +1,9 @@
 
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
-import About from '../components/About';
-import Services from '../components/Services';
-import Farms from '../components/Farms';
-import Contact from '../components/Contact';
+import WorldMap from '../components/WorldMap';
+import InstagramFeed from '../components/InstagramFeed';
+import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -12,10 +11,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <About />
-      <Services />
-      <Farms />
-      <Contact />
+      <WorldMap />
+      <InstagramFeed />
+      <ContactSection />
       <Footer />
     </div>
   );

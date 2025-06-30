@@ -6,10 +6,11 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Farms & Traceability', href: '#farms' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Our Farms', href: '/farms' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -18,9 +19,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-stone-800">
-              Cafetos de Segovia
-            </h1>
+            <a href="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/1b04df38-679e-4168-bf8e-55f394725790.png" 
+                alt="Cafetos de Segovia" 
+                className="h-8 w-auto"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
