@@ -17,14 +17,15 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-stone-200 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Logo and Company Name */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <a href="/" className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/1b04df38-679e-4168-bf8e-55f394725790.png" 
                 alt="Cafetos de Segovia" 
                 className="h-8 w-auto"
               />
+              <span className="text-xl font-bold text-stone-800">Cafetos de Segovia</span>
             </a>
           </div>
 
