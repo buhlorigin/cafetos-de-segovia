@@ -11,23 +11,14 @@ const Hero = () => {
           loop 
           playsInline
         >
-          <source src="https://player.vimeo.com/external/432462130.hd.mp4?s=e6f6b2d4a5e7c8d9a0b1c2d3e4f5g6h7i8j9k0l1&profile_id=175" type="video/mp4" />
+          <source src="https://drive.google.com/uc?export=download&id=1FYy8hsUXmgMdUfpz8cZX2y4l2KDDHs6h" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Logo */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/1b04df38-679e-4168-bf8e-55f394725790.png" 
-            alt="Cafetos de Segovia Logo" 
-            className="mx-auto h-32 md:h-40 w-auto"
-          />
-        </div>
-
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-          CAFETOS DE SEGOVIA is your partner in finding the best Specialty Coffees of the Cordillera de Dipilto and Jalapa, the coveted highlands of Nueva Segovia.
+          Cafetos de Segovia is your partner in finding the best Specialty Coffees of the Cordillera de Dipilto and Jalapa, the coveted highlands of Nueva Segovia.
         </h1>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

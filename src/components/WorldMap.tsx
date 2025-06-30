@@ -1,5 +1,24 @@
 
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from "recharts";
+
 const WorldMap = () => {
+  const marketData = [
+    { country: "USA", volume: 85 },
+    { country: "UK", volume: 62 },
+    { country: "Europe", volume: 78 },
+    { country: "China", volume: 45 },
+    { country: "Southeast Asia", volume: 38 },
+    { country: "Australia", volume: 52 }
+  ];
+
+  const chartConfig = {
+    volume: {
+      label: "Export Volume",
+      color: "#b45309",
+    },
+  };
+
   return (
     <section className="py-20 bg-stone-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,13 +32,29 @@ const WorldMap = () => {
         </div>
 
         <div className="relative">
-          <img 
-            src="/lovable-uploads/469ffa63-ee01-4319-a7d9-8a0e70f2c73a.png" 
-            alt="Our Current Markets - World Map" 
-            className="w-full h-auto rounded-2xl shadow-lg"
-          />
+          <div className="bg-white p-8 rounded-2xl shadow-lg mb-8">
+            <ChartContainer config={chartConfig} className="h-64 w-full">
+              <BarChart data={marketData}>
+                <XAxis 
+                  dataKey="country" 
+                  tick={{ fontSize: 12 }}
+                  axisLine={false}
+                  tickLine={false}
+                />
+                <YAxis hide />
+                <ChartTooltip 
+                  content={<ChartTooltipContent hideLabel />}
+                />
+                <Bar 
+                  dataKey="volume" 
+                  fill="var(--color-volume)"
+                  radius={[4, 4, 0, 0]}
+                />
+              </BarChart>
+            </ChartContainer>
+          </div>
           
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
             <div className="bg-white p-4 rounded-lg shadow">
               <h3 className="font-semibold text-stone-800">USA</h3>
               <p className="text-stone-600 text-sm">Premium roasters</p>
