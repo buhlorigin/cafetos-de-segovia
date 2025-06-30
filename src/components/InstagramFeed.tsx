@@ -3,30 +3,35 @@ const InstagramFeed = () => {
   const instagramPosts = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Coffee plantation in Nicaragua mountains"
+      image: "/lovable-uploads/5a536476-ea86-493a-98e6-c38d06565207.png",
+      alt: "Coffee cupping session with flavor wheel"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Fresh coffee beans being processed"
+      image: "/lovable-uploads/4f1b14de-e1b1-4184-a29f-9dda463852cc.png",
+      alt: "Woman harvesting green coffee cherries on the farm"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Misty morning on coffee farm"
+      image: "/lovable-uploads/871d7efd-27b6-422f-a6bd-a039202b5433.png",
+      alt: "Coffee beans being sorted and processed in wooden boxes"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Sunrise over Nueva Segovia mountains"
+      image: "/lovable-uploads/f2d28250-0287-429f-92ac-2e47aa041d9d.png",
+      alt: "Coffee beans drying on patios under the sun"
+    },
+    {
+      id: 5,
+      image: "/lovable-uploads/2d00b3b7-91dc-4caf-97e4-11d9cfd3f235.png",
+      alt: "Fresh coffee cherries being sorted by hand"
     }
   ];
 
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {instagramPosts.map((post) => (
             <div key={post.id} className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
