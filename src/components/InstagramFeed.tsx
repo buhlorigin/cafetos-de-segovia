@@ -25,24 +25,52 @@ const InstagramFeed = () => {
       id: 5,
       image: "/lovable-uploads/2d00b3b7-91dc-4caf-97e4-11d9cfd3f235.png",
       alt: "Fresh coffee cherries being sorted by hand"
+    },
+    {
+      id: 6,
+      image: "/lovable-uploads/92d114ce-8337-4d86-8541-4857717cc0c0.png",
+      alt: "Lush coffee plantation forest with shade trees"
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {instagramPosts.map((post) => (
-            <div key={post.id} className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+          {instagramPosts.map((post, index) => (
+            <div 
+              key={post.id} 
+              className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group"
+              style={{
+                animation: `float 6s ease-in-out infinite ${index * 0.5}s`
+              }}
+            >
               <img
                 src={post.image}
                 alt={post.alt}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
             </div>
           ))}
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          25% {
+            transform: translateY(-10px) rotate(1deg);
+          }
+          50% {
+            transform: translateY(-5px) rotate(-1deg);
+          }
+          75% {
+            transform: translateY(-15px) rotate(0.5deg);
+          }
+        }
+      `}</style>
     </section>
   );
 };
