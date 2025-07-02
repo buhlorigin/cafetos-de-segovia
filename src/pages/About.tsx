@@ -6,7 +6,7 @@ const About = () => {
   const values = [
     {
       title: "HERITAGE",
-      content: "Cafetos de Segovia was formed by Ana and Martha Albir, conducting the family coffee business in the third generation, as a response to the high demand for transparent and socially responsible connections to Nicaraguan coffee farmers. It brings together a team of highly motivated and passionate specialists in multiple aspects of coffee production with the goal to provide to our customers the highest level of quality — not only of coffee but also in terms of responsible and accountable assistance throughout the entire chain of production. The company works with partner farms and buyers around the world to establish long-lasting relationships.",
+      content: "CAFETOS DE SEGOVIA was formed by Ana and Martha Albir, conducting the family coffee business in the third generation, as a response to the high demand for transparent and socially responsible connections to Nicaraguan coffee farmers. It brings together a team of highly motivated and passionate specialists in multiple aspects of coffee production with the goal to provide to our customers the highest level of quality — not only of coffee but also in terms of responsible and accountable assistance throughout the entire chain of production. The company works with partner farms and buyers around the world to establish long-lasting relationships.",
       image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
@@ -75,83 +75,6 @@ const About = () => {
           </div>
         </section>
       ))}
-
-      {/* Services Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-stone-800 mb-6">
-              Our <span className="text-amber-700">Services</span>
-            </h2>
-            <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-              Cafetos de Segovia stays at the forefront of international coffee trends, with our team participating in renowned conventions worldwide. Our expertise spans from agricultural engineering to international trade, cupping, and brewing.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Coffee Producers */}
-            <div className="bg-stone-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-amber-700 mb-6">Coffee Producers</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-amber-700 rounded-full mt-3"></div>
-                  <div>
-                    <h4 className="font-semibold text-stone-800">Produce</h4>
-                    <p className="text-stone-600">From cultivation to harvest, ensuring the highest quality beans.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-amber-700 rounded-full mt-3"></div>
-                  <div>
-                    <h4 className="font-semibold text-stone-800">Milling</h4>
-                    <p className="text-stone-600">State-of-the-art processing techniques for optimal flavor development.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-amber-700 rounded-full mt-3"></div>
-                  <div>
-                    <h4 className="font-semibold text-stone-800">Quality Control</h4>
-                    <p className="text-stone-600">Rigorous testing and cupping to maintain exceptional standards.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-amber-700 rounded-full mt-3"></div>
-                  <div>
-                    <h4 className="font-semibold text-stone-800">Export</h4>
-                    <p className="text-stone-600">Seamless international shipping and logistics management.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Customer */}
-            <div className="bg-amber-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-amber-700 mb-6">Customer</h3>
-              <p className="text-stone-600 mb-6">
-                We provide comprehensive support to roasters and importers worldwide, offering transparent communication and detailed documentation throughout the entire supply chain.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-amber-700 rounded-full"></div>
-                  <span className="text-stone-800">Traceability Documentation</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-amber-700 rounded-full"></div>
-                  <span className="text-stone-800">Technical Support</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-amber-700 rounded-full"></div>
-                  <span className="text-stone-800">Custom Processing</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-amber-700 rounded-full"></div>
-                  <span className="text-stone-800">Direct Trade Partnerships</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Gallery Section */}
       <section className="py-20 bg-stone-50">
