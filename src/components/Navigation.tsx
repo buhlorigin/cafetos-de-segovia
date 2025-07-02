@@ -18,7 +18,7 @@ const Navigation = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Company Name */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 ml-8">
             <a href="/" className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/78487e42-fc8e-4d65-aefd-c528d420174e.png" 
@@ -31,7 +31,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block flex-1">
-            <div className="flex justify-center">
+            <div className="flex justify-center -ml-32">
               <div className="flex items-baseline space-x-8">
                 {navItems.map((item) => (
                   <a
