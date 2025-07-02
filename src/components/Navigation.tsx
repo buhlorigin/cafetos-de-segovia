@@ -15,7 +15,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-stone-200 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Company Name */}
           <div className="flex-shrink-0">
@@ -25,7 +25,7 @@ const Navigation = () => {
                 alt="Cafetos de Segovia" 
                 className="h-8 w-auto"
               />
-              <span className="text-xl font-bold text-stone-800">Cafetos de Segovia</span>
+              <span className="text-xl font-bold text-coffee-heritage">Cafetos de Segovia</span>
             </a>
           </div>
 
@@ -36,7 +36,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-stone-700 hover:text-amber-700 px-3 py-2 text-lg font-medium transition-colors duration-200"
+                  className="text-coffee-heritage hover:text-coffee-gold px-3 py-2 text-lg font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </a>
@@ -48,7 +48,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-stone-700 hover:text-amber-700"
+              className="text-coffee-heritage hover:text-coffee-gold"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -63,7 +63,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-stone-700 hover:text-amber-700 block px-3 py-2 text-lg font-medium"
+                  className="text-coffee-heritage hover:text-coffee-gold block px-3 py-2 text-lg font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
