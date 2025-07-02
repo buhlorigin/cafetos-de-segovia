@@ -100,15 +100,15 @@ const WorldMap = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-epic relative overflow-hidden">
-      <div className="absolute inset-0 opacity-30">
-        <div className="w-full h-full bg-gradient-traceability"></div>
+    <section className="py-20 bg-gradient-to-br from-stone-900 via-stone-800 to-amber-900 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20">
+        <div className="w-full h-full bg-gradient-to-br from-transparent via-amber-500/10 to-transparent"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Global <span className="text-coffee-gold">Markets</span>
+            Global <span className="text-amber-400">Markets</span>
           </h2>
           <p className="text-xl text-stone-300 max-w-3xl mx-auto">
             Serving specialty coffee roasters and distributors across continents with exceptional Nicaraguan coffee
@@ -139,7 +139,7 @@ const WorldMap = () => {
         <div className="text-center mt-12">
           <p className="text-stone-300 text-lg">
             Interested in becoming a partner? 
-            <a href="/contact" className="text-coffee-gold hover:text-coffee-cherry font-semibold ml-2">
+            <a href="/contact" className="text-amber-400 hover:text-amber-300 font-semibold ml-2">
               Contact us today →
             </a>
           </p>

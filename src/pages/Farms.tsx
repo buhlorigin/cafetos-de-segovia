@@ -78,12 +78,12 @@ const Farms = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-heritage relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-coffee-gold">Farms</span>
+      <section className="pt-24 pb-12 bg-gradient-to-br from-stone-50 to-amber-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-stone-800 mb-6">
+            Our <span className="text-amber-700">Farms</span>
           </h1>
-          <p className="text-2xl text-stone-200 leading-relaxed font-medium">
+          <p className="text-2xl text-stone-600 leading-relaxed font-medium">
             Exceptional terroir in the highlands of Nueva Segovia
           </p>
         </div>
@@ -91,33 +91,33 @@ const Farms = () => {
 
       {/* Farms Section */}
       {farms.map((farm, farmIndex) => (
-        <section key={farm.name} className={`py-24 ${farmIndex % 2 === 0 ? 'bg-gradient-origin' : 'bg-gradient-heritage'} relative`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${farmIndex % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+        <section key={farm.name} className={`py-16 ${farmIndex % 2 === 0 ? 'bg-white' : 'bg-stone-50'}`}>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${farmIndex % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               <div className={farmIndex % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <h2 className="text-4xl font-bold text-white mb-8">
-                  <span className="text-coffee-gold">{farm.name}</span>
+                <h2 className="text-4xl font-bold text-stone-800 mb-6">
+                  <span className="text-amber-700">{farm.name}</span>
                 </h2>
-                <p className="text-xl text-stone-200 leading-relaxed mb-8">
+                <p className="text-lg text-stone-600 leading-relaxed mb-8">
                   {farm.description}
                 </p>
                 
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                    <h4 className="font-semibold text-coffee-gold mb-2">Location</h4>
-                    <p className="text-stone-200">{farm.details.location}</p>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div>
+                    <h4 className="font-semibold text-stone-700 mb-1">Location</h4>
+                    <p className="text-stone-600">{farm.details.location}</p>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                    <h4 className="font-semibold text-coffee-gold mb-2">Altitude</h4>
-                    <p className="text-stone-200">{farm.details.altitude}</p>
+                  <div>
+                    <h4 className="font-semibold text-stone-700 mb-1">Altitude</h4>
+                    <p className="text-stone-600">{farm.details.altitude}</p>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                    <h4 className="font-semibold text-coffee-gold mb-2">Varieties</h4>
-                    <p className="text-stone-200">{farm.details.varieties}</p>
+                  <div>
+                    <h4 className="font-semibold text-stone-700 mb-1">Varieties</h4>
+                    <p className="text-stone-600">{farm.details.varieties}</p>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                    <h4 className="font-semibold text-coffee-gold mb-2">Processing</h4>
-                    <p className="text-stone-200">{farm.details.processing}</p>
+                  <div>
+                    <h4 className="font-semibold text-stone-700 mb-1">Processing</h4>
+                    <p className="text-stone-600">{farm.details.processing}</p>
                   </div>
                 </div>
               </div>
@@ -187,26 +187,26 @@ const Farms = () => {
       ))}
 
       {/* Certifications Section */}
-      <section className="py-24 bg-gradient-origin relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-stone-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Our <span className="text-coffee-gold">Certifications</span>
+            <h2 className="text-4xl font-bold text-stone-800 mb-6">
+              Our <span className="text-amber-700">Certifications</span>
             </h2>
-            <p className="text-xl text-stone-200">
+            <p className="text-xl text-stone-600">
               Committed to sustainable and ethical coffee production
             </p>
           </div>
           
           <div className="flex justify-center items-center space-x-12">
             {certifications.map((cert, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 text-center transform hover:scale-105">
+              <div key={index} className="bg-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 text-center transform hover:scale-105">
                 <img
                   src={cert.logo}
                   alt={cert.name}
                   className="w-32 h-32 object-contain mx-auto mb-6"
                 />
-                <h3 className="font-bold text-white text-lg">{cert.name}</h3>
+                <h3 className="font-bold text-stone-800 text-lg">{cert.name}</h3>
               </div>
             ))}
           </div>
@@ -218,17 +218,17 @@ const Farms = () => {
       <EnhancedMapbox />
 
       {/* Sample Request Section */}
-      <section className="py-24 bg-gradient-heritage relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Request <span className="text-coffee-gold">Samples</span>
+      <section className="py-16 bg-amber-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-stone-800 mb-6">
+            Request <span className="text-amber-700">Samples</span>
           </h2>
-          <p className="text-xl text-stone-200 mb-8">
+          <p className="text-xl text-stone-600 mb-8">
             Experience the exceptional quality of our farm-specific lots
           </p>
           <a 
             href="/contact"
-            className="bg-coffee-gold text-white px-8 py-4 rounded-lg font-semibold hover:bg-coffee-cherry transition-colors duration-200 shadow-lg inline-block"
+            className="bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-800 transition-colors duration-200 shadow-lg inline-block"
           >
             Request Samples & Spec Sheets
           </a>

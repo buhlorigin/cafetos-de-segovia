@@ -40,12 +40,12 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-heritage relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            About <span className="text-coffee-gold">Cafetos de Segovia</span>
+      <section className="pt-24 pb-12 bg-gradient-to-br from-stone-50 to-amber-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-stone-800 mb-6">
+            About <span className="text-amber-700">Cafetos de Segovia</span>
           </h1>
-          <p className="text-2xl text-stone-200 leading-relaxed font-medium">
+          <p className="text-2xl text-stone-600 leading-relaxed font-medium">
             Three generations of coffee excellence from the highlands of Nueva Segovia
           </p>
         </div>
@@ -53,14 +53,14 @@ const About = () => {
 
       {/* Values Sections */}
       {values.map((value, index) => (
-        <section key={value.title} className={`py-24 ${index % 2 === 0 ? 'bg-gradient-origin' : 'bg-gradient-heritage'} relative`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+        <section key={value.title} className={`py-16 ${index % 2 === 0 ? 'bg-white' : 'bg-stone-50'}`}>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <h2 className="text-4xl font-bold text-white mb-8">
-                  <span className="text-coffee-gold">{value.title}</span>
+                <h2 className="text-3xl font-bold text-stone-800 mb-6 text-amber-700">
+                  {value.title}
                 </h2>
-                <p className="text-xl text-stone-200 leading-relaxed">
+                <p className="text-lg text-stone-600 leading-relaxed">
                   {value.content}
                 </p>
               </div>

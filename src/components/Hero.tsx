@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl text-white mb-12 leading-tight">
           Cafetos de Segovia is your partner in finding the best Specialty Coffees of the Cordillera de Dipilto and Jalapa, the coveted highlands of Nueva Segovia.
         </h1>
@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a 
             href="/services"
-            className="bg-coffee-gold text-white px-8 py-4 rounded-lg font-semibold hover:bg-coffee-cherry transition-colors duration-200 shadow-lg"
+            className="bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-800 transition-colors duration-200 shadow-lg"
           >
             Our Services
           </a>
