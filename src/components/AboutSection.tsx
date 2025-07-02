@@ -8,8 +8,8 @@ const AboutSection = () => {
           <div className="relative">
             <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/lovable-uploads/3a4f4cd1-0192-433e-af6d-daba71cedfb7.png"
-                alt="Martha & Ana Albir - Founders of Cafetos de Segovia"
+                src="/lovable-uploads/0a3f2e9d-2fc6-431e-9ea7-ceb91791f712.png"
+                alt="The Albir Family - Three Generations at Cafetos de Segovia"
                 className="w-full h-full object-cover"
               />
             </div>
