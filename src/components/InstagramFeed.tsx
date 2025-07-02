@@ -34,13 +34,13 @@ const InstagramFeed = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-origin relative">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-stone-800 mb-6">
-            From Farm <span className="text-amber-700">to Cup</span>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            From Farm <span className="text-coffee-gold">to Cup</span>
           </h2>
-          <p className="text-xl text-stone-600">
+          <p className="text-xl text-stone-200">
             Follow our coffee journey through authentic moments
           </p>
         </div>
