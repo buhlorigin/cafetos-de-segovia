@@ -20,17 +20,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg mx-auto text-stone-600 text-center">
-            <p className="text-xl leading-relaxed mb-8">
-              Cafetos de Segovia stays current with international trends, with team members present at renowned coffee conventions worldwide. Our expertise spans agricultural engineering, international trade, coffee roasting, cupping, and brewing—covering all essential areas of the business.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Coffee Producers Section */}
       <section className="py-16 bg-amber-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
