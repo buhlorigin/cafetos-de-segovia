@@ -10,7 +10,7 @@ const Farms = () => {
   const farms = [
     {
       name: "Finca Bethania",
-      description: "Nestled in the high-altitude mountains of Dipilto, Finca Bethania represents three generations of coffee excellence. This family-managed farm spans 25 hectares of pristine mountainous terrain, where traditional farming methods meet innovative processing techniques. The farm's unique microclimate, characterized by cool nights and warm days, creates the perfect conditions for slow cherry maturation, resulting in complex and refined flavor profiles. Bethania has consistently produced Cup of Excellence level quality coffees, with several lots scoring above 85 points. The farm's commitment to sustainability includes maintaining native shade trees, implementing water conservation systems, and supporting local wildlife habitats.",
+      description: "Nestled in the high-altitude mountains of Dipilto, Finca Bethania represents three generations of coffee excellence. This family-managed farm spans 25 hectares of pristine mountainous terrain, where traditional farming methods meet innovative processing techniques. The farm's unique microclimate creates perfect conditions for slow cherry maturation, resulting in complex flavor profiles. Bethania consistently produces Cup of Excellence level quality coffees, with several lots scoring above 85 points.",
       images: [
         "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -44,20 +44,16 @@ const Farms = () => {
 
   const certifications = [
     {
-      name: "Rainforest Alliance",
-      logo: "https://images.unsplash.com/photo-1569163139394-de4e4f43e4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-    },
-    {
       name: "Fair Trade",
-      logo: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+      logo: "/lovable-uploads/b4b923b8-b0f0-464f-a514-946bc07b2715.png"
     },
     {
-      name: "Buenas Prácticas Agrícolas",
-      logo: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+      name: "Rainforest Alliance",
+      logo: "/lovable-uploads/d84c8f7a-07b2-4e44-9862-7e4a76628d99.png"
     },
     {
-      name: "Organic Certification",
-      logo: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+      name: "EU Organic",
+      logo: "/lovable-uploads/9b9aa40d-3262-495f-b99b-9fad968a74b3.png"
     }
   ];
 
@@ -190,7 +186,7 @@ const Farms = () => {
       ))}
 
       {/* Certifications Section */}
-      <section className="py-16 bg-gradient-to-br from-amber-50 to-stone-50">
+      <section className="py-16 bg-gradient-to-br from-amber-50 to-stone-50 overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-stone-800 mb-6">
@@ -201,17 +197,43 @@ const Farms = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                <img
-                  src={cert.logo}
-                  alt={cert.name}
-                  className="w-20 h-20 object-contain mx-auto mb-4 rounded-lg"
-                />
-                <h3 className="font-semibold text-stone-800 text-sm">{cert.name}</h3>
-              </div>
-            ))}
+          {/* Scrolling certifications container */}
+          <div className="relative">
+            <div className="flex animate-[scroll-left_15s_linear_infinite] space-x-12">
+              {/* First set of certifications */}
+              {certifications.map((cert, index) => (
+                <div key={`first-${index}`} className="flex-shrink-0 bg-white rounded-2xl p-8 shadow-lg text-center w-48">
+                  <img
+                    src={cert.logo}
+                    alt={cert.name}
+                    className="w-24 h-24 object-contain mx-auto mb-4"
+                  />
+                  <h3 className="font-semibold text-stone-800 text-sm">{cert.name}</h3>
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {certifications.map((cert, index) => (
+                <div key={`second-${index}`} className="flex-shrink-0 bg-white rounded-2xl p-8 shadow-lg text-center w-48">
+                  <img
+                    src={cert.logo}
+                    alt={cert.name}
+                    className="w-24 h-24 object-contain mx-auto mb-4"
+                  />
+                  <h3 className="font-semibold text-stone-800 text-sm">{cert.name}</h3>
+                </div>
+              ))}
+              {/* Third set for seamless loop */}
+              {certifications.map((cert, index) => (
+                <div key={`third-${index}`} className="flex-shrink-0 bg-white rounded-2xl p-8 shadow-lg text-center w-48">
+                  <img
+                    src={cert.logo}
+                    alt={cert.name}
+                    className="w-24 h-24 object-contain mx-auto mb-4"
+                  />
+                  <h3 className="font-semibold text-stone-800 text-sm">{cert.name}</h3>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
