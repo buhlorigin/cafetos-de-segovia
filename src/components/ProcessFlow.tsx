@@ -131,13 +131,14 @@ const ProcessFlow = () => {
                 <div
                   key={index}
                   ref={(el) => (stepRefs.current[index] = el)}
-                  className="relative flex items-start group"
+                  className="relative flex items-start group cursor-pointer"
+                  onClick={() => setActiveStep(index)}
                 >
                   {/* Timeline dot */}
-                  <div className={`relative z-10 flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 ${
+                  <div className={`relative z-10 flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:scale-125 ${
                     index <= activeStep 
                       ? 'bg-amber-700 text-white shadow-lg scale-110' 
-                      : 'bg-white border-2 border-stone-300 text-stone-400'
+                      : 'bg-white border-2 border-stone-300 text-stone-400 hover:border-amber-300 hover:text-amber-600'
                   }`}>
                     {(() => {
                       const IconComponent = process.icon;
@@ -146,12 +147,12 @@ const ProcessFlow = () => {
                   </div>
 
                   {/* Content */}
-                  <div className={`ml-6 p-6 rounded-2xl transition-all duration-300 ${
+                  <div className={`ml-6 p-6 rounded-2xl transition-all duration-300 hover:shadow-lg ${
                     index === activeStep 
                       ? 'bg-white shadow-xl scale-105 border-2 border-amber-200' 
                       : index < activeStep 
-                        ? 'bg-white shadow-md' 
-                        : 'bg-stone-100 shadow-sm'
+                        ? 'bg-white shadow-md hover:shadow-lg' 
+                        : 'bg-stone-100 shadow-sm hover:bg-white hover:shadow-md'
                   }`}>
                     <h4 className={`text-xl font-bold mb-3 transition-colors duration-300 ${
                       index <= activeStep ? 'text-stone-800' : 'text-stone-500'
@@ -168,6 +169,9 @@ const ProcessFlow = () => {
                         Currently viewing
                       </div>
                     )}
+                    <div className="mt-2 text-xs text-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Click to view details
+                    </div>
                   </div>
                 </div>
               ))}
