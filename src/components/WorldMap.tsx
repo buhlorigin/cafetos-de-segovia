@@ -1,12 +1,12 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const WorldMap = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState('');
+  const mapboxToken = 'pk.eyJ1IjoiYnVobG9yaWdpbiIsImEiOiJjbWNtNWhvaDAwYm03MmpzZGd3M2t3aDQ2In0.MtZWli9bG73mspo2-2ct8Q';
 
   const countries = ["USA", "UK", "Europe", "China", "Southeast Asia", "Australia", "Middle East"];
 
@@ -101,31 +101,12 @@ const WorldMap = () => {
           </p>
         </div>
 
-        {!mapboxToken ? (
-          <div className="max-w-md mx-auto mb-8">
-            <label htmlFor="mapbox-token" className="block text-sm font-medium text-stone-700 mb-2">
-              Enter your Mapbox Public Token to view the interactive map:
-            </label>
-            <input
-              id="mapbox-token"
-              type="text"
-              value={mapboxToken}
-              onChange={(e) => setMapboxToken(e.target.value)}
-              placeholder="pk.eyJ1..."
-              className="w-full px-3 py-2 border border-stone-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
-            />
-            <p className="mt-2 text-sm text-stone-500">
-              Get your token from <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-800">mapbox.com</a>
-            </p>
-          </div>
-        ) : (
-          <div className="mb-8">
-            <div 
-              ref={mapContainer} 
-              className="w-full h-96 rounded-lg shadow-lg border border-stone-200" 
-            />
-          </div>
-        )}
+        <div className="mb-8">
+          <div 
+            ref={mapContainer} 
+            className="w-full h-96 rounded-lg shadow-lg border border-stone-200" 
+          />
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 text-center">
           {countries.map((country) => (
