@@ -1,119 +1,152 @@
 
-import React, { useEffect, useRef } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import React from 'react';
 
 const WorldMap = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const mapboxToken = 'pk.eyJ1IjoiYnVobG9yaWdpbiIsImEiOiJjbWNtNWhvaDAwYm03MmpzZGd3M2t3aDQ2In0.MtZWli9bG73mspo2-2ct8Q';
-
-  const countries = ["USA", "UK", "Europe", "China", "Southeast Asia", "Australia", "Middle East"];
-
-  useEffect(() => {
-    if (!mapContainer.current || !mapboxToken) return;
-
-    // Initialize map
-    mapboxgl.accessToken = mapboxToken;
-    
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/light-v11',
-      projection: 'naturalEarth',
-      zoom: 1.2,
-      center: [20, 20],
-    });
-
-    // Add navigation controls
-    map.current.addControl(
-      new mapboxgl.NavigationControl({
-        visualizePitch: true,
-      }),
-      'top-right'
-    );
-
-    // Highlighted regions coordinates
-    const regions: { name: string; coordinates: [number, number] }[] = [
-      // USA
-      { name: "USA", coordinates: [-95.7129, 37.0902] },
-      // UK
-      { name: "UK", coordinates: [-3.436, 55.378] },
-      // Europe (Central)
-      { name: "Europe", coordinates: [10.451526, 51.165691] },
-      // China
-      { name: "China", coordinates: [104.195397, 35.86166] },
-      // Southeast Asia (Thailand/Vietnam area)
-      { name: "Southeast Asia", coordinates: [101.975766, 4.210484] },
-      // Australia
-      { name: "Australia", coordinates: [133.775136, -25.274398] },
-      // Middle East (Saudi Arabia/UAE area)
-      { name: "Middle East", coordinates: [45.079162, 23.885942] }
-    ];
-
-    map.current.on('load', () => {
-      // Add markers for each region
-      regions.forEach((region) => {
-        // Create a custom marker element
-        const el = document.createElement('div');
-        el.className = 'marker';
-        el.style.backgroundColor = '#dc2626'; // red-600
-        el.style.width = '20px';
-        el.style.height = '20px';
-        el.style.borderRadius = '50%';
-        el.style.border = '3px solid #ffffff';
-        el.style.boxShadow = '0 4px 8px rgba(0,0,0,0.3)';
-        el.style.cursor = 'pointer';
-
-        // Add popup
-        const popup = new mapboxgl.Popup({
-          offset: 25,
-          closeButton: false,
-          closeOnClick: false
-        }).setHTML(`<div style="font-weight: bold; color: #dc2626;">${region.name}</div>`);
-
-        // Create marker
-        new mapboxgl.Marker(el)
-          .setLngLat(region.coordinates)
-          .setPopup(popup)
-          .addTo(map.current!);
-
-        // Show popup on hover
-        el.addEventListener('mouseenter', () => popup.addTo(map.current!));
-        el.addEventListener('mouseleave', () => popup.remove());
-      });
-    });
-
-    // Cleanup
-    return () => {
-      map.current?.remove();
-    };
-  }, [mapboxToken]);
+  const markets = [
+    { name: "USA", color: "#d97706", description: "North American specialty coffee market" },
+    { name: "UK", color: "#ea580c", description: "British Isles premium coffee segment" },
+    { name: "Europe", color: "#dc2626", description: "Continental European markets" },
+    { name: "Middle East", color: "#b91c1c", description: "Growing Middle Eastern coffee culture" },
+    { name: "China", color: "#991b1b", description: "Expanding Chinese specialty coffee market" },
+    { name: "Southeast Asia", color: "#7c2d12", description: "Emerging Southeast Asian markets" },
+    { name: "Australia", color: "#a16207", description: "Australian coffee connoisseurs" }
+  ];
 
   return (
-    <section className="py-24 bg-stone-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-stone-800 mb-8">
-            Our <span className="text-amber-700">Global</span> Markets
+    <section className="py-20 bg-gradient-to-br from-stone-900 via-stone-800 to-amber-900 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20">
+        <div className="w-full h-full bg-gradient-to-br from-transparent via-amber-500/10 to-transparent"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Global <span className="text-amber-400">Markets</span>
           </h2>
-          <p className="text-2xl text-stone-600 max-w-4xl mx-auto">
-            Cafetos de Segovia exports premium specialty coffee to discerning roasters and importers worldwide.
+          <p className="text-xl text-stone-300 max-w-3xl mx-auto">
+            Serving specialty coffee roasters and distributors across continents with exceptional Nicaraguan coffee
           </p>
         </div>
 
-        <div className="mb-8">
-          <div 
-            ref={mapContainer} 
-            className="w-full h-96 rounded-lg shadow-lg border border-stone-200" 
-          />
+        {/* World Map Container */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
+          <div className="relative w-full max-w-5xl mx-auto">
+            <svg
+              viewBox="0 0 1000 500"
+              className="w-full h-auto"
+              style={{ maxHeight: '500px' }}
+            >
+              {/* Background */}
+              <rect width="1000" height="500" fill="#1e293b" rx="10" />
+              
+              {/* Simplified world map regions */}
+              
+              {/* North America (USA) */}
+              <path
+                d="M50 80 L280 80 L280 200 L50 200 Z"
+                fill="#d97706"
+                stroke="#ffffff"
+                strokeWidth="2"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              />
+              <text x="165" y="145" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">USA</text>
+              
+              {/* Europe */}
+              <path
+                d="M400 70 L580 70 L580 180 L400 180 Z"
+                fill="#dc2626"
+                stroke="#ffffff"
+                strokeWidth="2"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              />
+              <text x="490" y="130" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">EUROPE</text>
+              
+              {/* UK */}
+              <path
+                d="M360 60 L420 60 L420 120 L360 120 Z"
+                fill="#ea580c"
+                stroke="#ffffff"
+                strokeWidth="2"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              />
+              <text x="390" y="95" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">UK</text>
+              
+              {/* Middle East */}
+              <path
+                d="M500 200 L650 200 L650 280 L500 280 Z"
+                fill="#b91c1c"
+                stroke="#ffffff"
+                strokeWidth="2"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              />
+              <text x="575" y="245" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">MIDDLE EAST</text>
+              
+              {/* China */}
+              <path
+                d="M650 100 L800 100 L800 220 L650 220 Z"
+                fill="#991b1b"
+                stroke="#ffffff"
+                strokeWidth="2"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              />
+              <text x="725" y="165" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">CHINA</text>
+              
+              {/* Southeast Asia */}
+              <path
+                d="M700 240 L850 240 L850 320 L700 320 Z"
+                fill="#7c2d12"
+                stroke="#ffffff"
+                strokeWidth="2"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              />
+              <text x="775" y="285" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">SE ASIA</text>
+              
+              {/* Australia */}
+              <path
+                d="M750 350 L900 350 L900 420 L750 420 Z"
+                fill="#a16207"
+                stroke="#ffffff"
+                strokeWidth="2"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              />
+              <text x="825" y="390" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">AUSTRALIA</text>
+              
+              {/* Nicaragua (origin point) */}
+              <circle
+                cx="150"
+                cy="250"
+                r="8"
+                fill="#fbbf24"
+                stroke="#ffffff"
+                strokeWidth="3"
+                className="animate-pulse"
+              />
+              <text x="150" y="275" textAnchor="middle" fill="#fbbf24" fontSize="12" fontWeight="bold">NICARAGUA</text>
+            </svg>
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 text-center">
-          {countries.map((country) => (
-            <div key={country} className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-lg font-semibold text-stone-800">{country}</h3>
+        {/* Market Information Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          {markets.map((market, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 text-center hover:bg-white/20 transition-all duration-300">
+              <div 
+                className="w-6 h-6 rounded-full mx-auto mb-3"
+                style={{ backgroundColor: market.color }}
+              ></div>
+              <h3 className="text-white font-semibold text-sm mb-2">{market.name}</h3>
+              <p className="text-stone-300 text-xs">{market.description}</p>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <p className="text-stone-300 text-lg">
+            Interested in becoming a partner? 
+            <a href="/contact" className="text-amber-400 hover:text-amber-300 font-semibold ml-2">
+              Contact us today →
+            </a>
+          </p>
         </div>
       </div>
     </section>
