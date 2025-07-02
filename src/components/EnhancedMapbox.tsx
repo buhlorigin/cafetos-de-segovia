@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
 
 const EnhancedMapbox = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  const [apiKey, setApiKey] = useState('');
+  const [apiKey] = useState('pk.eyJ1IjoiYnVobG9yaWdpbiIsImEiOiJjbWNtNWhvaDAwYm03MmpzZGd3M2t3aDQ2In0.MtZWli9bG73mspo2-2ct8Q');
   const [mapLoaded, setMapLoaded] = useState(false);
 
   // Coffee farm locations in Nicaragua
@@ -145,11 +143,11 @@ const EnhancedMapbox = () => {
     });
   };
 
-  const handleApiKeySubmit = () => {
-    if (apiKey.trim()) {
-      initializeMap();
-    }
-  };
+  useEffect(() => {
+    initializeMap();
+  }, []);
+
+  // Remove the handleApiKeySubmit function since we auto-initialize
 
   return (
     <section className="py-20 bg-gradient-to-br from-stone-900 via-stone-800 to-amber-900 relative overflow-hidden">
@@ -167,49 +165,11 @@ const EnhancedMapbox = () => {
           </p>
         </div>
 
-        {!mapLoaded && (
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8 max-w-md mx-auto">
-            <h3 className="text-white text-lg font-semibold mb-4">Enter your Mapbox Token</h3>
-            <p className="text-stone-300 text-sm mb-4">
-              Get your free token at{' '}
-              <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline">
-                mapbox.com
-              </a>
-            </p>
-            <div className="flex gap-2">
-              <Input
-                type="text"
-                placeholder="pk.eyJ1IjoieW91cnVzZXJuYW1lIi..."
-                value={apiKey}
-                onChange={(e) => setApiKey(e.target.value)}
-                className="flex-1"
-              />
-              <Button onClick={handleApiKeySubmit} className="bg-amber-600 hover:bg-amber-700">
-                Load Map
-              </Button>
-            </div>
-          </div>
-        )}
-
         <div className="relative">
-          {apiKey ? (
-            <div 
-              ref={mapContainer} 
-              className="w-full h-[600px] rounded-2xl shadow-2xl border border-white/20"
-            />
-          ) : (
-            <div className="w-full h-[600px] rounded-2xl bg-gradient-to-br from-stone-700 to-stone-800 flex items-center justify-center border border-white/20">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Interactive Coffee Region Map</h3>
-                <p className="text-stone-300">Enter your Mapbox token above to explore our farm locations</p>
-              </div>
-            </div>
-          )}
+          <div 
+            ref={mapContainer} 
+            className="w-full h-[600px] rounded-2xl shadow-2xl border border-white/20"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
