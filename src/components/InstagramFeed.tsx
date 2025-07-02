@@ -35,7 +35,7 @@ const InstagramFeed = () => {
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-stone-800 mb-6">
             From Farm <span className="text-amber-700">to Cup</span>

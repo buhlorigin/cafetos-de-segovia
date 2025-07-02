@@ -131,8 +131,7 @@ const WorldMap = () => {
                 className="w-6 h-6 rounded-full mx-auto mb-3"
                 style={{ backgroundColor: market.color }}
               ></div>
-              <h3 className="text-white font-semibold text-sm mb-2">{market.name}</h3>
-              <p className="text-stone-300 text-xs">{market.description}</p>
+              <h3 className="text-white font-semibold text-sm">{market.name}</h3>
             </div>
           ))}
         </div>

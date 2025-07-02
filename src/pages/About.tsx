@@ -78,7 +78,7 @@ const About = () => {
 
       {/* Gallery Section */}
       <section className="py-20 bg-gradient-to-br from-amber-50 to-stone-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-stone-800 mb-12 text-center">
             Our <span className="text-amber-700">Story</span> in Pictures
           </h2>
