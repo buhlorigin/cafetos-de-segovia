@@ -10,8 +10,8 @@ const Services = () => {
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-stone-50 to-amber-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-stone-800 mb-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-amber-800 mb-6">
             Our <span className="text-amber-700">Services</span>
           </h1>
           <p className="text-2xl text-stone-600 leading-relaxed font-medium">
@@ -22,7 +22,7 @@ const Services = () => {
 
       {/* Coffee Producers Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-stone-800 mb-6">
@@ -63,7 +63,7 @@ const Services = () => {
 
       {/* Customer Section */}
       <section className="py-16 bg-stone-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img

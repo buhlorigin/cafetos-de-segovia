@@ -18,7 +18,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Company Name */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 -ml-4">
             <a href="/" className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/78487e42-fc8e-4d65-aefd-c528d420174e.png" 

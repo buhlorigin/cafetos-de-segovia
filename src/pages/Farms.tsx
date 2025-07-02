@@ -79,8 +79,8 @@ const Farms = () => {
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-stone-50 to-amber-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-stone-800 mb-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-amber-800 mb-6">
             Our <span className="text-amber-700">Farms</span>
           </h1>
           <p className="text-2xl text-stone-600 leading-relaxed font-medium">
@@ -92,7 +92,7 @@ const Farms = () => {
       {/* Farms Section */}
       {farms.map((farm, farmIndex) => (
         <section key={farm.name} className={`py-16 ${farmIndex % 2 === 0 ? 'bg-white' : 'bg-stone-50'}`}>
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${farmIndex % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               <div className={farmIndex % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <h2 className="text-4xl font-bold text-stone-800 mb-6">
@@ -188,7 +188,7 @@ const Farms = () => {
 
       {/* Certifications Section */}
       <section className="py-20 bg-gradient-to-br from-amber-50 to-stone-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-stone-800 mb-6">
               Our <span className="text-amber-700">Certifications</span>
