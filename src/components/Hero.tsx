@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl text-white mb-8 leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl text-white mb-12 leading-tight">
           Cafetos de Segovia is your partner in finding the best Specialty Coffees of the Cordillera de Dipilto and Jalapa, the coveted highlands of Nueva Segovia.
         </h1>
         

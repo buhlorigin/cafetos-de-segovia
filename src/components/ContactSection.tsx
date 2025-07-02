@@ -1,20 +1,20 @@
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-amber-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl font-bold text-stone-800 mb-6">
+    <section className="py-24 bg-amber-50">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-5xl md:text-6xl font-bold text-stone-800 mb-8">
           Ready to <span className="text-amber-700">Connect?</span>
         </h2>
-        <p className="text-xl text-stone-600 mb-8">
+        <p className="text-2xl text-stone-600 mb-12">
           Partner with us for premium Nicaraguan specialty coffee
         </p>
         
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="bg-white rounded-2xl p-12 shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-stone-800 mb-4">Get In Touch</h3>
-              <div className="space-y-2 text-stone-600">
+              <h3 className="text-3xl font-bold text-stone-800 mb-6">Get In Touch</h3>
+              <div className="space-y-3 text-xl text-stone-600">
                 <p>ana@cafetosdesegovia.com</p>
                 <p>+505 8733 1928</p>
                 <p>Nueva Segovia, Nicaragua</p>

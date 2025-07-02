@@ -36,7 +36,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-stone-700 hover:text-amber-700 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="text-stone-700 hover:text-amber-700 px-3 py-2 text-lg font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </a>
@@ -63,7 +63,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-stone-700 hover:text-amber-700 block px-3 py-2 text-base font-medium"
+                  className="text-stone-700 hover:text-amber-700 block px-3 py-2 text-lg font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
