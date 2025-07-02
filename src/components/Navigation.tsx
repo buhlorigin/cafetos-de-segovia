@@ -21,7 +21,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/1b04df38-679e-4168-bf8e-55f394725790.png" 
+                src="/lovable-uploads/78487e42-fc8e-4d65-aefd-c528d420174e.png" 
                 alt="Cafetos de Segovia" 
                 className="h-8 w-auto"
               />
