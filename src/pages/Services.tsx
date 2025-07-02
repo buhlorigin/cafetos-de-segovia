@@ -15,7 +15,7 @@ const Services = () => {
             Our <span className="text-amber-700">Services</span>
           </h1>
           <p className="text-2xl text-stone-600 leading-relaxed font-medium">
-            CAFETOS DE SEGOVIA is your partner in finding the best Specialty Coffees of the Cordillera de Dipilto and Jalapa, the coveted highlands of Nueva Segovia.
+            Cafetos de Segovia is your partner in finding the best Specialty Coffees of the Cordillera de Dipilto and Jalapa, the coveted highlands of Nueva Segovia.
           </p>
         </div>
       </section>
@@ -23,12 +23,9 @@ const Services = () => {
       {/* Main Content */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg mx-auto text-stone-600">
+          <div className="prose prose-lg mx-auto text-stone-600 text-center">
             <p className="text-xl leading-relaxed mb-8">
-              CAFETOS DE SEGOVIA is a committed long-term partner of coffee producers in the region with whom we cooperate closely year-round. We provide guidance on state-of-the-art farm management from planting to harvest to ensure optimal maturation. This becomes crucial when building long-term relationships with producers.
-            </p>
-            <p className="text-xl leading-relaxed mb-12">
-              Our services to producers also include dry mill processing, sales, and export services.
+              Cafetos de Segovia stays current with international trends, with team members present at renowned coffee conventions worldwide. Our expertise spans agricultural engineering, international trade, coffee roasting, cupping, and brewing—covering all essential areas of the business.
             </p>
           </div>
         </div>
@@ -40,11 +37,29 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-stone-800 mb-6">
-                <span className="text-amber-700">COFFEE</span> PRODUCERS
+                <span className="text-amber-700">Coffee</span> Producers
               </h2>
-              <p className="text-lg text-stone-600 leading-relaxed">
-                For our customers, CAFETOS DE SEGOVIA's services range from coffee selection, farm inspections, cupping, quality control, to export logistics. We arrange farm visits and are happy to accompany you while in Nicaragua. Once you find the right coffee, it's our job to ensure the quality you expect arrives at your port.
+              <p className="text-lg text-stone-600 leading-relaxed mb-6">
+                Cafetos de Segovia is a committed long-term partner of coffee producers in the region. We provide year-round guidance on state-of-the-art farm management from planting to harvest.
               </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h3 className="font-semibold text-amber-700 mb-2">Produce</h3>
+                  <p className="text-sm text-stone-600">Farm management and cultivation guidance</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h3 className="font-semibold text-amber-700 mb-2">Milling</h3>
+                  <p className="text-sm text-stone-600">Dry mill processing services</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h3 className="font-semibold text-amber-700 mb-2">Quality Control</h3>
+                  <p className="text-sm text-stone-600">Comprehensive quality assurance</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h3 className="font-semibold text-amber-700 mb-2">Export</h3>
+                  <p className="text-sm text-stone-600">Global logistics and shipping</p>
+                </div>
+              </div>
             </div>
             <div>
               <img
@@ -52,6 +67,47 @@ const Services = () => {
                 alt="Coffee producers working on farm"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Coffee cupping and quality control"
+                className="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-stone-800 mb-6">
+                <span className="text-amber-700">Customer</span> Services
+              </h2>
+              <p className="text-lg text-stone-600 leading-relaxed mb-6">
+                For our customers, Cafetos de Segovia's services range from coffee selection and farm inspections to cupping, quality control, and export logistics. We arrange farm visits and accompany you in Nicaragua to ensure the quality you expect arrives at your port.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-stone-600">
+                  <div className="w-2 h-2 bg-amber-700 rounded-full mr-3"></div>
+                  Coffee selection and sourcing
+                </li>
+                <li className="flex items-center text-stone-600">
+                  <div className="w-2 h-2 bg-amber-700 rounded-full mr-3"></div>
+                  Farm inspections and visits
+                </li>
+                <li className="flex items-center text-stone-600">
+                  <div className="w-2 h-2 bg-amber-700 rounded-full mr-3"></div>
+                  Professional cupping services
+                </li>
+                <li className="flex items-center text-stone-600">
+                  <div className="w-2 h-2 bg-amber-700 rounded-full mr-3"></div>
+                  Export logistics and documentation
+                </li>
+              </ul>
             </div>
           </div>
         </div>
