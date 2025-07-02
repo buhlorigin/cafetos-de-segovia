@@ -45,7 +45,7 @@ const About = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-stone-800 mb-6">
             About <span className="text-amber-700">Cafetos de Segovia</span>
           </h1>
-          <p className="text-xl text-stone-600 leading-relaxed">
+          <p className="text-2xl text-stone-600 leading-relaxed font-medium">
             Three generations of coffee excellence from the highlands of Nueva Segovia
           </p>
         </div>
