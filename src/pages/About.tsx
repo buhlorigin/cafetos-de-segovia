@@ -78,20 +78,29 @@ const About = () => {
 
       {/* Gallery Section */}
       <section className="py-20 bg-gradient-to-br from-amber-50 to-stone-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-stone-800 mb-12 text-center">
             Our <span className="text-amber-700">Story</span> in Pictures
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryImages.map((image, index) => (
-              <div key={index} className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img
-                  src={image}
-                  alt={`Gallery image ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-auto">
+            {galleryImages.map((image, index) => {
+              // Define varying heights for dynamic layout
+              const heights = ['h-64', 'h-80', 'h-96', 'h-72', 'h-60', 'h-88'];
+              const height = heights[index % heights.length];
+              
+              return (
+                <div 
+                  key={index} 
+                  className={`${height} ${index % 7 === 0 ? 'md:col-span-2' : ''} ${index % 11 === 0 ? 'lg:col-span-2' : ''} ${index % 13 === 0 ? 'md:row-span-2' : ''} rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group`}
+                >
+                  <img
+                    src={image}
+                    alt={`Gallery image ${index + 1}`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
