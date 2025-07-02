@@ -34,43 +34,32 @@ const InstagramFeed = () => {
   ];
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
-          {instagramPosts.map((post, index) => (
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-stone-800 mb-6">
+            From Farm <span className="text-amber-700">to Cup</span>
+          </h2>
+          <p className="text-xl text-stone-600">
+            Follow our coffee journey through authentic moments
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {instagramPosts.map((post) => (
             <div 
               key={post.id} 
-              className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group"
-              style={{
-                animation: `float 6s ease-in-out infinite ${index * 0.5}s`
-              }}
+              className="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <img
                 src={post.image}
                 alt={post.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
         </div>
       </div>
-      
-      <style>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          25% {
-            transform: translateY(-10px) rotate(1deg);
-          }
-          50% {
-            transform: translateY(-5px) rotate(-1deg);
-          }
-          75% {
-            transform: translateY(-15px) rotate(0.5deg);
-          }
-        }
-      `}</style>
     </section>
   );
 };
