@@ -6,22 +6,22 @@ const About = () => {
   const values = [
     {
       title: "HERITAGE",
-      content: "CAFETOS DE SEGOVIA was formed by Ana and Martha Albir, conducting the family coffee business in the third generation, as a response to the high demand for transparent and socially responsible connections to Nicaraguan coffee farmers. It brings together a team of highly motivated and passionate specialists in multiple aspects of coffee production with the goal to provide to our customers the highest level of quality — not only of coffee but also in terms of responsible and accountable assistance throughout the entire chain of production. The company works with partner farms and buyers around the world to establish long-lasting relationships.",
+      content: "Cafetos de Segovia was founded by Ana and Martha Albir, representing the third generation of their family's coffee legacy. We bridge tradition with innovation, providing transparent and socially responsible connections to Nicaraguan coffee farmers. Our passionate team of specialists ensures the highest quality standards throughout the entire production chain, building lasting relationships with partner farms and buyers worldwide.",
       image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "OUR COFFEE",
-      content: "Our most ambitious goal is to assist local farmers in coping with changing environmental conditions and the requirements of world markets while preserving their best traditional farming culture. We cooperate with outstanding importers and roasters who care about sustainability, and we provide guidance to our partner farms in their production organization. Here, micro-milling meets new processing techniques to improve quality and flavors. We actively advocate for the environment and the people who work in it.",
+      content: "We partner with exceptional farmers to navigate changing environmental conditions while preserving traditional farming culture. Our collaboration with outstanding importers and roasters focuses on sustainability and quality excellence. Through innovative micro-milling and advanced processing techniques, we enhance flavors and maintain consistency. Every cup tells the story of dedicated farmers and our commitment to environmental stewardship.",
       image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "SUSTAINABILITY",
-      content: "At Cafetos, nature is our essence. We cultivate and source coffee with reverence for the terroir, knowing that our practices are not just sustainable but essential for the future. Our commitment to preserve and protect our environment reflects our deep connection with nature, which we hold dear as our identity and legacy.",
+      content: "At Cafetos de Segovia, sustainability is our foundation. We cultivate coffee with deep reverence for the terroir, implementing practices that preserve our environment for future generations. Our connection with nature defines our identity and legacy, ensuring that every bean reflects our commitment to responsible farming and environmental protection.",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "INNOVATION",
-      content: "Creativity, cutting-edge ideas, and pioneering processes are part of our DNA. We constantly explore new horizons driven by our efficiency and our search for enhanced quality.",
+      content: "Innovation drives our pursuit of excellence in specialty coffee. We continuously explore cutting-edge processing methods and quality enhancement techniques. Our commitment to creativity and pioneering approaches ensures we deliver exceptional coffee experiences while maintaining the highest standards of consistency and flavor development.",
       image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];
@@ -77,7 +77,7 @@ const About = () => {
       ))}
 
       {/* Gallery Section */}
-      <section className="py-20 bg-stone-50">
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-stone-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-stone-800 mb-12 text-center">
             Our <span className="text-amber-700">Story</span> in Pictures
