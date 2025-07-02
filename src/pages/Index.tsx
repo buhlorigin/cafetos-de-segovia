@@ -2,7 +2,7 @@
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
-import EnhancedMapbox from '../components/EnhancedMapbox';
+import GlobalMarkets from '../components/GlobalMarkets';
 import InstagramFeed from '../components/InstagramFeed';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
@@ -13,7 +13,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <AboutSection />
-      <EnhancedMapbox />
+      <GlobalMarkets />
       <InstagramFeed />
       <ContactSection />
       <Footer />

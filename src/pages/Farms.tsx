@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import EnhancedMapbox from '../components/EnhancedMapbox';
 
 const Farms = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({ bethania: 0, hortensias: 0 });
@@ -211,6 +212,10 @@ const Farms = () => {
           </div>
         </div>
       </section>
+
+      
+      {/* Farm Locations Map */}
+      <EnhancedMapbox />
 
       {/* Sample Request Section */}
       <section className="py-16 bg-amber-50">
