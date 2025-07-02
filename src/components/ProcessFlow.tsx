@@ -12,43 +12,50 @@ const ProcessFlow = () => {
       title: "CLASSIFICATION",
       description: "Floating, separating green leaves and stones. This initial step ensures only the highest quality cherries proceed to the next stage.",
       details: "Our classification process uses advanced floating techniques to separate coffee cherries by density. This removes impurities like stones, green leaves, and damaged cherries, ensuring only premium quality fruit moves forward in our process.",
-      icon: Coffee
+      icon: Coffee,
+      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "ELECTRONIC - HAND SORT",
       description: "Electronic and hand picking to separate non-optimal state of ripeness, greens, dried and unripe cherries.",
       details: "We combine cutting-edge electronic sorting technology with skilled hand-picking to achieve unparalleled precision. This dual approach ensures consistent ripeness levels and removes any remaining defects.",
-      icon: Search
+      icon: Search,
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "FERMENTATION",
       description: "If defined for the variety, anaerobic fermentation to standardize the profile.",
       details: "Our controlled fermentation process varies by coffee variety and desired flavor profile. Anaerobic fermentation in sealed tanks allows us to develop unique flavor characteristics while maintaining consistency across lots.",
-      icon: Beaker
+      icon: Beaker,
+      image: "https://images.unsplash.com/photo-1442411210769-ed3850c7e39a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "DRYING",
       description: "Mechanical or greenhouse drying in 3 stages for optimal moisture content.",
       details: "Our three-stage drying process combines greenhouse and mechanical methods to achieve the perfect moisture content of 10-12%. This careful approach preserves the coffee's inherent flavors while ensuring stability for storage.",
-      icon: Sun
+      icon: Sun,
+      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "QUALITY CONTROL",
       description: "Every storage unit is cupped to ensure profile consistency and score quality.",
       details: "Our Q-graders cup every lot to ensure it meets our quality standards. Each batch is scored and profiled, with detailed notes on flavor, aroma, body, and overall quality maintained for traceability.",
-      icon: CheckCircle
+      icon: CheckCircle,
+      image: "https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "WAREHOUSING",
       description: "Coffee is stored at optimal conditions to preserve quality and characteristics.",
       details: "Our climate-controlled warehouses maintain ideal temperature and humidity levels. Coffee is stored in specialized containers that protect against moisture and contamination while preserving flavor integrity.",
-      icon: Warehouse
+      icon: Warehouse,
+      image: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "MILLING & PACKING",
       description: "Coffee is milled in-house, then vacuum packed in 24kg boxes to facilitate stacking and preserve quality.",
       details: "Our final step involves precise milling to customer specifications followed by vacuum packing in 24kg boxes. This packaging method preserves freshness during transport while facilitating efficient stacking and handling.",
-      icon: Package
+      icon: Package,
+      image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -93,11 +100,20 @@ const ProcessFlow = () => {
           {/* Left Side - Detailed Information */}
           <div className="lg:sticky lg:top-24 lg:h-fit">
             <div className="bg-white rounded-3xl p-8 shadow-xl">
+              {/* Process Image */}
+              <div className="mb-6">
+                <img
+                  src={processes[activeStep].image}
+                  alt={processes[activeStep].title}
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+              
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-amber-100 rounded-full mr-4">
+                <div className="flex-shrink-0 w-12 h-12 p-3 bg-amber-100 rounded-full mr-4 flex items-center justify-center">
                   {(() => {
                     const IconComponent = processes[activeStep].icon;
-                    return <IconComponent className="w-8 h-8 text-amber-700" />;
+                    return <IconComponent className="w-6 h-6 text-amber-700" />;
                   })()}
                 </div>
                 <div>
@@ -135,14 +151,14 @@ const ProcessFlow = () => {
                   onClick={() => setActiveStep(index)}
                 >
                   {/* Timeline dot */}
-                  <div className={`relative z-10 flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:scale-125 ${
+                  <div className={`relative z-10 flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-125 ${
                     index <= activeStep 
                       ? 'bg-amber-700 text-white shadow-lg scale-110' 
                       : 'bg-white border-2 border-stone-300 text-stone-400 hover:border-amber-300 hover:text-amber-600'
                   }`}>
                     {(() => {
                       const IconComponent = process.icon;
-                      return <IconComponent className="w-5 h-5" />;
+                      return <IconComponent className="w-5 h-5 flex-shrink-0" />;
                     })()}
                   </div>
 
