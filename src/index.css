@@ -32,12 +32,12 @@ All colors MUST be HSL.
     
     /* Epic Origin Traceability Colors */
     --coffee-origin: 120 40% 25%;      /* Deep forest green */
-    --coffee-bean: 25 60% 18%;         /* Rich coffee bean */
+    --coffee-bean: 35 45% 25%;         /* Warm golden brown */
     --coffee-cherry: 15 85% 50%;       /* Vibrant coffee cherry */
-    --coffee-gold: 35 85% 45%;         /* Premium traceability gold */
-    --coffee-earth: 35 30% 35%;        /* Rich earth/soil */
+    --coffee-gold: 45 90% 50%;         /* Bright warm gold */
+    --coffee-earth: 40 50% 40%;        /* Warm earth/soil */
     --coffee-parchment: 45 35% 92%;    /* Natural parchment */
-    --coffee-heritage: 25 45% 25%;     /* Heritage brown */
+    --coffee-heritage: 42 60% 35%;     /* Warm heritage gold */
     
     /* Epic Gradients */
     --gradient-origin: linear-gradient(135deg, hsl(var(--coffee-origin)), hsl(var(--coffee-gold)));

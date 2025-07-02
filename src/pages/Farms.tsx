@@ -79,7 +79,7 @@ const Farms = () => {
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-heritage relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Our <span className="text-coffee-gold">Farms</span>
           </h1>
@@ -92,7 +92,7 @@ const Farms = () => {
       {/* Farms Section */}
       {farms.map((farm, farmIndex) => (
         <section key={farm.name} className={`py-24 ${farmIndex % 2 === 0 ? 'bg-gradient-origin' : 'bg-gradient-heritage'} relative`}>
-          <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${farmIndex % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               <div className={farmIndex % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <h2 className="text-4xl font-bold text-white mb-8">
@@ -188,7 +188,7 @@ const Farms = () => {
 
       {/* Certifications Section */}
       <section className="py-24 bg-gradient-origin relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Our <span className="text-coffee-gold">Certifications</span>
@@ -219,7 +219,7 @@ const Farms = () => {
 
       {/* Sample Request Section */}
       <section className="py-24 bg-gradient-heritage relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Request <span className="text-coffee-gold">Samples</span>
           </h2>

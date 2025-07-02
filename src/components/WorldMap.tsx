@@ -105,7 +105,7 @@ const WorldMap = () => {
         <div className="w-full h-full bg-gradient-traceability"></div>
       </div>
       
-      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Global <span className="text-coffee-gold">Markets</span>

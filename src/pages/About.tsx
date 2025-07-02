@@ -41,7 +41,7 @@ const About = () => {
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-heritage relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             About <span className="text-coffee-gold">Cafetos de Segovia</span>
           </h1>
@@ -54,7 +54,7 @@ const About = () => {
       {/* Values Sections */}
       {values.map((value, index) => (
         <section key={value.title} className={`py-24 ${index % 2 === 0 ? 'bg-gradient-origin' : 'bg-gradient-heritage'} relative`}>
-          <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <h2 className="text-4xl font-bold text-white mb-8">

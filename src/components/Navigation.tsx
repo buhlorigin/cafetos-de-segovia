@@ -30,17 +30,19 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-coffee-heritage hover:text-coffee-gold px-3 py-2 text-lg font-medium transition-colors duration-200"
-                >
-                  {item.name}
-                </a>
-              ))}
+          <div className="hidden md:block flex-1">
+            <div className="flex justify-center">
+              <div className="flex items-baseline space-x-8">
+                {navItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-coffee-heritage hover:text-coffee-gold px-3 py-2 text-lg font-medium transition-colors duration-200"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 

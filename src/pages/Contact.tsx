@@ -9,7 +9,7 @@ const Contact = () => {
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-heritage relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="text-coffee-gold">Contact</span> Us
           </h1>
@@ -21,7 +21,7 @@ const Contact = () => {
 
       {/* Contact Information */}
       <section className="py-24 bg-gradient-origin relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-white mb-8">
@@ -100,7 +100,7 @@ const Contact = () => {
 
       {/* Call to Action */}
       <section className="py-24 bg-gradient-heritage relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Partner with Us?
           </h2>

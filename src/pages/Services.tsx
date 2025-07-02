@@ -10,7 +10,7 @@ const Services = () => {
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-heritage relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Our <span className="text-coffee-gold">Services</span>
           </h1>
@@ -22,7 +22,7 @@ const Services = () => {
 
       {/* Coffee Producers Section */}
       <section className="py-24 bg-gradient-origin relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-bold text-white mb-8">
@@ -63,7 +63,7 @@ const Services = () => {
 
       {/* Customer Section */}
       <section className="py-24 bg-gradient-heritage relative">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <img
