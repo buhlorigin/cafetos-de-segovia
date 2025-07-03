@@ -108,7 +108,31 @@ export const CoffeeSpiderChart: React.FC<CoffeeSpiderChartProps> = ({ regionId, 
 
   return (
     <div className="bg-white rounded-lg p-6 border border-amber-200">
-      <h4 className="text-xl font-bold text-amber-900 mb-4">Coffee Profile</h4>
+      <h4 className="text-xl font-bold text-amber-900 mb-4">Coffee Characteristics</h4>
+      
+      {/* Denomination of Origin */}
+      <div className="mb-6">
+        <div className="flex items-center mb-3">
+          <Award className="w-4 h-4 text-gray-600 mr-2" />
+          <span className="font-semibold text-gray-700 text-sm">Denomination of Origin</span>
+        </div>
+        <div className="bg-blue-50 rounded-lg p-3 border-l-4 border-blue-400">
+          <span className="text-blue-800 font-medium text-sm">
+            {(() => {
+              const denominations = {
+                'nueva-segovia': 'Café Dipilto - Protected Designation of Origin',
+                'jinotega': 'Café Cuspire - Protected Designation of Origin',
+                'madriz': 'Café Wiwilí Jinotega - Protected Designation of Origin',
+                'esteli': 'Regional Production Area',
+                'matagalpa': 'Coffee Capital - Historic Production Zone',
+                'rivas': 'Emerging Specialty Coffee Zone',
+                'boaco': 'Diversified Production Region'
+              };
+              return denominations[regionId as keyof typeof denominations] || 'Regional Coffee Production';
+            })()}
+          </span>
+        </div>
+      </div>
       
       {/* Region Characteristics */}
       <div className="mb-6">

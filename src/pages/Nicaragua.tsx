@@ -37,10 +37,10 @@ const Nicaragua = () => {
       <section className="pt-24 pb-12 bg-gradient-to-br from-stone-50 to-amber-50">
         <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-amber-800 mb-6">
-            <span className="text-amber-700">Nicaragua</span> Cafetalera
+            <span className="text-amber-700">Nicaragua</span> Coffee Regions
           </h1>
           <p className="text-2xl text-stone-600 leading-relaxed font-medium">
-            Explora las regiones productoras de café de Nicaragua y sus perfiles únicos
+            Explore Nicaragua's coffee producing regions and their unique profiles
           </p>
         </div>
       </section>
@@ -52,7 +52,7 @@ const Nicaragua = () => {
             {/* Map */}
             <div className="bg-stone-50 rounded-2xl p-6 shadow-lg">
               <h3 className="text-2xl font-bold text-amber-700 mb-6 text-center">
-                Mapa Interactivo de Departamentos Cafeteros
+                Interactive Map of Coffee Departments
               </h3>
               <div className="h-96">
                 <MapboxNicaraguaMap 

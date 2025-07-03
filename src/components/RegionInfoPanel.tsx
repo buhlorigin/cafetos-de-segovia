@@ -29,9 +29,9 @@ export const RegionInfoPanel: React.FC<RegionInfoPanelProps> = ({ region }) => {
       <div className="bg-white rounded-2xl shadow-2xl p-8 h-full flex items-center justify-center">
         <div className="text-center text-gray-500">
           <MapPin className="w-16 h-16 mx-auto mb-4 text-gray-300" />
-          <h3 className="text-xl font-semibold mb-2">Selecciona un departamento</h3>
+          <h3 className="text-xl font-semibold mb-2">Select a department</h3>
           <p className="text-sm">
-            Haz clic en cualquier departamento del mapa para ver información detallada.
+            Click on any department on the map to see detailed information.
           </p>
         </div>
       </div>
@@ -48,7 +48,7 @@ export const RegionInfoPanel: React.FC<RegionInfoPanelProps> = ({ region }) => {
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="relative z-10 text-center">
           <h2 className="text-2xl font-bold">{region.name}</h2>
-          <p className="text-sm opacity-90">Departamento de Nicaragua</p>
+          <p className="text-sm opacity-90">Department of Nicaragua</p>
         </div>
       </div>
       
@@ -57,7 +57,7 @@ export const RegionInfoPanel: React.FC<RegionInfoPanelProps> = ({ region }) => {
         <div className="bg-gray-50 rounded-lg p-4">
           <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
             <MapPin className="w-5 h-5 mr-2" />
-            Información General
+            General Information
           </h3>
           
           {/* Basic Info */}
@@ -65,7 +65,7 @@ export const RegionInfoPanel: React.FC<RegionInfoPanelProps> = ({ region }) => {
             <div className="bg-white rounded-lg p-3 shadow-sm">
               <div className="flex items-center mb-2">
                 <MapPin className="w-4 h-4 text-gray-600 mr-2" />
-                <span className="font-semibold text-gray-700 text-sm">Área</span>
+                <span className="font-semibold text-gray-700 text-sm">Area</span>
               </div>
               <p className="text-lg font-bold text-gray-900">{region.coffeeInfo.area}</p>
             </div>
@@ -73,7 +73,7 @@ export const RegionInfoPanel: React.FC<RegionInfoPanelProps> = ({ region }) => {
             <div className="bg-white rounded-lg p-3 shadow-sm">
               <div className="flex items-center mb-2">
                 <Mountain className="w-4 h-4 text-gray-600 mr-2" />
-                <span className="font-semibold text-gray-700 text-sm">Altitud</span>
+                <span className="font-semibold text-gray-700 text-sm">Altitude</span>
               </div>
               <p className="text-lg font-bold text-gray-900">{region.coffeeInfo.altitude}</p>
             </div>
@@ -83,7 +83,7 @@ export const RegionInfoPanel: React.FC<RegionInfoPanelProps> = ({ region }) => {
           <div className="bg-green-50 rounded-lg p-3 mb-4">
             <div className="flex items-center mb-2">
               <TrendingUp className="w-4 h-4 text-green-600 mr-2" />
-              <span className="font-semibold text-green-700 text-sm">Producción Principal</span>
+              <span className="font-semibold text-green-700 text-sm">Main Production</span>
             </div>
             <p className="text-base font-bold text-green-900">{region.coffeeInfo.production}</p>
           </div>
@@ -92,7 +92,7 @@ export const RegionInfoPanel: React.FC<RegionInfoPanelProps> = ({ region }) => {
           <div className="mb-4">
             <div className="flex items-center mb-3">
               <Building className="w-4 h-4 text-gray-600 mr-2" />
-              <span className="font-semibold text-gray-700 text-sm">Municipios</span>
+              <span className="font-semibold text-gray-700 text-sm">Municipalities</span>
             </div>
             <div className="flex flex-wrap gap-2">
               {region.coffeeInfo.municipalities.map((municipality, index) => (
