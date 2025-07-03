@@ -10,6 +10,7 @@ const Navigation = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Our Farms', href: '/farms' },
+    { name: 'Nicaragua', href: '/nicaragua' },
     { name: 'Contact', href: '/contact' },
   ];
 
