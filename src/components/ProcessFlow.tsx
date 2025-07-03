@@ -9,18 +9,18 @@ const ProcessFlow = () => {
 
   const processes = [
     {
+      title: "HAND SORT",
+      description: "Hand picking to separate non-optimal state of ripeness, greens, dried and unripe cherries.",
+      details: "Our skilled workers carefully hand-pick each coffee cherry to ensure optimal ripeness. This meticulous process removes green, dried, and unripe cherries, ensuring only the finest quality fruit moves forward in our process.",
+      icon: Search,
+      image: "/lovable-uploads/d926c5ea-294f-420b-9058-767dd7f68fb9.png"
+    },
+    {
       title: "CLASSIFICATION",
       description: "Floating, separating green leaves and stones. This initial step ensures only the highest quality cherries proceed to the next stage.",
       details: "Our classification process uses advanced floating techniques to separate coffee cherries by density. This removes impurities like stones, green leaves, and damaged cherries, ensuring only premium quality fruit moves forward in our process.",
       icon: Coffee,
       image: "/lovable-uploads/d41c4dad-46b4-40d6-805c-77ee90fc12d0.png"
-    },
-    {
-      title: "ELECTRONIC - HAND SORT",
-      description: "Electronic and hand picking to separate non-optimal state of ripeness, greens, dried and unripe cherries.",
-      details: "We combine cutting-edge electronic sorting technology with skilled hand-picking to achieve unparalleled precision. This dual approach ensures consistent ripeness levels and removes any remaining defects.",
-      icon: Search,
-      image: "/lovable-uploads/d926c5ea-294f-420b-9058-767dd7f68fb9.png"
     },
     {
       title: "FERMENTATION",
@@ -48,7 +48,7 @@ const ProcessFlow = () => {
       description: "Coffee is stored at optimal conditions to preserve quality and characteristics.",
       details: "Our climate-controlled warehouses maintain ideal temperature and humidity levels. Coffee is stored in specialized containers that protect against moisture and contamination while preserving flavor integrity.",
       icon: Warehouse,
-      image: "/lovable-uploads/2eae116d-024c-4086-9690-c8cb6535853f"
+      image: "/lovable-uploads/2eae116d-024c-4086-9690-c8cb6535853f.png"
     },
     {
       title: "MILLING & PACKING",
@@ -105,7 +105,7 @@ const ProcessFlow = () => {
                 <img
                   src={processes[activeStep].image}
                   alt={processes[activeStep].title}
-                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
               </div>
               
