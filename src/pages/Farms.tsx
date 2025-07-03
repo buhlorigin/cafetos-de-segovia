@@ -13,10 +13,11 @@ const Farms = () => {
       name: "Finca Bethania",
       description: "Nestled in the high-altitude mountains of Dipilto, Finca Bethania represents three generations of coffee excellence. This family-managed farm spans 25 hectares of pristine mountainous terrain, where traditional farming methods meet innovative processing techniques. The farm's unique microclimate creates perfect conditions for slow cherry maturation, resulting in complex flavor profiles. Bethania consistently produces Cup of Excellence level quality coffees, with several lots scoring above 85 points.",
       images: [
-        "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "/lovable-uploads/c583d705-3f60-4df4-8cfa-ac3538d6d036.png",
+        "/lovable-uploads/61079dbc-cb5a-4ea7-ba8c-a3386a5c6671.png",
+        "/lovable-uploads/ad277da2-06aa-4822-8f6b-4cf494471a2e.png",
+        "/lovable-uploads/52010541-91f5-494c-909b-02fc63d9e224.png",
+        "/lovable-uploads/2fb707ad-4139-4528-9715-3a9f2960ad90.png"
       ],
       details: {
         location: "Dipilto, Nueva Segovia",
