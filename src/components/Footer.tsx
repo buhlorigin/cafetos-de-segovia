@@ -48,8 +48,8 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-stone-300">
               <p>Nueva Segovia, Nicaragua</p>
-              <p>export@cafetosdesegovia.com</p>
-              <p>+505 2345 6789</p>
+              <p>ana@cafetosdesegovia.com</p>
+              <p>+505 8733 1928</p>
             </div>
           </div>
         </div>
