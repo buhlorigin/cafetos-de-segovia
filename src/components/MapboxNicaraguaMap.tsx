@@ -132,11 +132,13 @@ const regions: Region[] = [
 export const MapboxNicaraguaMap: React.FC<MapboxNicaraguaMapProps> = ({ onRegionSelect, selectedRegion }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState('');
   const [isMapInitialized, setIsMapInitialized] = useState(false);
+  
+  // Use the provided Mapbox token
+  const mapboxToken = 'pk.eyJ1IjoiYnVobG9yaWdpbiIsImEiOiJjbWNtNWhvaDAwYm03MmpzZGd3M2t3aDQ2In0.MtZWli9bG73mspo2-2ct8Q';
 
   const initializeMap = () => {
-    if (!mapContainer.current || !mapboxToken.trim()) return;
+    if (!mapContainer.current) return;
 
     try {
       mapboxgl.accessToken = mapboxToken;
@@ -269,6 +271,7 @@ export const MapboxNicaraguaMap: React.FC<MapboxNicaraguaMapProps> = ({ onRegion
   }, [selectedRegion, isMapInitialized]);
 
   useEffect(() => {
+    initializeMap();
     return () => {
       map.current?.remove();
     };
@@ -276,58 +279,22 @@ export const MapboxNicaraguaMap: React.FC<MapboxNicaraguaMapProps> = ({ onRegion
 
   return (
     <div className="relative w-full h-full">
-      {!mapboxToken && (
-        <div className="absolute inset-0 bg-white bg-opacity-95 z-10 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full mx-4">
-            <h3 className="text-lg font-bold text-gray-800 mb-4">Configurar Mapbox</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              Para mostrar el mapa interactivo, necesitas un token público de Mapbox. 
-              Puedes obtenerlo gratis en{' '}
-              <a 
-                href="https://mapbox.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                mapbox.com
-              </a>
-            </p>
-            <input
-              type="text"
-              placeholder="Ingresa tu token público de Mapbox"
-              value={mapboxToken}
-              onChange={(e) => setMapboxToken(e.target.value)}
-              className="w-full p-3 border border-gray-300 rounded-lg mb-4"
-            />
-            <button
-              onClick={initializeMap}
-              disabled={!mapboxToken.trim()}
-              className="w-full bg-amber-600 hover:bg-amber-700 disabled:bg-gray-300 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
-            >
-              Cargar Mapa
-            </button>
-          </div>
-        </div>
-      )}
-      
       <div ref={mapContainer} className="absolute inset-0 rounded-lg shadow-lg" />
       
-      {mapboxToken && (
-        <div className="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
-          <h4 className="text-sm font-bold text-gray-800 mb-2">Departamentos Cafeteros</h4>
-          <div className="space-y-1">
-            {regions.map((region) => (
-              <div key={region.id} className="flex items-center text-xs">
-                <div
-                  className="w-3 h-3 rounded-full mr-2"
-                  style={{ backgroundColor: region.color }}
-                ></div>
-                <span className="text-gray-700">{region.name}</span>
-              </div>
-            ))}
-          </div>
+      <div className="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
+        <h4 className="text-sm font-bold text-gray-800 mb-2">Departamentos Cafeteros</h4>
+        <div className="space-y-1">
+          {regions.map((region) => (
+            <div key={region.id} className="flex items-center text-xs">
+              <div
+                className="w-3 h-3 rounded-full mr-2"
+                style={{ backgroundColor: region.color }}
+              ></div>
+              <span className="text-gray-700">{region.name}</span>
+            </div>
+          ))}
         </div>
-      )}
+      </div>
     </div>
   );
 };

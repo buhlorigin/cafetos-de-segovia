@@ -8,6 +8,7 @@ import EnhancedMapbox from '../components/EnhancedMapbox';
 const Farms = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({ bethania: 0, hortensias: 0 });
   const [bethaniaImageIndex, setBethaniaImageIndex] = useState(0);
+  const [hortensiaImageIndex, setHortensiaImageIndex] = useState(0);
 
   const farms = [
     {
@@ -31,10 +32,11 @@ const Farms = () => {
       name: "Finca Las Hortensias",
       description: "Located in Buenos Aires, Dipilto, at 1,250–1,450 m with constant breezes and morning mist. A small 10-hectare farm passed through generations, known for its floral surroundings and expressive lots. It's a finalist of the Nicaragua Cup of Excellence multiple times. Here, tradition inspires innovation: they use careful fermentation, natural shade and biodiversity, creating lots that reflect both patience and purpose.",
       images: [
-        "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1469041797191-50ace28483c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "/lovable-uploads/2b6cfe6f-9101-406b-9e51-7a0c2a273fff.png",
+        "/lovable-uploads/4f4c2833-b318-4108-8165-924ad5cfb8c3.png",
+        "/lovable-uploads/376c0056-37ee-48ff-aa28-93b13e5bf4f2.png",
+        "/lovable-uploads/ed78fb31-f8e1-405d-8294-7a05021c5bd0.png",
+        "/lovable-uploads/7c02df0f-01a0-4c8f-a12c-dcbc5c934000.png"
       ],
       details: {
         location: "Buenos Aires, Dipilto",
@@ -77,13 +79,22 @@ const Farms = () => {
 
   // Auto-change background images for Finca Bethania every 3 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
+    const bethaniaInterval = setInterval(() => {
       setBethaniaImageIndex(prev => 
         prev === farms[0].images.length - 1 ? 0 : prev + 1
       );
     }, 3000);
 
-    return () => clearInterval(interval);
+    const hortensiaInterval = setInterval(() => {
+      setHortensiaImageIndex(prev => 
+        prev === farms[1].images.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => {
+      clearInterval(bethaniaInterval);
+      clearInterval(hortensiaInterval);
+    };
   }, [farms]);
 
   return (
@@ -183,91 +194,74 @@ const Farms = () => {
             </div>
           </section>
         ) : (
-          // Regular layout for other farms
-          <section key={farm.name} className="py-16 bg-stone-50">
-            <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:grid-flow-col-dense">
-                <div className="lg:col-start-2">
-                  <h2 className="text-4xl font-bold text-stone-800 mb-6">
-                    <span className="text-amber-700">{farm.name}</span>
-                  </h2>
-                  <p className="text-lg text-stone-600 leading-relaxed mb-8">
-                    {farm.description}
-                  </p>
-                  
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div>
-                      <h4 className="font-semibold text-stone-700 mb-1">Location</h4>
-                      <p className="text-stone-600">{farm.details.location}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-stone-700 mb-1">Altitude</h4>
-                      <p className="text-stone-600">{farm.details.altitude}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-stone-700 mb-1">Varieties</h4>
-                      <p className="text-stone-600">{farm.details.varieties}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-stone-700 mb-1">Processing</h4>
-                      <p className="text-stone-600">{farm.details.processing}</p>
-                    </div>
-                  </div>
+          // Special layout for Finca Las Hortensias with background slideshow
+          <section key={farm.name} className="relative min-h-screen">
+            {/* Background Images with Auto-slideshow */}
+            <div className="absolute inset-0">
+              {farm.images.map((image, imageIndex) => (
+                <div
+                  key={imageIndex}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    imageIndex === hortensiaImageIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  <img
+                    src={image}
+                    alt={`${farm.name} - Image ${imageIndex + 1}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                
-                {/* Instagram-style Photo Gallery for other farms */}
-                <div className="lg:col-start-1">
-                  <div className="relative">
-                    <div className="overflow-hidden rounded-2xl shadow-lg">
-                      <div 
-                        className="flex transition-transform duration-300 ease-out"
-                        style={{ 
-                          transform: `translateX(-${activeImageIndex.hortensias * 80}%)`,
-                          width: `${farm.images.length * 100}%`
-                        }}
-                      >
-                        {farm.images.map((image, imageIndex) => (
-                          <div key={imageIndex} className="w-full flex-shrink-0 relative" style={{ width: '80%' }}>
-                            <img
-                              src={image}
-                              alt={`${farm.name} - Image ${imageIndex + 1}`}
-                              className="w-full h-96 object-cover"
-                            />
-                            {imageIndex < farm.images.length - 1 && (
-                              <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-r from-transparent to-black/20"></div>
-                            )}
-                          </div>
-                        ))}
+              ))}
+              {/* Dark overlay for text readability */}
+              <div className="absolute inset-0 bg-black/30"></div>
+            </div>
+
+            {/* Content Container */}
+            <div className="relative z-10 min-h-screen flex items-center">
+              <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+                  
+                  {/* Empty left side - let the image show through */}
+                  <div className="hidden lg:block"></div>
+
+                  {/* Text Content with Blurred Background - positioned on the right */}
+                  <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                      <span className="text-amber-300">{farm.name}</span>
+                    </h2>
+                    <p className="text-lg text-white/90 leading-relaxed mb-8">
+                      {farm.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-8">
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">Location</h4>
+                        <p className="text-white/90">{farm.details.location}</p>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">Altitude</h4>
+                        <p className="text-white/90">{farm.details.altitude}</p>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">Varieties</h4>
+                        <p className="text-white/90">{farm.details.varieties}</p>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">Processing</h4>
+                        <p className="text-white/90">{farm.details.processing}</p>
                       </div>
                     </div>
-                    
-                    {/* Navigation buttons */}
-                    <button
-                      onClick={() => handleImageScroll(farmIndex, 'prev')}
-                      className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
-                    >
-                      <ChevronLeft className="w-5 h-5 text-stone-700" />
-                    </button>
-                    <button
-                      onClick={() => handleImageScroll(farmIndex, 'next')}
-                      className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
-                    >
-                      <ChevronRight className="w-5 h-5 text-stone-700" />
-                    </button>
-                    
+
                     {/* Image indicators */}
-                    <div className="flex justify-center mt-4 space-x-2">
+                    <div className="flex justify-center space-x-3">
                       {farm.images.map((_, imageIndex) => (
                         <button
                           key={imageIndex}
-                          onClick={() => setActiveImageIndex(prev => ({ 
-                            ...prev, 
-                            hortensias: imageIndex 
-                          }))}
-                          className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                            activeImageIndex.hortensias === imageIndex 
-                              ? 'bg-amber-700 scale-125' 
-                              : 'bg-stone-300'
+                          onClick={() => setHortensiaImageIndex(imageIndex)}
+                          className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                            hortensiaImageIndex === imageIndex 
+                              ? 'bg-amber-300 scale-125' 
+                              : 'bg-white/50 hover:bg-white/70'
                           }`}
                         />
                       ))}
