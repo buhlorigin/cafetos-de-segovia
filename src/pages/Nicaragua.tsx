@@ -80,49 +80,6 @@ const Nicaragua = () => {
         </div>
       </section>
 
-      {/* Coffee Regions Overview */}
-      <section className="py-16 bg-stone-50">
-        <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h2 className="text-4xl font-bold text-amber-800 text-center mb-12">
-            Regiones Cafeteras de Nicaragua
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-amber-700 mb-4">Nueva Segovia</h3>
-              <p className="text-stone-600 mb-4">
-                Región montañosa fronteriza con Honduras, conocida por sus cafés de altura 
-                con perfiles aromáticos complejos y acidez balanceada.
-              </p>
-              <div className="text-sm text-stone-500">
-                <span className="font-semibold">Altitud:</span> 800-1,400 msnm
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-amber-700 mb-4">Jinotega</h3>
-              <p className="text-stone-600 mb-4">
-                El mayor productor de café del país, con clima fresco de montaña 
-                y suelos volcánicos ricos que producen cafés premium.
-              </p>
-              <div className="text-sm text-stone-500">
-                <span className="font-semibold">Altitud:</span> 1,000-1,500 msnm
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-amber-700 mb-4">Matagalpa</h3>
-              <p className="text-stone-600 mb-4">
-                Conocida como la "Capital del Café", con tradición cafetalera histórica 
-                y producción de cafés gourmet de competencia.
-              </p>
-              <div className="text-sm text-stone-500">
-                <span className="font-semibold">Altitud:</span> 800-1,300 msnm
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

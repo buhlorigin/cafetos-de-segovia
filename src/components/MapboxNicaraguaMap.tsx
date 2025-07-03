@@ -281,20 +281,6 @@ export const MapboxNicaraguaMap: React.FC<MapboxNicaraguaMapProps> = ({ onRegion
     <div className="relative w-full h-full">
       <div ref={mapContainer} className="absolute inset-0 rounded-lg shadow-lg" />
       
-      <div className="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
-        <h4 className="text-sm font-bold text-gray-800 mb-2">Departamentos Cafeteros</h4>
-        <div className="space-y-1">
-          {regions.map((region) => (
-            <div key={region.id} className="flex items-center text-xs">
-              <div
-                className="w-3 h-3 rounded-full mr-2"
-                style={{ backgroundColor: region.color }}
-              ></div>
-              <span className="text-gray-700">{region.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };

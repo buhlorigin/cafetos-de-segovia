@@ -106,23 +106,6 @@ export const RegionInfoPanel: React.FC<RegionInfoPanelProps> = ({ region }) => {
             </div>
           </div>
           
-          {/* Characteristics */}
-          <div>
-            <div className="flex items-center mb-3">
-              <Award className="w-4 h-4 text-gray-600 mr-2" />
-              <span className="font-semibold text-gray-700 text-sm">Características</span>
-            </div>
-            <div className="space-y-2">
-              {region.coffeeInfo.characteristics.map((characteristic, index) => (
-                <div
-                  key={index}
-                  className="flex items-center p-2 bg-amber-50 rounded-lg border-l-4 border-amber-400"
-                >
-                  <span className="text-amber-800 font-medium text-sm">{characteristic}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </div>
