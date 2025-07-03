@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { NicaraguaMap } from '../components/NicaraguaMap';
+import { MapboxNicaraguaMap } from '../components/MapboxNicaraguaMap';
 import { RegionInfoPanel } from '../components/RegionInfoPanel';
 import { CoffeeSpiderChart } from '../components/CoffeeSpiderChart';
 
@@ -9,6 +9,7 @@ interface Region {
   id: string;
   name: string;
   color: string;
+  coordinates: [number, number];
   coffeeInfo: {
     denomination: string;
     area: string;
@@ -51,10 +52,10 @@ const Nicaragua = () => {
             {/* Map */}
             <div className="bg-stone-50 rounded-2xl p-6 shadow-lg">
               <h3 className="text-2xl font-bold text-amber-700 mb-6 text-center">
-                Mapa Interactivo de Regiones Cafeteras
+                Mapa Interactivo de Departamentos Cafeteros
               </h3>
               <div className="h-96">
-                <NicaraguaMap 
+                <MapboxNicaraguaMap 
                   onRegionSelect={setSelectedRegion}
                   selectedRegion={selectedRegion}
                 />
