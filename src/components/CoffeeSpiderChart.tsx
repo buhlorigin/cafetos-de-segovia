@@ -110,29 +110,52 @@ export const CoffeeSpiderChart: React.FC<CoffeeSpiderChartProps> = ({ regionId, 
     <div className="bg-white rounded-lg p-6 border border-amber-200">
       <h4 className="text-xl font-bold text-amber-900 mb-4">Coffee Characteristics</h4>
       
-      {/* Denomination of Origin */}
-      <div className="mb-6">
-        <div className="flex items-center mb-3">
-          <Award className="w-4 h-4 text-gray-600 mr-2" />
-          <span className="font-semibold text-gray-700 text-sm">Denomination of Origin</span>
-        </div>
-        <div className="bg-blue-50 rounded-lg p-3 border-l-4 border-blue-400">
-          <span className="text-blue-800 font-medium text-sm">
-            {(() => {
-              const denominations = {
-                'nueva-segovia': 'Café Dipilto - Protected Designation of Origin',
-                'jinotega': 'Café Cuspire - Protected Designation of Origin',
-                'madriz': 'Café Wiwilí Jinotega - Protected Designation of Origin',
-                'esteli': 'Regional Production Area',
-                'matagalpa': 'Coffee Capital - Historic Production Zone',
-                'rivas': 'Emerging Specialty Coffee Zone',
-                'boaco': 'Diversified Production Region'
-              };
-              return denominations[regionId as keyof typeof denominations] || 'Regional Coffee Production';
-            })()}
-          </span>
-        </div>
-      </div>
+      {/* Denomination of Origin - Only for regions that have it */}
+      {(() => {
+        const denominationInfo = {
+          'nueva-segovia': {
+            name: 'Café Dipilto',
+            description: 'The first Designation of Origin of Nicaragua, characterized by its location and processes in the city of specialty coffees.'
+          },
+          'jinotega': {
+            name: 'Café Cuspire',
+            description: 'Surrounded by San Rafael del Norte, Jinotega, Santa María de Pantasma and San Sebastián de Yalí, an area of 424 km² with topography, soil and climatic conditions appropriate for coffee cultivation.'
+          },
+          'madriz': {
+            name: 'Café Wiwilí',
+            description: 'Has a geographical extension of 2,444.7 km² with the municipalities of Cuá, Bocay and Santa María de Pantasma, which belong to the great Kilambé Massif Natural Reserve.'
+          },
+          'rivas': {
+            name: 'La Isla de Ometepe',
+            description: 'Has a surface area of 276 km², divided into two municipalities, Moyogalpa and Altagracia. This land produces more than 265 quintals in 165 hectares of established organic coffee.'
+          }
+        };
+        
+        const info = denominationInfo[regionId as keyof typeof denominationInfo];
+        
+        return info ? (
+          <div className="mb-6">
+            <div className="flex items-center mb-3">
+              <Award className="w-4 h-4 text-gray-600 mr-2" />
+              <span className="font-semibold text-gray-700 text-sm">Designation of Origin</span>
+            </div>
+            <div className="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
+              <h5 className="font-bold text-blue-900 mb-2">{info.name}</h5>
+              <p className="text-blue-800 text-sm leading-relaxed">{info.description}</p>
+            </div>
+          </div>
+        ) : (
+          <div className="mb-6">
+            <div className="flex items-center mb-3">
+              <Award className="w-4 h-4 text-gray-600 mr-2" />
+              <span className="font-semibold text-gray-700 text-sm">Production Status</span>
+            </div>
+            <div className="bg-gray-50 rounded-lg p-3 border-l-4 border-gray-400">
+              <span className="text-gray-700 font-medium text-sm">Regional Coffee Production (No Designation of Origin)</span>
+            </div>
+          </div>
+        );
+      })()}
       
       {/* Region Characteristics */}
       <div className="mb-6">
