@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <iframe
           className="w-full h-full object-cover scale-150"
-          src="https://www.youtube.com/embed/MkDChW801tU?autoplay=1&mute=1&loop=1&playlist=MkDChW801tU&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+          src="https://www.youtube.com/embed/MkDChW801tU?autoplay=1&mute=1&loop=1&playlist=MkDChW801tU&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&start=0&end=0&version=3&playsinline=1&disablekb=1&fs=0&cc_load_policy=0&hl=en&color=white&enablejsapi=1"
           title="Coffee farm background video"
           frameBorder="0"
           allow="autoplay; encrypted-media"
