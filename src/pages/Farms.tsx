@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -7,6 +7,7 @@ import EnhancedMapbox from '../components/EnhancedMapbox';
 
 const Farms = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({ bethania: 0, hortensias: 0 });
+  const [bethaniaImageIndex, setBethaniaImageIndex] = useState(0);
 
   const farms = [
     {
@@ -74,6 +75,17 @@ const Farms = () => {
     setActiveImageIndex(prev => ({ ...prev, [farmKey]: newIndex }));
   };
 
+  // Auto-change background images for Finca Bethania every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBethaniaImageIndex(prev => 
+        prev === farms[0].images.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [farms]);
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -92,99 +104,180 @@ const Farms = () => {
 
       {/* Farms Section */}
       {farms.map((farm, farmIndex) => (
-        <section key={farm.name} className={`py-16 ${farmIndex % 2 === 0 ? 'bg-white' : 'bg-stone-50'}`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${farmIndex % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-              <div className={farmIndex % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <h2 className="text-4xl font-bold text-stone-800 mb-6">
-                  <span className="text-amber-700">{farm.name}</span>
-                </h2>
-                <p className="text-lg text-stone-600 leading-relaxed mb-8">
-                  {farm.description}
-                </p>
-                
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  <div>
-                    <h4 className="font-semibold text-stone-700 mb-1">Location</h4>
-                    <p className="text-stone-600">{farm.details.location}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-stone-700 mb-1">Altitude</h4>
-                    <p className="text-stone-600">{farm.details.altitude}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-stone-700 mb-1">Varieties</h4>
-                    <p className="text-stone-600">{farm.details.varieties}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-stone-700 mb-1">Processing</h4>
-                    <p className="text-stone-600">{farm.details.processing}</p>
-                  </div>
+        farmIndex === 0 ? (
+          // Special layout for Finca Bethania with background slideshow
+          <section key={farm.name} className="relative min-h-screen">
+            {/* Background Images with Auto-slideshow */}
+            <div className="absolute inset-0">
+              {farm.images.map((image, imageIndex) => (
+                <div
+                  key={imageIndex}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    imageIndex === bethaniaImageIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  <img
+                    src={image}
+                    alt={`${farm.name} - Image ${imageIndex + 1}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </div>
-              
-              {/* Instagram-style Photo Gallery */}
-              <div className={farmIndex % 2 === 1 ? 'lg:col-start-1' : ''}>
-                <div className="relative">
-                  <div className="overflow-hidden rounded-2xl shadow-lg">
-                    <div 
-                      className="flex transition-transform duration-300 ease-out"
-                      style={{ 
-                        transform: `translateX(-${activeImageIndex[farmIndex === 0 ? 'bethania' : 'hortensias'] * 80}%)`,
-                        width: `${farm.images.length * 100}%`
-                      }}
-                    >
-                      {farm.images.map((image, imageIndex) => (
-                        <div key={imageIndex} className="w-full flex-shrink-0 relative" style={{ width: '80%' }}>
-                          <img
-                            src={image}
-                            alt={`${farm.name} - Image ${imageIndex + 1}`}
-                            className="w-full h-96 object-cover"
-                          />
-                          {imageIndex < farm.images.length - 1 && (
-                            <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-r from-transparent to-black/20"></div>
-                          )}
-                        </div>
+              ))}
+              {/* Dark overlay for text readability */}
+              <div className="absolute inset-0 bg-black/30"></div>
+            </div>
+
+            {/* Content Container */}
+            <div className="relative z-10 min-h-screen flex items-center">
+              <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+                  
+                  {/* Text Content with Blurred Background */}
+                  <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                      <span className="text-amber-300">{farm.name}</span>
+                    </h2>
+                    <p className="text-lg text-white/90 leading-relaxed mb-8">
+                      {farm.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-8">
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">Location</h4>
+                        <p className="text-white/90">{farm.details.location}</p>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">Altitude</h4>
+                        <p className="text-white/90">{farm.details.altitude}</p>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">Varieties</h4>
+                        <p className="text-white/90">{farm.details.varieties}</p>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">Processing</h4>
+                        <p className="text-white/90">{farm.details.processing}</p>
+                      </div>
+                    </div>
+
+                    {/* Image indicators */}
+                    <div className="flex justify-center space-x-3">
+                      {farm.images.map((_, imageIndex) => (
+                        <button
+                          key={imageIndex}
+                          onClick={() => setBethaniaImageIndex(imageIndex)}
+                          className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                            bethaniaImageIndex === imageIndex 
+                              ? 'bg-amber-300 scale-125' 
+                              : 'bg-white/50 hover:bg-white/70'
+                          }`}
+                        />
                       ))}
                     </div>
                   </div>
+
+                  {/* Right side - let the image show through */}
+                  <div className="hidden lg:block"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : (
+          // Regular layout for other farms
+          <section key={farm.name} className="py-16 bg-stone-50">
+            <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:grid-flow-col-dense">
+                <div className="lg:col-start-2">
+                  <h2 className="text-4xl font-bold text-stone-800 mb-6">
+                    <span className="text-amber-700">{farm.name}</span>
+                  </h2>
+                  <p className="text-lg text-stone-600 leading-relaxed mb-8">
+                    {farm.description}
+                  </p>
                   
-                  {/* Navigation buttons */}
-                  <button
-                    onClick={() => handleImageScroll(farmIndex, 'prev')}
-                    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
-                  >
-                    <ChevronLeft className="w-5 h-5 text-stone-700" />
-                  </button>
-                  <button
-                    onClick={() => handleImageScroll(farmIndex, 'next')}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
-                  >
-                    <ChevronRight className="w-5 h-5 text-stone-700" />
-                  </button>
-                  
-                  {/* Image indicators */}
-                  <div className="flex justify-center mt-4 space-x-2">
-                    {farm.images.map((_, imageIndex) => (
-                      <button
-                        key={imageIndex}
-                        onClick={() => setActiveImageIndex(prev => ({ 
-                          ...prev, 
-                          [farmIndex === 0 ? 'bethania' : 'hortensias']: imageIndex 
-                        }))}
-                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                          activeImageIndex[farmIndex === 0 ? 'bethania' : 'hortensias'] === imageIndex 
-                            ? 'bg-amber-700 scale-125' 
-                            : 'bg-stone-300'
-                        }`}
-                      />
-                    ))}
+                  <div className="grid grid-cols-2 gap-4 mb-8">
+                    <div>
+                      <h4 className="font-semibold text-stone-700 mb-1">Location</h4>
+                      <p className="text-stone-600">{farm.details.location}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-stone-700 mb-1">Altitude</h4>
+                      <p className="text-stone-600">{farm.details.altitude}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-stone-700 mb-1">Varieties</h4>
+                      <p className="text-stone-600">{farm.details.varieties}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-stone-700 mb-1">Processing</h4>
+                      <p className="text-stone-600">{farm.details.processing}</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Instagram-style Photo Gallery for other farms */}
+                <div className="lg:col-start-1">
+                  <div className="relative">
+                    <div className="overflow-hidden rounded-2xl shadow-lg">
+                      <div 
+                        className="flex transition-transform duration-300 ease-out"
+                        style={{ 
+                          transform: `translateX(-${activeImageIndex.hortensias * 80}%)`,
+                          width: `${farm.images.length * 100}%`
+                        }}
+                      >
+                        {farm.images.map((image, imageIndex) => (
+                          <div key={imageIndex} className="w-full flex-shrink-0 relative" style={{ width: '80%' }}>
+                            <img
+                              src={image}
+                              alt={`${farm.name} - Image ${imageIndex + 1}`}
+                              className="w-full h-96 object-cover"
+                            />
+                            {imageIndex < farm.images.length - 1 && (
+                              <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-r from-transparent to-black/20"></div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Navigation buttons */}
+                    <button
+                      onClick={() => handleImageScroll(farmIndex, 'prev')}
+                      className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+                    >
+                      <ChevronLeft className="w-5 h-5 text-stone-700" />
+                    </button>
+                    <button
+                      onClick={() => handleImageScroll(farmIndex, 'next')}
+                      className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+                    >
+                      <ChevronRight className="w-5 h-5 text-stone-700" />
+                    </button>
+                    
+                    {/* Image indicators */}
+                    <div className="flex justify-center mt-4 space-x-2">
+                      {farm.images.map((_, imageIndex) => (
+                        <button
+                          key={imageIndex}
+                          onClick={() => setActiveImageIndex(prev => ({ 
+                            ...prev, 
+                            hortensias: imageIndex 
+                          }))}
+                          className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                            activeImageIndex.hortensias === imageIndex 
+                              ? 'bg-amber-700 scale-125' 
+                              : 'bg-stone-300'
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )
       ))}
 
       {/* Certifications Section */}
