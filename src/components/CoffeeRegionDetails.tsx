@@ -138,13 +138,13 @@ export const CoffeeRegionDetails: React.FC<CoffeeRegionDetailsProps> = ({ region
 
         {/* Right Side - Sensory Diagram */}
         <div>
+          <div className="flex items-center mb-6">
+            <div className="w-4 h-4 bg-amber-500 rounded-full mr-3"></div>
+            <h4 className="text-xl font-bold text-amber-800">
+              Coffee Sensory Diagram
+            </h4>
+          </div>
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <div className="flex items-center mb-6">
-              <div className="w-4 h-4 bg-amber-500 rounded-full mr-3"></div>
-              <h4 className="text-xl font-bold text-amber-800">
-                Coffee Sensory Diagram
-              </h4>
-            </div>
             <div className="h-80">
               <CoffeeSpiderChart 
                 regionId={region.id} 
