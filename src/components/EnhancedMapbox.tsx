@@ -12,12 +12,12 @@ const EnhancedMapbox = () => {
   const farmLocations = [
     {
       name: "Finca Bethania",
-      coordinates: [-86.1167, 13.7167], // Dipilto, Nueva Segovia
+      coordinates: [-86.500, 13.717], // Dipilto, Nueva Segovia
       description: "High-altitude farm producing Cup of Excellence level quality coffees"
     },
     {
       name: "Finca Las Hortensias", 
-      coordinates: [-86.1000, 13.7000], // Buenos Aires, Dipilto
+      coordinates: [-86.485, 13.705], // Buenos Aires, Dipilto
       description: "Multiple Cup of Excellence finalist with expressive lots"
     }
   ];
@@ -30,7 +30,7 @@ const EnhancedMapbox = () => {
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/satellite-streets-v12',
-      center: [-86.1, 13.7], // Nueva Segovia, Nicaragua
+      center: [-86.490, 13.710], // Nueva Segovia, Nicaragua
       zoom: 10,
       pitch: 45,
       bearing: -15
@@ -98,11 +98,11 @@ const EnhancedMapbox = () => {
           geometry: {
             type: 'Polygon',
             coordinates: [[
-              [-86.3, 13.5],
-              [-85.8, 13.5], 
-              [-85.8, 13.9],
-              [-86.3, 13.9],
-              [-86.3, 13.5]
+              [-86.6, 13.6],
+              [-86.4, 13.6], 
+              [-86.4, 13.8],
+              [-86.6, 13.8],
+              [-86.6, 13.6]
             ]]
           }
         }
@@ -132,7 +132,7 @@ const EnhancedMapbox = () => {
       // Smooth flyTo animation showcasing the region
       setTimeout(() => {
         map.current?.flyTo({
-          center: [-86.1, 13.7],
+          center: [-86.490, 13.710],
           zoom: 11,
           pitch: 60,
           bearing: 30,
