@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import { MapboxNicaraguaMap } from '../components/MapboxNicaraguaMap';
 import { RegionInfoPanel } from '../components/RegionInfoPanel';
 import { CoffeeSpiderChart } from '../components/CoffeeSpiderChart';
+import { CoffeeRegionDetails } from '../components/CoffeeRegionDetails';
 
 interface Region {
   id: string;
@@ -68,14 +69,9 @@ const Nicaragua = () => {
             </div>
           </div>
           
-          {/* Coffee Spider Chart */}
+          {/* Coffee Region Details */}
           {selectedRegion && (
-            <div className="mt-12">
-              <CoffeeSpiderChart 
-                regionId={selectedRegion.id} 
-                regionName={selectedRegion.name} 
-              />
-            </div>
+            <CoffeeRegionDetails region={selectedRegion} />
           )}
         </div>
       </section>
