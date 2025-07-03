@@ -52,7 +52,7 @@ const Services = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/lovable-uploads/3a6c8eee-a550-4834-9d40-6f420bc8dcaf.png"
                 alt="Coffee producers working on farm"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
@@ -67,7 +67,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/lovable-uploads/d9962495-1738-46ba-90fd-d2f8b067f5ed.png"
                 alt="Coffee cupping and quality control"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
