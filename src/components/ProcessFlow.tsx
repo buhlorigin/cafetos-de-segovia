@@ -138,7 +138,7 @@ const ProcessFlow = () => {
             <div 
               className="absolute left-6 top-0 w-0.5 bg-amber-700 transition-all duration-500 ease-out"
               style={{
-                height: `${((activeStep + 1) / processes.length) * 100}%`
+                height: `${(Math.min(activeStep + 1, processes.length - 1) / (processes.length - 1)) * 100}%`
               }}
             ></div>
 

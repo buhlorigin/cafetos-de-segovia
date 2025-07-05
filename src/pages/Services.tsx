@@ -106,7 +106,7 @@ const Services = () => {
       <ProcessFlow />
 
       {/* Certifications Section */}
-      <section className="py-20 bg-gradient-to-br from-amber-50 to-stone-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-stone-800 mb-6">
@@ -118,14 +118,14 @@ const Services = () => {
           </div>
           
           <div className="flex justify-center items-center space-x-12">
-            <div className="bg-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 text-center transform hover:scale-105">
+            <div className="bg-stone-50 rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 text-center transform hover:scale-105">
               <div className="w-32 h-32 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-amber-700 text-2xl font-bold">HACCP</span>
               </div>
               <h3 className="font-bold text-stone-800 text-lg">HACCP</h3>
               <p className="text-stone-600 text-sm mt-2">Hazard Analysis Critical Control Points</p>
             </div>
-            <div className="bg-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 text-center transform hover:scale-105">
+            <div className="bg-stone-50 rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 text-center transform hover:scale-105">
               <div className="w-32 h-32 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-green-700 text-lg font-bold">ORGANIC</span>
               </div>
