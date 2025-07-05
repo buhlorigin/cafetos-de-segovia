@@ -3,8 +3,8 @@ const InstagramFeed = () => {
   const instagramPosts = [
     {
       id: 1,
-      image: "/lovable-uploads/5a536476-ea86-493a-98e6-c38d06565207.png",
-      alt: "Coffee cupping session with flavor wheel"
+      image: "/lovable-uploads/5d91e95a-b0e5-41d4-be76-181f648707e6.png",
+      alt: "Woman harvesting coffee cherries in blue polka dot shirt"
     },
     {
       id: 2,
