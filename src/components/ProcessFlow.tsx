@@ -13,7 +13,7 @@ const ProcessFlow = () => {
       description: "Hand picking to separate non-optimal state of ripeness, greens, dried and unripe cherries.",
       details: "Our skilled workers carefully hand-pick each coffee cherry to ensure optimal ripeness. This meticulous process removes green, dried, and unripe cherries, ensuring only the finest quality fruit moves forward in our process.",
       icon: Search,
-      image: "/lovable-uploads/0c16f42d-b78d-4f2f-9904-cb3c04e081fd.png"
+      image: "/lovable-uploads/5d91e95a-b0e5-41d4-be76-181f648707e6.png"
     },
     {
       title: "CLASSIFICATION",
