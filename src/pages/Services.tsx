@@ -102,6 +102,9 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Process Flow */}
+      <ProcessFlow />
+
       {/* Certifications Section */}
       <section className="py-20 bg-gradient-to-br from-amber-50 to-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,9 +135,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-
-      {/* Process Flow */}
-      <ProcessFlow />
 
       <Footer />
     </div>
