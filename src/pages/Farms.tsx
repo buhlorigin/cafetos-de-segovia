@@ -47,21 +47,6 @@ const Farms = () => {
     }
   ];
 
-  const certifications = [
-    {
-      name: "Fair Trade",
-      logo: "/lovable-uploads/b4b923b8-b0f0-464f-a514-946bc07b2715.png"
-    },
-    {
-      name: "Rainforest Alliance",
-      logo: "/lovable-uploads/d84c8f7a-07b2-4e44-9862-7e4a76628d99.png"
-    },
-    {
-      name: "EU Organic",
-      logo: "/lovable-uploads/9b9aa40d-3262-495f-b99b-9fad968a74b3.png"
-    }
-  ];
-
   const handleImageScroll = (farmIndex: number, direction: 'prev' | 'next') => {
     const farmKey = farmIndex === 0 ? 'bethania' : 'hortensias';
     const currentIndex = activeImageIndex[farmKey];
@@ -273,33 +258,6 @@ const Farms = () => {
           </section>
         )
       ))}
-
-      {/* Certifications Section */}
-      <section className="py-20 bg-gradient-to-br from-amber-50 to-stone-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-stone-800 mb-6">
-              Our <span className="text-amber-700">Certifications</span>
-            </h2>
-            <p className="text-xl text-stone-600">
-              Committed to sustainable and ethical coffee production
-            </p>
-          </div>
-          
-          <div className="flex justify-center items-center space-x-12">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 text-center transform hover:scale-105">
-                <img
-                  src={cert.logo}
-                  alt={cert.name}
-                  className="w-32 h-32 object-contain mx-auto mb-6"
-                />
-                <h3 className="font-bold text-stone-800 text-lg">{cert.name}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       
       {/* Farm Locations Map */}
