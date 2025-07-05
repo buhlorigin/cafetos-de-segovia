@@ -9,6 +9,7 @@ const markets = [
   { name: "UK", coordinates: [-3, 55], color: "#ea580c" },
   { name: "Europe", coordinates: [10, 54], color: "#dc2626" },
   { name: "China", coordinates: [104, 35], color: "#b91c1c" },
+  { name: "South Korea", coordinates: [127.7, 35.9], color: "#c2410c" },
   { name: "Middle East", coordinates: [47, 29], color: "#991b1b" },
   { name: "Southeast Asia", coordinates: [101, 13], color: "#7c2d12" },
   { name: "Australia", coordinates: [133, -27], color: "#a16207" }
@@ -118,7 +119,7 @@ const GlobalMarkets = () => {
         </div>
 
         {/* Market Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-12">
           {markets.map((market, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 text-center">
               <div 
