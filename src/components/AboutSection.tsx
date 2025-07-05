@@ -22,8 +22,9 @@ const AboutSection = () => {
             <div className="absolute top-0 left-0 text-8xl text-amber-500/20 font-serif leading-none">"</div>
             <blockquote className="relative z-10 pl-12">
               <p className="text-2xl md:text-3xl text-white leading-relaxed font-light italic mb-8">
-                From farm to cup, every step is traceable and intentional. 
-                We deliver exceptional specialty coffee that embodies the pure essence of Nicaragua.
+                At Cafetos de Segovia, we are committed to integrity, transparency, and excellence. 
+                From cultivation to export, every stage of our specialty green coffee process is traceable and intentional. 
+                The exceptional flavor in every cup reflects our passion for natural process coffees and the purity of the Nicaragua origin.
               </p>
               <footer className="text-amber-400">
                 <div className="flex items-center space-x-4">
