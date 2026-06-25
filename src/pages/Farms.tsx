@@ -271,8 +271,9 @@ const Farms = () => {
               </div>
             </div>
           </section>
+        )
         )}
-        )}
+
 
 
         </div>
