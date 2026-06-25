@@ -271,8 +271,10 @@ const Farms = () => {
               </div>
             </div>
           </section>
-        )
+        )}
+        </div>
       ))}
+
 
       
       {/* Farm Locations Map */}
