@@ -100,6 +100,21 @@ const Farms = () => {
 
       {/* Farms Section */}
       {farms.map((farm, farmIndex) => (
+        <div key={`wrap-${farm.name}`}>
+        {farmIndex === 1 && (
+          <section className="py-20 bg-gradient-to-br from-stone-50 to-amber-50">
+            <div className="max-w-4xl mx-auto px-6 text-center">
+              <svg className="w-12 h-12 text-amber-700 mx-auto mb-6 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.17 17c-1.93 0-3.5-1.57-3.5-3.5 0-3.5 2.5-6.5 6-7.5l.5 1.5c-2.5.83-4 2.5-4 4.5h1c1.93 0 3.5 1.57 3.5 3.5S9.1 17 7.17 17zm9.66 0c-1.93 0-3.5-1.57-3.5-3.5 0-3.5 2.5-6.5 6-7.5l.5 1.5c-2.5.83-4 2.5-4 4.5h1c1.93 0 3.5 1.57 3.5 3.5s-1.57 1.5-3.5 1.5z"/>
+              </svg>
+              <p className="text-2xl md:text-3xl font-serif italic text-stone-700 leading-relaxed">
+                We value sustainability, innovation, and the people who make every harvest possible.
+              </p>
+              <div className="mt-6 w-24 h-1 bg-amber-700 mx-auto rounded-full"></div>
+            </div>
+          </section>
+        )}
+        {(
         farmIndex === 0 ? (
           // Special layout for Finca Bethania with background slideshow
           <section key={farm.name} className="relative min-h-screen">
