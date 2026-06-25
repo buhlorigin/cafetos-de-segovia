@@ -221,7 +221,7 @@ export const MapboxNicaraguaMap: React.FC<MapboxNicaraguaMapProps> = ({ onRegion
         map.current.on('click', 'department-circles', (e) => {
           if (!e.features || e.features.length === 0) return;
           
-          const feature = e.features[0];
+          const feature = e.features[0] as any;
           const regionId = feature.properties?.id;
           const region = regions.find(r => r.id === regionId);
           

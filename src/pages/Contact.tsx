@@ -46,9 +46,15 @@ const Contact = () => {
                   <h3 className="text-lg font-semibold text-stone-700 mb-2">General Requests</h3>
                   <a 
                     href="mailto:ana@cafetosdesegovia.com" 
-                    className="text-amber-700 hover:text-amber-800 transition-colors"
+                    className="text-amber-700 hover:text-amber-800 transition-colors block"
                   >
                     ana@cafetosdesegovia.com
+                  </a>
+                  <a 
+                    href="mailto:martha@cafetosdesegovia.com" 
+                    className="text-amber-700 hover:text-amber-800 transition-colors block"
+                  >
+                    martha@cafetosdesegovia.com
                   </a>
                 </div>
                 
