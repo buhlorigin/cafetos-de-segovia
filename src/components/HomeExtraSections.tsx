@@ -42,7 +42,7 @@ const StepCard = ({ s, className = '' }: { s: Step; className?: string }) => {
   );
 };
 
-const CountUp = ({ n, display }: { n: number | null; display: string }) => {
+const CountUp = ({ n, display = '', suffix = '' }: { n: number | null; display?: string; suffix?: string }) => {
   const [ref, seen] = useInView<HTMLSpanElement>();
   const [v, setV] = useState(0);
   useEffect(() => {
@@ -52,7 +52,7 @@ const CountUp = ({ n, display }: { n: number | null; display: string }) => {
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
   }, [seen, n]);
-  return <span ref={ref}>{n === null ? display : v}</span>;
+  return <span ref={ref}>{n === null ? display : v}{suffix}</span>;
 };
 
 const HomeExtraSections = () => {
@@ -62,9 +62,9 @@ const HomeExtraSections = () => {
   const steps: Step[] = stepMedia.map((m, i) => ({ ...m, ...(t('home.steps', { returnObjects: true }) as { title: string; text: string }[])[i] }));
   const strip = (t('home.strip', { returnObjects: true }) as string[]).map((label, i) => ({ icon: stripIcons[i], label }));
   const numbers = [
-    { value: 12, display: t('home.numbers.years'), label: t('home.numbers.yearsLabel') },
-    { value: 60, display: t('home.numbers.containersTotal'), label: t('home.numbers.containers') },
-    { value: 15, display: t('home.numbers.total'), label: t('home.numbers.farms') },
+    { value: 12, suffix: '+', label: t('home.numbers.yearsLabel') },
+    { value: 60, suffix: '+', label: t('home.numbers.containers') },
+    { value: 15, suffix: '+', label: t('home.numbers.farms') },
     { value: null, display: t('home.numbers.altitude'), label: t('home.numbers.altitudeLabel') },
   ];
   const row = useRef<HTMLDivElement>(null);
