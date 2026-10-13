@@ -1,3 +1,4 @@
+import ClosingBand from '@/components/ClosingBand';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sprout, Factory, Coffee } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -105,12 +106,7 @@ const Services = () => (
         </div>
       </section>
 
-      <section className="py-12 md:py-16 border-t border-stone-200">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-center gap-4">
-          <Button asChild size="lg" className="h-auto min-h-12 whitespace-normal text-center"><Link to="/contact?subject=Talk%20to%20us%20about%20your%20harvest">Talk to us about your harvest<ArrowRight aria-hidden="true" /></Link></Button>
-          <Button asChild size="lg" variant="outline" className="h-auto min-h-12 text-coffee border-cherry"><Link to="/contact?subject=Request%20samples">Request samples<ArrowRight aria-hidden="true" /></Link></Button>
-        </div>
-      </section>
+      <ClosingBand heading="Let's work together" text="Whether you grow coffee or roast it, we would love to hear from you." primary={{ label: 'Talk to us about your harvest', to: '/contact?subject=Talk%20to%20us%20about%20your%20harvest' }} secondary={{ label: 'Request samples & spec sheets', to: '/contact?subject=Request%20samples%20%26%20spec%20sheets' }} />
     </main>
     <Footer />
   </div>
