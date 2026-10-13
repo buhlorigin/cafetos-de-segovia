@@ -12,6 +12,7 @@ import Nicaragua from "./pages/Nicaragua";
 import Contact from "./pages/Contact";
 import ScrollEffects from "./components/ScrollEffects";
 import NotFound from "./pages/NotFound";
+import { LocaleLayout } from "./lib/locale";
 
 const queryClient = new QueryClient();
 
@@ -23,14 +24,21 @@ const App = () => (
       <BrowserRouter>
         <ScrollEffects />
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/farms" element={<Farms />} />
-          <Route path="/nicaragua" element={<Nicaragua />} />
-          <Route path="/contact" element={<Contact />} />
+          {(['en', 'es'] as const).map((lang) => {
+            const pre = lang === 'es' ? '/es' : '';
+            return (
+              <Route key={lang} element={<LocaleLayout lang={lang} />}>
+                <Route path={pre || '/'} element={<Index />} />
+                <Route path={`${pre}/about`} element={<About />} />
+                <Route path={`${pre}/services`} element={<Services />} />
+                <Route path={`${pre}/farms`} element={<Farms />} />
+                <Route path={`${pre}/nicaragua`} element={<Nicaragua />} />
+                <Route path={`${pre}/contact`} element={<Contact />} />
+                <Route path={`${pre}/*`} element={<NotFound />} />
+              </Route>
+            );
+          })}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
