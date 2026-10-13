@@ -5,9 +5,6 @@ export type Farm = {
   details: { location: string; altitude: string; varieties: string; processing: string; difference: string };
 };
 
-const placeholderText = "Placeholder text: a family-run farm in the highlands of Nueva Segovia, dedicated to specialty coffee with careful harvesting and processing. Full story coming soon.";
-const placeholderDiff = "Placeholder: what makes this farm unique will be added soon.";
-
 export const farms: Farm[] = [
   {
     name: "Finca Bethania",
@@ -46,21 +43,21 @@ export const farms: Farm[] = [
     }
   },
   ...[
-    { name: "Finca Los Milagros", image: "/lovable-uploads/61079dbc-cb5a-4ea7-ba8c-a3386a5c6671.png", altitude: "To be confirmed" },
+    { name: "Finca Los Milagros", image: "/lovable-uploads/61079dbc-cb5a-4ea7-ba8c-a3386a5c6671.png", altitude: "" },
     { name: "Finca Agua Sarca", image: "/lovable-uploads/4f4c2833-b318-4108-8165-924ad5cfb8c3.png", altitude: "1,150-1,400m" },
-    { name: "Finca El Ciprés", image: "/lovable-uploads/ad277da2-06aa-4822-8f6b-4cf494471a2e.png", altitude: "To be confirmed" },
+    { name: "Finca El Ciprés", image: "/lovable-uploads/ad277da2-06aa-4822-8f6b-4cf494471a2e.png", altitude: "" },
     { name: "Finca Mirjam", image: "/lovable-uploads/376c0056-37ee-48ff-aa28-93b13e5bf4f2.png", altitude: "1,200-1,350m" },
     { name: "Finca La Picona", image: "/lovable-uploads/52010541-91f5-494c-909b-02fc63d9e224.png", altitude: "1,250-1,400m" },
   ].map((f) => ({
     name: f.name,
-    description: placeholderText,
+    description: "",
     images: [f.image],
     details: {
-      location: "Nueva Segovia (to be confirmed)",
+      location: "Nueva Segovia",
       altitude: f.altitude,
-      varieties: "To be confirmed",
-      processing: "To be confirmed",
-      difference: placeholderDiff,
+      varieties: "",
+      processing: "",
+      difference: "",
     },
   })),
 ];

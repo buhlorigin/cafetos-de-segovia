@@ -7,7 +7,7 @@ const About = () => {
     {
       title: "HERITAGE",
       content: "Cafetos de Segovia was founded by Ana and Martha Albir, representing the third generation of their family's coffee legacy. We bridge tradition with innovation, providing transparent and socially responsible connections to Nicaraguan coffee farmers. Our passionate team of specialists ensures the highest quality standards throughout the entire production chain, building lasting relationships with partner farms and buyers worldwide.",
-      image: "/lovable-uploads/9af00c73-ef74-4288-be9b-729040476183.png"
+      image: "/media/about-heritage-family.jpg"
     },
     {
       title: "OUR COFFEE",
@@ -26,13 +26,13 @@ const About = () => {
     }
     ,{
       title: "DRYING & PROCESSING",
-      content: "Placeholder text: our coffee is dried slowly on patios and raised beds, turned by hand throughout the day. We monitor moisture constantly until each lot reaches its ideal level, protecting flavor and stability for export.",
-      image: "/lovable-uploads/c583d705-3f60-4df4-8cfa-ac3538d6d036.png"
+      content: "Drying is where a good harvest is protected or lost, so we take it slowly. After processing, our coffee rests on raised beds in the open air, where it dries evenly with the sun and the mountain breeze. Our team turns every bed by hand several times a day and checks moisture until each lot reaches the right level for storage and export.\n\nNatural, honey and washed lots dry separately, and every bed is identified by farm and process. That way each lot keeps its own character and its own traceability, from the farm to the bag.",
+      image: "/media/about-drying-parchment.jpg"
     },
     {
       title: "LABORATORY & QUALITY CONTROL",
-      content: "Placeholder text: in our cupping lab every lot is evaluated before export. We check moisture and density, cup each lot, and select only the coffees that meet our standards.",
-      image: "/lovable-uploads/2fb707ad-4139-4528-9715-3a9f2960ad90.png"
+      content: "Every lot is evaluated in our own cupping lab before we offer it. We roast samples, cup them blind alongside our reference lots, and score each one, so we know exactly what is in every bag before a buyer tastes it.\n\nAlongside cupping, we check moisture and the physical quality of the green coffee, looking for defects, size and uniformity. Only lots that meet our standards are prepared for export, and we cup them again before they ship.",
+      image: "/media/beneficio-cupping-lab.jpg"
     }
   ];
 
@@ -66,19 +66,19 @@ const About = () => {
         <section key={value.title} className={`py-16 ${index % 2 === 0 ? 'bg-white' : 'bg-stone-50'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-              <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+              <div className={index % 2 === 1 ? 'order-2 lg:order-none lg:col-start-2 lg:row-start-1' : 'order-2 lg:order-none lg:col-start-1 lg:row-start-1'}>
                 <h2 className="text-3xl font-bold text-stone-800 mb-6 text-amber-700">
                   {value.title}
                 </h2>
-                <p className="text-lg text-stone-600 leading-relaxed">
-                  {value.content}
-                </p>
+                <div className="space-y-5 text-lg text-stone-600 leading-relaxed">
+                  {value.content.split('\n\n').map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                </div>
               </div>
-              <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+              <div className={index % 2 === 1 ? 'order-1 lg:order-none lg:col-start-1 lg:row-start-1' : 'order-1 lg:order-none lg:col-start-2 lg:row-start-1'}>
                 <img
                   src={value.image}
                   alt={value.title}
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                  className={`w-full object-cover rounded-sm ${index === 0 ? 'aspect-[1402/1072] h-auto object-top' : index >= 4 ? 'h-[320px] lg:h-[420px]' : 'h-80'}`}
                 />
               </div>
             </div>
