@@ -21,7 +21,7 @@ const Navigation = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
-  const solid = scrolled;
+  const solid = scrolled || window.location.pathname !== '/';
   const text = solid ? 'text-coffee' : 'text-parchment';
 
   return (
