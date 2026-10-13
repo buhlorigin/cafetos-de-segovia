@@ -1,3 +1,4 @@
+import ClosingBand from '@/components/ClosingBand';
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -275,23 +276,7 @@ const Farms = () => {
         </div>
       </section>}
 
-      {/* Sample Request Section */}
-      <section className="py-16 bg-amber-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-stone-800 mb-6">
-            Request <span className="text-amber-700">Samples</span>
-          </h2>
-          <p className="text-xl text-stone-600 mb-8">
-            Experience the exceptional quality of our farm-specific lots
-          </p>
-          <a
-            href="/contact"
-            className="bg-amber-700 text-parchment px-8 py-4 rounded-lg font-semibold hover:bg-amber-800 transition-colors duration-200 inline-block"
-          >
-            Request Samples & Spec Sheets
-          </a>
-        </div>
-      </section>
+      <ClosingBand heading="Request samples" text="Experience the exceptional quality of our farm-specific lots." primary={{ label: 'Request samples & spec sheets', to: '/contact?subject=Request%20samples%20%26%20spec%20sheets' }} />
 
       <Footer />
     </div>
