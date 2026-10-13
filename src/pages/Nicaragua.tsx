@@ -1,85 +1,47 @@
-import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { MapboxNicaraguaMap } from '../components/MapboxNicaraguaMap';
-import { RegionInfoPanel } from '../components/RegionInfoPanel';
-import { CoffeeSpiderChart } from '../components/CoffeeSpiderChart';
-import { CoffeeRegionDetails } from '../components/CoffeeRegionDetails';
 
-interface Region {
-  id: string;
-  name: string;
-  color: string;
-  coordinates: [number, number];
-  coffeeInfo: {
-    denomination: string;
-    area: string;
-    municipalities: string[];
-    characteristics: string[];
-    altitude: string;
-    production: string;
-    coffeeDetails?: {
-      name: string;
-      description: string;
-      established: string;
-      cupProfile?: string;
-    };
-  };
-}
+const sections = [
+  { eyebrow: "Origin", title: "Nicaragua as a coffee origin", image: "/lovable-uploads/c583d705-3f60-4df4-8cfa-ac3538d6d036.png",
+    text: "Placeholder text: Nicaragua has grown coffee for over 150 years. Its volcanic soils, mountain ranges and family farms make it one of Central America's most rewarding origins for specialty buyers." },
+  { eyebrow: "Terroir", title: "Climate, altitude and the mountains of the north", image: "/lovable-uploads/2b6cfe6f-9101-406b-9e51-7a0c2a273fff.png",
+    text: "Placeholder text: In the north, pine-covered ranges rise above 1,500 m. Cool nights, morning mist and a clear dry season slow cherry maturation and build sweetness and structure in the cup." },
+  { eyebrow: "Our home", title: "Nueva Segovia and Dipilto, where our farms are", image: "/lovable-uploads/4f4c2833-b318-4108-8165-924ad5cfb8c3.png",
+    text: "Placeholder text: Our farms lie in the Cordillera de Dipilto and Jalapa, along the Honduran border. Café Dipilto is a protected designation of origin, recognised for its bright, clean and complex coffees." },
+  { eyebrow: "Craft", title: "Varieties and processing traditions", image: "/lovable-uploads/ad277da2-06aa-4822-8f6b-4cf494471a2e.png",
+    text: "Placeholder text: Catuai, Caturra, Bourbon, Maracaturra and Java grow side by side. Washed coffees remain the tradition, while natural, honey and experimental fermentations open new flavour profiles." },
+  { eyebrow: "Harvest", title: "Harvest season and the road to export", image: "/lovable-uploads/376c0056-37ee-48ff-aa28-93b13e5bf4f2.png",
+    text: "Placeholder text: Harvest runs from November to March. Cherries are hand-picked, processed and dried, then rested, milled, sorted and packed at the dry mill before shipping from Nicaraguan ports to roasters worldwide." },
+];
 
-const Nicaragua = () => {
-  const [selectedRegion, setSelectedRegion] = useState<Region | null>(null);
+const Nicaragua = () => (
+  <div className="min-h-screen">
+    <Navigation />
 
-  return (
-    <div className="min-h-screen">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-stone-50 to-amber-50">
-        <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-amber-800 mb-6">
-            <span className="text-amber-700">Nicaragua</span> Coffee Regions
-          </h1>
-          <p className="text-2xl text-stone-600 leading-relaxed font-medium">
-            Explore Nicaragua's coffee producing regions and their unique profiles
-          </p>
-        </div>
-      </section>
+    <section className="pt-24 pb-12 bg-gradient-to-br from-stone-50 to-amber-50">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h1 className="text-5xl md:text-6xl text-amber-800 mb-6">Nicaragua</h1>
+        <p className="text-2xl text-stone-600 leading-relaxed">What makes Nicaragua special as a coffee origin</p>
+      </div>
+    </section>
 
-      {/* Interactive Map and Info Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Map */}
-            <div className="bg-stone-50 rounded-2xl p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-amber-700 mb-6 text-center">
-                Interactive Map of Coffee Departments
-              </h3>
-              <div className="h-96">
-                <MapboxNicaraguaMap 
-                  onRegionSelect={setSelectedRegion}
-                  selectedRegion={selectedRegion}
-                />
-              </div>
-            </div>
-            
-            {/* Region Info Panel */}
-            <div className="h-96">
-              <RegionInfoPanel region={selectedRegion} />
-            </div>
+    {sections.map((s, i) => (
+      <section key={s.title} className={`py-20 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'}`}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className={`aspect-[4/3] overflow-hidden ${i % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+            <img src={s.image} alt={s.title} className="w-full h-full object-cover" />
           </div>
-          
-          {/* Coffee Region Details */}
-          {selectedRegion && (
-            <CoffeeRegionDetails region={selectedRegion} />
-          )}
+          <div className={i % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}>
+            <span className="eyebrow">{String(i + 1).padStart(2, '0')} · {s.eyebrow}</span>
+            <h2 className="text-4xl md:text-5xl text-stone-800 mb-6">{s.title}</h2>
+            <p className="text-lg text-stone-600 leading-relaxed">{s.text}</p>
+          </div>
         </div>
       </section>
+    ))}
 
-
-      <Footer />
-    </div>
-  );
-};
+    <Footer />
+  </div>
+);
 
 export default Nicaragua;

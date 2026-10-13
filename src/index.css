@@ -137,3 +137,10 @@ section { padding-left: 0; }
 .overflow-hidden img, img.object-cover { transition: transform .9s ease-out; }
 .overflow-hidden:hover > img, .group:hover img.object-cover { transform: scale(1.04); }
 @media (prefers-reduced-motion: reduce) { .fade-up { opacity: 1; transform: none; } }
+
+/* Contrast: dark gradient sections stay dark so their white text remains readable */
+[class*="bg-gradient-"][class*="from-stone-900"], [class*="bg-gradient-"][class*="from-stone-800"],
+[class*="bg-gradient-"][class*="from-amber-900"], [class*="bg-gradient-"][class*="from-black"] { background-color: #2F4A3A !important; }
+/* Contrast: on light backgrounds, white/light text becomes coffee brown */
+:is(.bg-white, .bg-stone-50, .bg-stone-100, .bg-amber-50, [class*="from-stone-50"], [class*="from-amber-50"], [class*="from-white"]) :is(.text-white, .text-stone-100, .text-stone-200, .text-stone-300, .text-amber-300, .text-amber-400):not(.bg-amber-700 *, .bg-amber-700, .bg-amber-600, .bg-amber-600 *, .bg-stone-800 *, .bg-stone-900 *, .bg-black\/30 ~ * *, .relative > .absolute ~ * *) { color: #2B1D14 !important; }
+:is(.bg-white, .bg-stone-50, .bg-stone-100, .bg-amber-50) :is(.text-stone-400, .text-gray-400, .text-white\/70, .text-white\/80, .text-white\/90) { color: #5A4636 !important; }
