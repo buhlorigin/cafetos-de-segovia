@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
@@ -37,7 +37,7 @@ export const LocaleLayout = ({ lang }: { lang: Lang }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [banner, setBanner] = useState(false);
-  if (i18n.language !== lang) i18n.changeLanguage(lang);
+  useLayoutEffect(() => { if (i18n.language !== lang) i18n.changeLanguage(lang); }, [lang]);
 
   useEffect(() => { document.documentElement.lang = lang; }, [lang]);
 
@@ -56,6 +56,8 @@ export const LocaleLayout = ({ lang }: { lang: Lang }) => {
   const href = (l: Lang) => SITE + (localizedPath(base, l) === '/' ? '/' : localizedPath(base, l));
 
   const dismiss = () => { localStorage.setItem(BANNER_KEY, '1'); setBanner(false); };
+
+  if (i18n.language !== lang) return null;
 
   return (
     <>
