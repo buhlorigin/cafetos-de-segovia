@@ -1,5 +1,9 @@
+import { useTranslation } from 'react-i18next';
+import { useLocale } from '@/lib/locale';
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const { lp } = useLocale();
   return (
     <footer className="bg-stone-800 text-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -7,39 +11,39 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src="/brand/cafetos-logo-light.png" alt="Cafetos de Segovia logo" className="h-14 w-auto" />
+              <img src="/brand/cafetos-logo-light.png" alt={t('footer.logoAlt')} className="h-14 w-auto" />
               <h3 className="text-2xl font-bold">Cafetos de Segovia</h3>
             </div>
             <p className="text-stone-300 mb-4">
-              Producers and exporters of specialty coffee from Nueva Segovia, Nicaragua.
+              {t('footer.description')}
             </p>
             <p className="text-stone-400 text-sm">
-              © {new Date().getFullYear()} Cafetos de Segovia. All rights reserved.
+              © {new Date().getFullYear()} Cafetos de Segovia. {t('footer.rights')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-stone-300 hover:text-amber-400 transition-colors">
-                  Home
+                <a href={lp('/')} className="text-stone-300 hover:text-amber-400 transition-colors">
+                  {t('footer.home')}
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-stone-300 hover:text-amber-400 transition-colors">
-                  Services
+                <a href={lp('/services')} className="text-stone-300 hover:text-amber-400 transition-colors">
+                  {t('footer.services')}
                 </a>
               </li>
               <li>
-                <a href="#farms" className="text-stone-300 hover:text-amber-400 transition-colors">
-                  Farms & Traceability
+                <a href={lp('/farms')} className="text-stone-300 hover:text-amber-400 transition-colors">
+                  {t('footer.farms')}
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-stone-300 hover:text-amber-400 transition-colors">
-                  Contact
+                <a href={lp('/contact')} className="text-stone-300 hover:text-amber-400 transition-colors">
+                  {t('footer.contact')}
                 </a>
               </li>
             </ul>
@@ -47,9 +51,9 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.contactInfo')}</h4>
             <div className="space-y-2 text-stone-300">
-              <p>Nueva Segovia, Nicaragua</p>
+              <p>{t('footer.location')}</p>
               <p>ana@cafetosdesegovia.com</p>
               <p>+505 8733 1928</p>
             </div>
@@ -59,7 +63,7 @@ const Footer = () => {
         {/* Social Media Section */}
         <div className="border-t border-stone-700 mt-8 pt-8">
           <div className="text-center">
-            <h4 className="text-lg font-semibold mb-4 text-white">Follow Us on Social Media</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">{t('footer.social')}</h4>
             <div className="flex justify-center space-x-6">
               <a 
                 href="https://www.facebook.com/cafetosspecialty/" 
@@ -90,7 +94,7 @@ const Footer = () => {
 
         <div className="border-t border-stone-700 mt-8 pt-8 text-center">
           <p className="text-stone-400">
-            Crafted with passion in the mountains of Nueva Segovia
+            {t('footer.crafted')}
           </p>
         </div>
       </div>

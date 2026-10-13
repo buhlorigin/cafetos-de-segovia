@@ -1,7 +1,11 @@
+import { useTranslation } from 'react-i18next';
+import { LanguageToggle, basePath, useLocale } from '@/lib/locale';
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
+  const { t } = useTranslation();
+  const { lp } = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -13,15 +17,15 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Our Farms', href: '/farms' },
-    { name: 'Nicaragua', href: '/nicaragua' },
-    { name: 'Contact', href: '/contact' },
+    { name: t('nav.home'), href: lp('/') },
+    { name: t('nav.about'), href: lp('/about') },
+    { name: t('nav.services'), href: lp('/services') },
+    { name: t('nav.farms'), href: lp('/farms') },
+    { name: t('nav.nicaragua'), href: lp('/nicaragua') },
+    { name: t('nav.contact'), href: lp('/contact') },
   ];
 
-  const solid = scrolled || window.location.pathname !== '/';
+  const solid = scrolled || basePath(window.location.pathname) !== '/';
   const text = solid ? 'text-coffee' : 'text-parchment';
 
   return (
@@ -33,7 +37,7 @@ const Navigation = () => {
       >
         <div className="max-w-[90rem] mx-auto px-6 lg:px-10">
           <div className="flex justify-between items-center h-20">
-            <a href="/" className="flex items-center gap-3">
+            <a href={lp('/')} className="flex items-center gap-3">
               <img src={solid ? '/brand/cafetos-logo-transparent.png' : '/brand/cafetos-logo-light.png'} alt="Cafetos de Segovia" className="h-9 md:h-11 w-auto" />
               <span className={`font-serif text-2xl transition-colors duration-500 ${text}`}>Cafetos de Segovia</span>
             </a>
@@ -48,9 +52,10 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
+              <LanguageToggle className={text} />
             </div>
 
-            <button onClick={() => setIsOpen(true)} className={`md:hidden ${text}`} aria-label="Open menu">
+            <button onClick={() => setIsOpen(true)} className={`md:hidden ${text}`} aria-label={t('nav.openMenu')}>
               <Menu size={28} />
             </button>
           </div>
@@ -61,7 +66,7 @@ const Navigation = () => {
         <div className="fixed inset-0 z-[60] bg-parchment flex flex-col md:hidden">
           <div className="flex justify-between items-center h-20 px-6">
             <span className="font-serif text-2xl text-coffee">Cafetos de Segovia</span>
-            <button onClick={() => setIsOpen(false)} className="text-coffee" aria-label="Close menu">
+            <button onClick={() => setIsOpen(false)} className="text-coffee" aria-label={t('nav.closeMenu')}>
               <X size={28} />
             </button>
           </div>
@@ -71,6 +76,7 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
+            <LanguageToggle className="text-coffee mt-4 text-base" onSwitch={() => setIsOpen(false)} />
           </div>
         </div>
       )}
