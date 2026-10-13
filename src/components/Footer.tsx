@@ -11,8 +11,7 @@ const Footer = () => {
               <h3 className="text-2xl font-bold">Cafetos de Segovia</h3>
             </div>
             <p className="text-stone-300 mb-4">
-              Premium specialty coffee exporter from Nueva Segovia, Nicaragua. 
-              Producers and exporters of Nicaraguan specialty coffee.
+              Producers and exporters of specialty coffee from Nueva Segovia, Nicaragua.
             </p>
             <p className="text-stone-400 text-sm">
               © {new Date().getFullYear()} Cafetos de Segovia. All rights reserved.

@@ -1,20 +1,19 @@
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-// Publish these editorial sections once their final copy is supplied.
-const editorialPublished = false;
-
-const sections = [
-  { eyebrow: "Origin", title: "Nicaragua as a coffee origin", image: "/lovable-uploads/c583d705-3f60-4df4-8cfa-ac3538d6d036.png",
-    text: "Nicaragua has grown coffee for over 150 years. Its volcanic soils, mountain ranges and family farms make it one of Central America's most rewarding origins for specialty buyers." },
-  { eyebrow: "Terroir", title: "Climate, altitude and the mountains of the north", image: "/lovable-uploads/2b6cfe6f-9101-406b-9e51-7a0c2a273fff.png",
-    text: "In the north, pine-covered ranges rise above 1,500 m. Cool nights, morning mist and a clear dry season slow cherry maturation and build sweetness and structure in the cup." },
-  { eyebrow: "Our home", title: "Nueva Segovia and Dipilto, where our farms are", image: "/lovable-uploads/4f4c2833-b318-4108-8165-924ad5cfb8c3.png",
-    text: "Our farms lie in the Cordillera de Dipilto and Jalapa, along the Honduran border. Café Dipilto is a protected designation of origin, recognised for its bright, clean and complex coffees." },
-  { eyebrow: "Craft", title: "Varieties and processing traditions", image: "/lovable-uploads/ad277da2-06aa-4822-8f6b-4cf494471a2e.png",
-    text: "Catuai, Caturra, Bourbon, Maracaturra and Java grow side by side. Washed coffees remain the tradition, while natural, honey and experimental fermentations open new flavour profiles." },
-  { eyebrow: "Harvest", title: "Harvest season and the road to export", image: "/lovable-uploads/376c0056-37ee-48ff-aa28-93b13e5bf4f2.png",
-    text: "Harvest runs from November to March. Cherries are hand-picked, processed and dried, then rested, milled, sorted and packed at the dry mill before shipping from Nicaraguan ports to roasters worldwide." },
+const sections: { eyebrow: string; title: string; image: string; text: string; facts?: string[]; cta?: boolean }[] = [
+  { eyebrow: "The origin", title: "A country shaped by coffee", image: "/media/hero-poster.jpg",
+    text: "Coffee is one of Nicaragua's most important exports and the livelihood of thousands of families, most of them small and medium producers. Almost all of it is arabica, grown in the cool mountains of the north, where altitude, volcanic soils and a clear dry season give the beans their density and sweetness." },
+  { eyebrow: "Climate & altitude", title: "Mountains, mist and a real dry season", image: "/media/farm-bethania-1.jpg",
+    text: "The coffee regions of the north sit between roughly 1,000 and 1,800 metres. Cool nights slow the ripening of the cherry, which builds sugars and acidity, and a long dry season from November to April makes slow, careful sun drying possible. Most coffee here grows under shade, among native trees, fruit trees and bananas." },
+  { eyebrow: "Where we grow", title: "Nueva Segovia, the northernmost coffee region", image: "/media/farm-agua-sarca-1.jpg",
+    text: "Nueva Segovia borders Honduras and is home to the Serranías de Dipilto y Jalapa nature reserve, where many of our farms and partner producers grow coffee. The region is known for clean, sweet and structured cups, and its coffees regularly stand out in the Cup of Excellence Nicaragua, including lots from our own family farms.",
+    facts: ["Our farms: 1,150–1,800 m", "Harvest: November to April", "Municipalities: Dipilto, Mozonte, Macuelizo, San Fernando"] },
+  { eyebrow: "In the cup", title: "From classic varieties to new expressions", image: "/media/about-drying-parchment.jpg",
+    text: "Caturra, Red and Yellow Catuaí and Maracaturra, the large-bean variety Nicaragua is known for, grow alongside newer and rarer varieties such as Java, Pacamara, Parainema, Marsellesa and Geisha. Washed coffee remains the tradition, while naturals, honeys and anaerobic fermentations open new profiles every harvest." },
+  { eyebrow: "The journey", title: "From the mountain to the port", image: "/media/beneficio-lot-storage.jpg", cta: true,
+    text: "Cherries are picked by hand, processed at the farm or the wet mill, and brought down as parchment to dry mills like ours. There the coffee is dried, rested, milled, sorted and cupped before it leaves by truck for the port and, from there, for roasters around the world." },
 ];
 
 const Nicaragua = () => (
@@ -28,16 +27,18 @@ const Nicaragua = () => (
       </div>
     </section>
 
-    {editorialPublished && sections.map((s, i) => (
+    {sections.map((s, i) => (
       <section key={s.title} className={`py-20 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className={`aspect-[4/3] overflow-hidden ${i % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
-            <img src={s.image} alt={s.title} className="w-full h-full object-cover" />
+            <img src={s.image} alt={s.title} loading="lazy" className="w-full h-full object-cover rounded-md" />
           </div>
           <div className={i % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}>
-            <span className="eyebrow">{String(i + 1).padStart(2, '0')} · {s.eyebrow}</span>
+            <span className="eyebrow">{s.eyebrow}</span>
             <h2 className="text-4xl md:text-5xl text-stone-800 mb-6">{s.title}</h2>
             <p className="text-lg text-stone-600 leading-relaxed">{s.text}</p>
+            {s.facts && <ul className="mt-8 flex flex-wrap gap-3">{s.facts.map(f => <li key={f} className="border border-stone-300 rounded-sm px-4 py-2 text-sm text-coffee">{f}</li>)}</ul>}
+            {s.cta && <Link to="/services" className="mt-8 inline-block bg-primary text-primary-foreground px-7 py-3 rounded-sm font-medium hover:bg-primary/90">See how we work</Link>}
           </div>
         </div>
       </section>
