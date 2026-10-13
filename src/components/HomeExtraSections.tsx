@@ -73,7 +73,7 @@ const HomeExtraSections = () => {
       {/* The Beneficio */}
       <section className="py-[72px] md:py-[120px] bg-parchment">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <span className="eyebrow">Our dry mill · Ramamesa, Nueva Segovia</span>
+          <span className="eyebrow">Our dry mill · Nueva Segovia</span>
           <h2 className="text-4xl md:text-6xl text-coffee mb-6">From cherry to container, under one roof</h2>
           <p className="text-lg leading-relaxed mb-12" style={{ maxWidth: 640, color: '#5A4636' }}>
             Every lot we export passes through our own beneficio in Nueva Segovia. Drying, milling, sorting, storage and cupping happen in one place, run by our own team, so we control each step and can tell you exactly where your coffee has been.
@@ -149,7 +149,7 @@ const HomeExtraSections = () => {
                   <img src="/media/hero-poster.jpg" alt={f.name} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-2xl text-coffee">{f.name}</h3>
-                <p className="text-sm mt-1" style={{ color: '#5A4636' }}>{f.details.location} · {f.details.altitude}</p>
+                <p className="text-sm mt-1" style={{ color: '#5A4636' }}>{[f.details.location, f.details.altitude].filter(Boolean).join(' · ')}</p>
               </a>
             ))}
           </div>

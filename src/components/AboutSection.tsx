@@ -10,7 +10,7 @@ const AboutSection = () => {
               <img
                 src="/lovable-uploads/0a3f2e9d-2fc6-431e-9ea7-ceb91791f712.png"
                 alt="The Albir Family - Three Generations at Cafetos de Segovia"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             {/* Decorative element */}

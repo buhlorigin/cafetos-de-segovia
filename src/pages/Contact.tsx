@@ -1,6 +1,7 @@
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Button } from '../components/ui/button';
 
 const Contact = () => {
   return (
@@ -114,7 +115,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps?q=JGWW%2B4FJ+Ramamesa+Nicaragua&output=embed"
+                src="https://www.google.com/maps?q=Cafetos+de+Segovia,+Nueva+Segovia,+Nicaragua&output=embed"
                 title="Cafetos de Segovia dry mill location"
                 className="w-full h-[300px] md:h-[400px] border-0"
                 loading="lazy"
@@ -124,15 +125,16 @@ const Contact = () => {
             </div>
             <div className="bg-white rounded-2xl p-8 flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-stone-800 mb-3">Cafetos de Segovia, Beneficio Seco</h3>
-              <p className="text-stone-600 mb-8">JGWW+4FJ, Ramamesa, Nueva Segovia, Nicaragua</p>
+              <p className="text-stone-600 mb-8">Nueva Segovia, Nicaragua</p>
+              <Button asChild size="lg" className="self-start">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=CAFETOS+DE+SEGOVIA+JGWW%2B4FJ+Ramamesa+Nicaragua"
+                href="https://www.google.com/maps/search/?api=1&query=Cafetos+de+Segovia,+Nueva+Segovia,+Nicaragua"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block self-start bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-800 transition-colors duration-200"
               >
                 Get directions
               </a>
+              </Button>
             </div>
           </div>
         </div>
