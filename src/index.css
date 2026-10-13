@@ -103,3 +103,37 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+@layer base {
+  :root {
+    --background: 38 41% 94%;
+    --foreground: 24 37% 12%;
+    --primary: 3 62% 38%;
+    --primary-foreground: 38 41% 94%;
+    --radius: 0.25rem;
+  }
+  body { font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif; font-size: 1.0625rem; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 400 !important; line-height: 1.08; letter-spacing: -0.015em; }
+  h1 { font-size: clamp(2.75rem, 6vw, 5.5rem); }
+}
+
+/* Editorial overrides: flat, earthy, no gradients or glows */
+[class*="bg-gradient-"] { background-image: none !important; background-color: hsl(var(--background)); }
+.bg-white { background-color: #F5F0E8 !important; }
+.bg-stone-50 { background-color: #EDE5D8 !important; }
+[class*="shadow-"] { box-shadow: none !important; }
+.rounded-2xl, .rounded-3xl, .rounded-xl { border-radius: 0.25rem !important; }
+a.rounded-lg, a.rounded-full, button.rounded-lg { border-radius: 2px !important; }
+.bg-stone-800, .bg-stone-900 { background-color: #2F4A3A !important; position: relative; }
+.bg-stone-800::after, .bg-stone-900::after, .grain::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .12; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+section { padding-left: 0; }
+.eyebrow { display:block; font-family:'DM Sans',sans-serif; font-size:.75rem; letter-spacing:.25em; text-transform:uppercase; color:#9E2B25; margin-bottom:1rem; }
+
+/* Motion */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity .7s ease-out, transform .7s ease-out; }
+.fade-up.in-view { opacity: 1; transform: none; }
+.overflow-hidden img, img.object-cover { transition: transform .9s ease-out; }
+.overflow-hidden:hover > img, .group:hover img.object-cover { transform: scale(1.04); }
+@media (prefers-reduced-motion: reduce) { .fade-up { opacity: 1; transform: none; } }
