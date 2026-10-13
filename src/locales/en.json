@@ -47,7 +47,7 @@
       { "title": "Lot storage", "text": "Each lot rests separately, tagged with its farm, process and date, so it stays traceable to export." },
       { "title": "Cupping lab", "text": "Every lot is cupped in our own lab before it is offered, and again before it ships." }
     ],
-    "strip": ["HACCP certified", "Full lot traceability", "In-house cupping lab", "Export-ready preparation"],
+    "strip": ["African beds & patios", "Mechanical dryer", "Cold room for fermentation", "Cupping lab", "HACCP certified"],
     "coffee": {
       "eyebrow": "Portfolio",
       "title": "Our Coffee",
@@ -71,7 +71,8 @@
       "altitude": "1,150–1,800 m",
       "farms": "Family and partner farms",
       "altitudeLabel": "Altitude range",
-      "processes": "Processes: Natural, Honey, Washed, Experimental",
+      "containersTotal": "60+",
+      "containers": "Specialty coffee containers exported",
       "mill": "Own dry mill, from drying to export"
     },
     "cta": {
@@ -99,7 +100,7 @@
   "services": {
     "eyebrow": "OUR SERVICES",
     "title": "From origin to destination",
-    "intro": "We are producers ourselves, and we have been exporting Nicaraguan coffee for more than fifteen years. That experience lets us work on both ends of the chain: growing alongside the producers of Nueva Segovia, and preparing their coffee for roasters around the world. Everything in between happens at our own dry mill, with our own team.",
+    "intro": "We are producers ourselves, and we have been exporting Nicaraguan coffee for more than twelve years. That experience lets us work on both ends of the chain: growing alongside the producers of Nueva Segovia, and preparing their coffee for roasters around the world. Everything in between happens at our own dry mill, with our own team.",
     "journeyLabel": "Coffee journey",
     "journey": ["Origin · Farms of Nueva Segovia", "Our dry mill", "Destination · Roasters worldwide"],
     "producers": {
