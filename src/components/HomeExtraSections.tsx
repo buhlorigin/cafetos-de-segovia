@@ -62,10 +62,10 @@ const HomeExtraSections = () => {
   const steps: Step[] = stepMedia.map((m, i) => ({ ...m, ...(t('home.steps', { returnObjects: true }) as { title: string; text: string }[])[i] }));
   const strip = (t('home.strip', { returnObjects: true }) as string[]).map((label, i) => ({ icon: stripIcons[i], label }));
   const numbers = [
-    { value: null, display: t('home.numbers.total'), label: t('home.numbers.farms'), nowrap: false },
-    { value: null, display: t('home.numbers.altitude'), label: t('home.numbers.altitudeLabel'), nowrap: true },
-    { value: null, display: t('home.numbers.containersTotal'), label: t('home.numbers.containers'), nowrap: false },
-    { value: 1, display: '1', label: t('home.numbers.mill'), nowrap: false },
+    { value: 12, display: t('home.numbers.years'), label: t('home.numbers.yearsLabel') },
+    { value: 60, display: t('home.numbers.containersTotal'), label: t('home.numbers.containers') },
+    { value: 15, display: t('home.numbers.total'), label: t('home.numbers.farms') },
+    { value: null, display: t('home.numbers.altitude'), label: t('home.numbers.altitudeLabel') },
   ];
   const row = useRef<HTMLDivElement>(null);
   const scroll = (d: number) => row.current?.scrollBy({ left: d * row.current.clientWidth * 0.8, behavior: 'smooth' });
