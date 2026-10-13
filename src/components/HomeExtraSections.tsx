@@ -44,8 +44,8 @@ const StepCard = ({ s, className = '' }: { s: typeof steps[number]; className?: 
     <div ref={ref} className={`relative overflow-hidden rounded-sm transition-all duration-700 ${seen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'} ${className}`}>
       <img src={s.src} alt={s.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: s.pos }} />
       <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 text-parchment max-w-md" style={captionShade}>
-        <div className="text-xs tracking-[0.25em] uppercase mb-1 text-amber-300">{s.n} · {s.title}</div>
-        <p className="text-sm leading-relaxed">{s.text}</p>
+        <div className="text-xs tracking-[0.25em] uppercase mb-1 font-medium" style={{ color: "#F5F0E8" }}>{s.n} · {s.title}</div>
+        <p className="text-sm leading-relaxed" style={{ color: "#FFFFFF" }}>{s.text}</p>
       </div>
     </div>
   );
