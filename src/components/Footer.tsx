@@ -15,7 +15,7 @@ const Footer = () => {
               Four generations of coffee excellence.
             </p>
             <p className="text-stone-400 text-sm">
-              © 2024 Cafetos de Segovia. All rights reserved.
+              © {new Date().getFullYear()} Cafetos de Segovia. All rights reserved.
             </p>
           </div>
 
