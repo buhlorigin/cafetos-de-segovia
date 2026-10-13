@@ -20,6 +20,7 @@ const HomeExtraSections = () => {
               className="w-full h-96 object-cover rounded-2xl shadow-lg"
             />
             <div>
+              <span className="eyebrow">Dry mill</span>
               <h2 className="text-4xl font-bold text-amber-800 mb-6">
                 Our <span className="text-amber-700">Beneficio</span>
               </h2>
@@ -40,6 +41,7 @@ const HomeExtraSections = () => {
       {/* Our Coffee */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="eyebrow text-center">Portfolio</span>
           <h2 className="text-4xl font-bold text-amber-800 mb-12 text-center">
             Our <span className="text-amber-700">Coffee</span>
           </h2>
@@ -68,6 +70,7 @@ const HomeExtraSections = () => {
       {/* Quality & Food Safety */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="eyebrow text-center">Quality</span>
           <h2 className="text-4xl font-bold text-amber-800 mb-12 text-center">
             Quality & <span className="text-amber-700">Food Safety</span>
           </h2>

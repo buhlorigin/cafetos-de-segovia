@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
 import HomeExtraSections from '../components/HomeExtraSections';
-import WorldMap from '../components/WorldMap';
+import PartnerBand from '../components/PartnerBand';
 import InstagramFeed from '../components/InstagramFeed';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
@@ -15,9 +15,9 @@ const Index = () => {
       <Hero />
       <AboutSection />
       <HomeExtraSections />
-      <WorldMap />
       <InstagramFeed />
       <ContactSection />
+      <PartnerBand />
       <Footer />
     </div>
   );

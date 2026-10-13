@@ -19,6 +19,12 @@ export default {
 		},
 		extend: {
 			colors: {
+				amber: {50:'#F8F1EF',100:'#F1E2DE',200:'#E3C3BC',300:'#E8C9A8',400:'#D9AE85',500:'#B5443C',600:'#A8322B',700:'#9E2B25',800:'#2B1D14',900:'#5E1814'},
+				stone: {50:'#F5F0E8',100:'#EDE5D8',200:'#DDD2C1',300:'#C7B8A3',400:'#9C8B76',500:'#7A6A58',600:'#5E4E40',700:'#45362B',800:'#2B1D14',900:'#1F150E'},
+				cherry: '#9E2B25',
+				forest: { DEFAULT: '#2F4A3A', dark: '#24392D' },
+				parchment: '#F5F0E8',
+				coffee: '#2B1D14',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -69,7 +75,9 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'sans': ['Poppins', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'segoe ui', 'Roboto', 'helvetica neue', 'Arial', 'sans-serif'],
+				'serif': ['Fraunces', 'Georgia', 'serif'],
+				'display': ['Fraunces', 'Georgia', 'serif'],
+				'sans': ['"DM Sans"', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'segoe ui', 'Roboto', 'helvetica neue', 'Arial', 'sans-serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 			},
 			keyframes: {
