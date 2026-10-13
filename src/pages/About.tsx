@@ -24,6 +24,16 @@ const About = () => {
       content: "Innovation drives our pursuit of excellence in specialty coffee. We continuously explore cutting-edge processing methods and quality enhancement techniques. Our commitment to creativity and pioneering approaches ensures we deliver exceptional coffee experiences while maintaining the highest standards of consistency and flavor development.",
       image: "/lovable-uploads/a45a3c49-43d8-40ef-b238-3768a245bd5e.png"
     }
+    ,{
+      title: "DRYING & PROCESSING",
+      content: "Placeholder text: our coffee is dried slowly on patios and raised beds, turned by hand throughout the day. We monitor moisture constantly until each lot reaches its ideal level, protecting flavor and stability for export.",
+      image: "/lovable-uploads/c583d705-3f60-4df4-8cfa-ac3538d6d036.png"
+    },
+    {
+      title: "LABORATORY & QUALITY CONTROL",
+      content: "Placeholder text: in our cupping lab every lot is evaluated before export. We check moisture and density, cup each lot, and select only the coffees that meet our standards.",
+      image: "/lovable-uploads/2fb707ad-4139-4528-9715-3a9f2960ad90.png"
+    }
   ];
 
   const galleryImages = [

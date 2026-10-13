@@ -25,7 +25,8 @@ const Farms = () => {
         location: "Dipilto, Nueva Segovia",
         altitude: "1,350-1,500m",
         varieties: "Red & Yellow Catuai, Maracaturra, Java, Caturra, Bourbon",
-        processing: "Natural, Washed, Experimental"
+        processing: "Natural, Washed, Experimental",
+        difference: ""
       }
     },
     {
@@ -42,10 +43,32 @@ const Farms = () => {
         location: "Buenos Aires, Dipilto",
         altitude: "1,250-1,450m",
         varieties: "Geisha, Red & Yellow Catuai, Maracaturra, Bourbon",
-        processing: "Natural, Washed, Honey, Experimental"
+        processing: "Natural, Washed, Honey, Experimental",
+        difference: ""
       }
     }
   ];
+
+  const placeholderText = "Placeholder text: a family-run farm in the highlands of Nueva Segovia, dedicated to specialty coffee with careful harvesting and processing. Full story coming soon.";
+  const placeholderDiff = "Placeholder: what makes this farm unique will be added soon.";
+  const extraFarms = [
+    { name: "Finca Los Milagros", image: "/lovable-uploads/61079dbc-cb5a-4ea7-ba8c-a3386a5c6671.png", altitude: "To be confirmed" },
+    { name: "Finca Agua Sarca", image: "/lovable-uploads/4f4c2833-b318-4108-8165-924ad5cfb8c3.png", altitude: "1,150-1,400m" },
+    { name: "Finca El Ciprés", image: "/lovable-uploads/ad277da2-06aa-4822-8f6b-4cf494471a2e.png", altitude: "To be confirmed" },
+    { name: "Finca Mirjam", image: "/lovable-uploads/376c0056-37ee-48ff-aa28-93b13e5bf4f2.png", altitude: "1,200-1,350m" },
+    { name: "Finca La Picona", image: "/lovable-uploads/52010541-91f5-494c-909b-02fc63d9e224.png", altitude: "1,250-1,400m" },
+  ].map((f) => ({
+    name: f.name,
+    image: f.image,
+    description: placeholderText,
+    details: {
+      location: "Nueva Segovia (to be confirmed)",
+      altitude: f.altitude,
+      varieties: "To be confirmed",
+      processing: "To be confirmed",
+      difference: placeholderDiff,
+    },
+  }));
 
   const handleImageScroll = (farmIndex: number, direction: 'prev' | 'next') => {
     const farmKey = farmIndex === 0 ? 'bethania' : 'hortensias';
@@ -169,6 +192,10 @@ const Farms = () => {
                         <h4 className="font-semibold text-amber-300 mb-1">Processing</h4>
                         <p className="text-white/90">{farm.details.processing}</p>
                       </div>
+                      <div className="col-span-2 bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">What makes it different</h4>
+                        <p className="text-white/90 min-h-[1.5rem]">{farm.details.difference}</p>
+                      </div>
                     </div>
 
                     {/* Image indicators */}
@@ -250,6 +277,10 @@ const Farms = () => {
                         <h4 className="font-semibold text-amber-300 mb-1">Processing</h4>
                         <p className="text-white/90">{farm.details.processing}</p>
                       </div>
+                      <div className="col-span-2 bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">What makes it different</h4>
+                        <p className="text-white/90 min-h-[1.5rem]">{farm.details.difference}</p>
+                      </div>
                     </div>
 
                     {/* Image indicators */}
@@ -282,6 +313,46 @@ const Farms = () => {
 
 
       
+      {/* Additional Farms */}
+      {extraFarms.map((farm) => (
+        <section key={farm.name} className="relative min-h-screen mt-2">
+          <div className="absolute inset-0">
+            <img src={farm.image} alt={farm.name} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/30"></div>
+          </div>
+          <div className="relative z-10 min-h-screen flex items-center">
+            <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+                <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <span className="text-amber-300">{farm.name}</span>
+                  </h2>
+                  <p className="text-lg text-white/90 leading-relaxed mb-8">{farm.description}</p>
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      ["Location", farm.details.location],
+                      ["Altitude", farm.details.altitude],
+                      ["Varieties", farm.details.varieties],
+                      ["Processing", farm.details.processing],
+                    ].map(([label, value]) => (
+                      <div key={label} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <h4 className="font-semibold text-amber-300 mb-1">{label}</h4>
+                        <p className="text-white/90">{value}</p>
+                      </div>
+                    ))}
+                    <div className="col-span-2 bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                      <h4 className="font-semibold text-amber-300 mb-1">What makes it different</h4>
+                      <p className="text-white/90">{farm.details.difference}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
+
       {/* Farm Locations Map */}
       <EnhancedMapbox />
 
