@@ -1,48 +1,42 @@
 import * as React from "react";
-import heroVideo from "../assets/hero-loop-1080p.mp4.asset.json";
-import heroVideoMobile from "../assets/hero-loop-mobile-720p.mp4.asset.json";
-import heroPoster from "../assets/hero-poster.jpg.asset.json";
-
-const NARROW_QUERY = "(max-width: 767px)";
-
-const isNarrowViewport = () =>
-  typeof window !== "undefined" && window.matchMedia(NARROW_QUERY).matches;
 
 const Hero = () => {
-  const [isNarrow, setIsNarrow] = React.useState<boolean>(isNarrowViewport);
+  const ref = React.useRef<HTMLVideoElement>(null);
 
   React.useEffect(() => {
-    const mql = window.matchMedia(NARROW_QUERY);
-    const onChange = () => setIsNarrow(mql.matches);
-    mql.addEventListener("change", onChange);
-    return () => mql.removeEventListener("change", onChange);
+    const v = ref.current;
+    if (!v) return;
+    v.muted = true;
+    v.play().catch(() => {});
   }, []);
-
-  const videoSrc = isNarrow ? heroVideoMobile.url : heroVideo.url;
 
   return (
     <section id="home" className="min-h-screen relative flex items-center justify-center">
-      {/* Hero video background */}
       <div className="absolute inset-0 overflow-hidden bg-coffee">
         <video
-          key={videoSrc}
+          ref={ref}
           className="absolute inset-0 w-full h-full object-cover"
-          src={videoSrc}
-          poster={heroPoster.url}
+          poster="/media/hero-poster.jpg"
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           aria-hidden="true"
           tabIndex={-1}
-        ></video>
-        <div className="absolute inset-0 bg-coffee/55"></div>
+        >
+          <source src="/media/hero-loop-mobile-720p.mp4" type="video/mp4" media="(max-width: 767px)" />
+          <source src="/media/hero-loop-1080p.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(30,20,14,0.45)" }}></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span className="eyebrow !text-amber-300">Specialty Coffee Export · Nicaragua</span>
-        <h1 className="text-parchment mb-12 leading-tight">
+        <h1
+          className="text-parchment mb-12 mx-auto"
+          style={{ fontSize: "clamp(2.25rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "900px" }}
+        >
           Cafetos de Segovia is your partner in finding the best Specialty Coffees in Nueva Segovia
         </h1>
 

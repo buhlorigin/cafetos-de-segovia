@@ -6,7 +6,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Cafetos de Segovia</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/brand/cafetos-logo-light.png" alt="Cafetos de Segovia logo" className="h-14 w-auto" />
+              <h3 className="text-2xl font-bold">Cafetos de Segovia</h3>
+            </div>
             <p className="text-stone-300 mb-4">
               Premium specialty coffee exporter from Nueva Segovia, Nicaragua. 
               Four generations of coffee excellence.
