@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { farms } from '../data/farms';
+import { Button } from '../components/ui/button';
+import { farms, farmNetwork } from '../data/farms';
 
 type CoffeeArea = {
   label: string;
@@ -18,26 +19,25 @@ const coffeeAreas: CoffeeArea[] = [
   {
     label: "Dipilto, Nueva Segovia",
     heading: "The highlands of the Serranías de Dipilto y Jalapa",
-    text: "our farms sit on the slopes of the Serranías de Dipilto y Jalapa nature reserve, where high altitude and cool mountain nights slow the ripening of the coffee cherries and build the sweetness and complexity these coffees are known for. Finca Bethania and Finca Las Hortensias grow here.",
+    text: "",
     image: "/lovable-uploads/c583d705-3f60-4df4-8cfa-ac3538d6d036.png",
-    altitude: "1,250–1,500m",
-    varieties: "Red & Yellow Catuai, Maracaturra, Geisha, Bourbon, Java",
-    farmNames: ["Finca Bethania", "Finca Las Hortensias"],
+    altitude: "",
+    varieties: "",
+    farmNames: ["Finca Agua Sarca", "Finca La Picona", "Finca Mirjam", "Finca El Ciprés", "Finca Las Hortensias", "Santa Isabel", "Santa Helena"],
   },
   {
     label: "Mozonte, Nueva Segovia",
     heading: "The highlands of Mozonte",
-    text: "the coffee area around Mozonte, close to our dry mill, combines fertile soils with a mild climate and altitudes that suit balanced, sweet cups. Finca Los Milagros, Finca Agua Sarca, Finca El Ciprés, Finca Mirjam and Finca La Picona grow here.",
+    text: "",
     image: "/lovable-uploads/4f4c2833-b318-4108-8165-924ad5cfb8c3.png",
-    altitude: "1,150–1,400m",
+    altitude: "",
     varieties: "",
-    farmNames: ["Finca Los Milagros", "Finca Agua Sarca", "Finca El Ciprés", "Finca Mirjam", "Finca La Picona"],
+    farmNames: ["La Esperanza", "Ojo de Agua", "Quebrada Las Naranjas", "Las Naranjas", "El Esfuerzo"],
   },
 ];
 
-// Draft origin and partner sections stay hidden until final copy is supplied.
-const originsPublished = false;
-const partnerFarmsPublished = false;
+// Only approved origin names are published; unfinished area copy stays empty.
+const originsPublished = true;
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
@@ -77,7 +77,7 @@ const Farms = () => {
             Our <span className="text-amber-700">Farms</span>
           </h1>
           <p className="text-2xl text-stone-600 leading-relaxed font-medium">
-            Exceptional terroir in the highlands of Nueva Segovia
+            {farmNetwork.total} farms across Nueva Segovia, six of them run by our family.
           </p>
         </div>
       </section>
@@ -172,8 +172,10 @@ const Farms = () => {
                       {[
                         ["Location", farm.details.location],
                         ["Altitude", farm.details.altitude],
+                        ["Size", farm.details.size],
                         ["Varieties", farm.details.varieties],
                         ["Processing", farm.details.processing],
+                        ["Harvest", farm.details.harvest],
                         ["What makes it different", farm.details.difference],
                       ].filter(([, value]) => Boolean(value)).map(([label, value]) => (
                         <div key={label} className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-stone-300">
@@ -208,42 +210,26 @@ const Farms = () => {
         </div>
       </section>
 
-      {/* More farms on request — awaiting final copy */}
-      {partnerFarmsPublished && <section className="py-20" style={{ backgroundColor: '#2F4A3A' }}>
+      {/* More farms on request */}
+      <section id="partner-farms" className="py-20 bg-forest text-parchment scroll-mt-20">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
-          <span className="eyebrow text-white/70">Beyond our farms</span>
-          <h2 className="text-4xl md:text-5xl text-white mt-4 mb-6">More farms on request</h2>
-          <p className="text-lg text-white/80 leading-relaxed max-w-3xl mx-auto mb-10">
-            Besides the farms shown above, we work with a network of partner producers across Nueva Segovia.
-            Lots from these farms are available on request, with the same traceability and quality control at our beneficio.
+          <span className="eyebrow !text-parchment">Beyond our farms</span>
+          <h2 className="text-4xl md:text-5xl text-parchment mt-4 mb-6">More farms on request</h2>
+          <p className="text-lg text-parchment leading-relaxed max-w-3xl mx-auto mb-10">
+            Beyond our family farms, we work with a close circle of partner producers in Dipilto, Mozonte and San Fernando. Their coffee is processed and cupped at our own dry mill with the same care and traceability, and lots are available on request.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto">
-            {[
-              ["15+", "Partner producers"],
-              ["1,100–1,500m", "Altitude range"],
-              ["All processes", "Natural, Washed, Honey, Experimental"],
-            ].map(([value, label]) => (
-              <div key={label} className="border-t border-white/30 pt-4">
-                <p className="text-3xl font-serif text-white mb-1">{value}</p>
-                <p className="text-sm text-white/70">{label}</p>
-              </div>
-            ))}
-          </div>
-          <a
-            href="mailto:ana@cafetosdesegovia.com?subject=Partner%20farms%20request"
-            className="inline-block bg-white text-stone-900 px-8 py-4 font-semibold hover:bg-stone-100 transition-colors duration-200"
-          >
-            Request farm list &amp; spec sheets
-          </a>
+          <Button asChild size="lg" className="h-auto whitespace-normal py-4">
+            <a href="/contact?subject=Partner%20farms%20request">Request farm list &amp; spec sheets</a>
+          </Button>
         </div>
-      </section>}
+      </section>
 
       {/* Where our coffee comes from — awaiting final copy */}
-      {originsPublished && <section className="py-20" style={{ backgroundColor: '#2F4A3A' }}>
+      {originsPublished && <section className="py-20 bg-forest text-parchment">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-14">
-            <span className="eyebrow text-white/70">Our origins</span>
-            <h2 className="text-4xl md:text-5xl text-white mt-4">Where our coffee comes from</h2>
+            <span className="eyebrow !text-parchment">Our origins</span>
+            <h2 className="text-4xl md:text-5xl text-parchment mt-4">Where our coffee comes from</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             {coffeeAreas.map((area) => (
@@ -251,32 +237,33 @@ const Farms = () => {
                 <div className="aspect-[16/10] overflow-hidden mb-8">
                   <img src={area.image} alt={area.label} className="w-full h-full object-cover" />
                 </div>
-                <span className="eyebrow text-white/70">{area.label}</span>
-                <h3 className="font-serif text-3xl md:text-4xl text-white mt-3 mb-4">{area.heading}</h3>
-                <p className="text-white/80 leading-relaxed mb-8">{area.text}</p>
-                <dl className="border-t border-white/30">
+                <span className="eyebrow !text-parchment">{area.label}</span>
+                <h3 className="font-serif text-3xl md:text-4xl text-parchment mt-3 mb-4">{area.heading}</h3>
+                {area.text && <p className="text-parchment leading-relaxed mb-8">{area.text}</p>}
+                <dl className="border-t border-parchment/30">
                   {[
                     ["Altitude range", area.altitude],
                     ["Main varieties", area.varieties],
                   ].filter(([, value]) => Boolean(value)).map(([label, value]) => (
-                    <div key={label} className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-white/30">
-                      <dt className="text-xs uppercase tracking-widest text-white/70 pt-1">{label}</dt>
-                      <dd className="text-white">{value}</dd>
+                    <div key={label} className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
+                      <dt className="text-xs uppercase tracking-widest text-parchment pt-1">{label}</dt>
+                      <dd className="text-parchment">{value}</dd>
                     </div>
                   ))}
-                  <div className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-white/30">
-                    <dt className="text-xs uppercase tracking-widest text-white/70 pt-1">Farms</dt>
+                  <div className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
+                    <dt className="text-xs uppercase tracking-widest text-parchment pt-1">Farms</dt>
                     <dd className="flex flex-wrap gap-2">
                       {area.farmNames.map((name) => {
                         const idx = farms.findIndex((f) => f.name === name);
+                        if (idx < 0) return <span key={name} className="text-xs uppercase tracking-widest border border-parchment/40 px-3 py-1.5 text-parchment">{name}</span>;
                         return (
-                          <button
+                          <Button variant="ghost"
                             key={name}
                             onClick={() => idx >= 0 && jumpTo(idx)}
-                            className="text-xs uppercase tracking-widest border border-white/40 px-3 py-1.5 text-white hover:bg-white/10 transition-colors"
+                            className="text-xs uppercase tracking-widest border border-parchment/40 px-3 py-1.5 text-parchment hover:bg-parchment/10 transition-colors"
                           >
                             {name.replace('Finca ', '')}
-                          </button>
+                          </Button>
                         );
                       })}
                     </dd>
@@ -299,7 +286,7 @@ const Farms = () => {
           </p>
           <a
             href="/contact"
-            className="bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-800 transition-colors duration-200 inline-block"
+            className="bg-amber-700 text-parchment px-8 py-4 rounded-lg font-semibold hover:bg-amber-800 transition-colors duration-200 inline-block"
           >
             Request Samples & Spec Sheets
           </a>

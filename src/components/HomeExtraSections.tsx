@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ShieldCheck, Route, FlaskConical, PackageCheck, ChevronLeft, ChevronRight } from 'lucide-react';
-import { farms } from '../data/farms';
+import { farms, farmNetwork } from '../data/farms';
 
 const captionShade = { backgroundImage: 'linear-gradient(to top, rgba(30,20,14,0.85), rgba(30,20,14,0))' };
 
@@ -19,8 +19,8 @@ const strip = [
 ];
 
 const numbers = [
-  { value: 7, display: '7', label: 'Farms' },
-  { value: null, display: '1,150–1,500 m', label: 'Altitude range' },
+  { value: null, display: farmNetwork.total, label: 'Family and partner farms' },
+  { value: null, display: farmNetwork.altitude, label: 'Altitude range' },
   { value: 4, display: '4', label: 'Processes: Natural, Honey, Washed, Experimental' },
   { value: 1, display: '1', label: 'Own dry mill, from drying to export' },
 ];
@@ -134,8 +134,8 @@ const HomeExtraSections = () => {
           <div className="flex items-end justify-between gap-6 mb-10">
             <div>
               <span className="eyebrow">Our farms</span>
-              <h2 className="text-4xl md:text-6xl text-coffee mb-4">Seven farms in the highlands of Dipilto and Mozonte</h2>
-              <p className="text-lg" style={{ color: '#5A4636' }}>Each farm has its own altitude, varieties and character. Here is where your coffee grows.</p>
+              <h2 className="text-4xl md:text-6xl text-coffee mb-4">15+ farms in the highlands of Nueva Segovia</h2>
+              <p className="text-lg" style={{ color: '#5A4636' }}>Our family farms and a close circle of partner producers in Dipilto, Mozonte and the surrounding mountains. Each has its own altitude, varieties and character.</p>
             </div>
             <div className="hidden md:flex gap-2 shrink-0">
               <button onClick={() => scroll(-1)} aria-label="Previous farms" className="w-11 h-11 border border-coffee text-coffee flex items-center justify-center hover:bg-coffee hover:text-parchment transition-colors"><ChevronLeft size={20} /></button>
@@ -146,12 +146,18 @@ const HomeExtraSections = () => {
             {farms.map((f) => (
               <a key={f.name} href="/farms" className="snap-start shrink-0 w-[75vw] sm:w-[45%] lg:w-[30%] group">
                 <div className="overflow-hidden aspect-[4/5] mb-4">
-                  <img src="/media/hero-poster.jpg" alt={f.name} loading="lazy" className="w-full h-full object-cover" />
+                  <img src={f.images[0]} alt={f.name} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-2xl text-coffee">{f.name}</h3>
-                <p className="text-sm mt-1" style={{ color: '#5A4636' }}>{[f.details.location, f.details.altitude].filter(Boolean).join(' · ')}</p>
+                <p className="text-sm mt-1" style={{ color: '#5A4636' }}>{[f.details.location.replace(', Nueva Segovia', ''), f.details.altitude].filter(Boolean).join(' · ')}</p>
               </a>
             ))}
+            <a href="/farms#partner-farms" className="snap-start shrink-0 w-[75vw] sm:w-[45%] lg:w-[30%] group">
+              <div className="aspect-[4/5] bg-forest text-parchment flex items-center justify-center p-6 mb-4">
+                <h3 className="text-3xl text-parchment">+ {farmNetwork.partnerCount} partner farms</h3>
+              </div>
+              <p className="text-sm text-coffee">More farms on request</p>
+            </a>
           </div>
           <a href="/farms" className="inline-block mt-10 border border-coffee text-coffee px-8 py-4 font-medium tracking-wide hover:bg-coffee hover:text-parchment transition-colors">Explore our farms</a>
         </div>
@@ -162,7 +168,7 @@ const HomeExtraSections = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-2 lg:grid-cols-4 gap-10">
           {numbers.map((x) => (
             <div key={x.label}>
-              <div className="font-serif text-4xl md:text-6xl mb-3"><CountUp n={x.value} display={x.display} /></div>
+              <div className={`font-serif mb-3 ${x.label === 'Altitude range' ? 'whitespace-nowrap text-lg min-[380px]:text-xl sm:text-3xl lg:text-4xl' : 'text-4xl md:text-6xl'}`}><CountUp n={x.value} display={x.display} /></div>
               <div className="text-sm leading-snug" style={{ color: 'rgba(255,255,255,0.8)' }}>{x.label}</div>
             </div>
           ))}
