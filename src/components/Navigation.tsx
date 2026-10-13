@@ -34,7 +34,7 @@ const Navigation = () => {
         <div className="max-w-[90rem] mx-auto px-6 lg:px-10">
           <div className="flex justify-between items-center h-20">
             <a href="/" className="flex items-center gap-3">
-              <img src="/lovable-uploads/78487e42-fc8e-4d65-aefd-c528d420174e.png" alt="Cafetos de Segovia" className="h-9 w-auto" />
+              <img src={solid ? '/brand/cafetos-logo-transparent.png' : '/brand/cafetos-logo-light.png'} alt="Cafetos de Segovia" className="h-9 md:h-11 w-auto" />
               <span className={`font-serif text-2xl transition-colors duration-500 ${text}`}>Cafetos de Segovia</span>
             </a>
 
