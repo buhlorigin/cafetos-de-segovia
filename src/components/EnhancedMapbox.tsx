@@ -22,6 +22,14 @@ const EnhancedMapbox = () => {
     }
   ];
 
+  const allOrigins = [
+    ...farmLocations,
+    ...["Finca Los Milagros", "Finca Agua Sarca", "Finca El Ciprés", "Finca Mirjam", "Finca La Picona"].map((name) => ({
+      name,
+      description: "Placeholder: specialty coffee farm in Nueva Segovia. Details coming soon.",
+    })),
+  ];
+
   const initializeMap = () => {
     if (!mapContainer.current || !apiKey) return;
 
@@ -173,7 +181,7 @@ const EnhancedMapbox = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          {farmLocations.map((farm, index) => (
+          {allOrigins.map((farm, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center mr-3">
