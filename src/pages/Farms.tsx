@@ -18,7 +18,7 @@ const coffeeAreas: CoffeeArea[] = [
   {
     label: "Dipilto, Nueva Segovia",
     heading: "The highlands of the Serranías de Dipilto y Jalapa",
-    text: "Placeholder text: our farms sit on the slopes of the Serranías de Dipilto y Jalapa nature reserve, where high altitude and cool mountain nights slow the ripening of the coffee cherries and build the sweetness and complexity these coffees are known for. Finca Bethania and Finca Las Hortensias grow here.",
+    text: "our farms sit on the slopes of the Serranías de Dipilto y Jalapa nature reserve, where high altitude and cool mountain nights slow the ripening of the coffee cherries and build the sweetness and complexity these coffees are known for. Finca Bethania and Finca Las Hortensias grow here.",
     image: "/lovable-uploads/c583d705-3f60-4df4-8cfa-ac3538d6d036.png",
     altitude: "1,250–1,500m",
     varieties: "Red & Yellow Catuai, Maracaturra, Geisha, Bourbon, Java",
@@ -27,13 +27,17 @@ const coffeeAreas: CoffeeArea[] = [
   {
     label: "Mozonte, Nueva Segovia",
     heading: "The highlands of Mozonte",
-    text: "Placeholder text: the coffee area around Mozonte, close to our dry mill, combines fertile soils with a mild climate and altitudes that suit balanced, sweet cups. Finca Los Milagros, Finca Agua Sarca, Finca El Ciprés, Finca Mirjam and Finca La Picona grow here.",
+    text: "the coffee area around Mozonte, close to our dry mill, combines fertile soils with a mild climate and altitudes that suit balanced, sweet cups. Finca Los Milagros, Finca Agua Sarca, Finca El Ciprés, Finca Mirjam and Finca La Picona grow here.",
     image: "/lovable-uploads/4f4c2833-b318-4108-8165-924ad5cfb8c3.png",
     altitude: "1,150–1,400m",
-    varieties: "To be confirmed",
+    varieties: "",
     farmNames: ["Finca Los Milagros", "Finca Agua Sarca", "Finca El Ciprés", "Finca Mirjam", "Finca La Picona"],
   },
 ];
+
+// Draft origin and partner sections stay hidden until final copy is supplied.
+const originsPublished = false;
+const partnerFarmsPublished = false;
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
@@ -163,15 +167,15 @@ const Farms = () => {
                   <div className={photoLeft ? 'lg:order-2' : 'lg:order-1'}>
                     <span className="eyebrow">Farm {pad(i + 1)} / {pad(total)}</span>
                     <h2 className="text-4xl md:text-5xl text-stone-800 mb-6">{farm.name}</h2>
-                    <p className="text-stone-600 leading-relaxed mb-8">{farm.description}</p>
+                    {farm.description && <p className="text-stone-600 leading-relaxed mb-8">{farm.description}</p>}
                     <dl className="border-t border-stone-300">
                       {[
                         ["Location", farm.details.location],
                         ["Altitude", farm.details.altitude],
                         ["Varieties", farm.details.varieties],
                         ["Processing", farm.details.processing],
-                        ["What makes it different", farm.details.difference || "—"],
-                      ].map(([label, value]) => (
+                        ["What makes it different", farm.details.difference],
+                      ].filter(([, value]) => Boolean(value)).map(([label, value]) => (
                         <div key={label} className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-stone-300">
                           <dt className="text-xs uppercase tracking-widest text-stone-600 pt-1">{label}</dt>
                           <dd className="text-stone-800">{value}</dd>
@@ -204,8 +208,8 @@ const Farms = () => {
         </div>
       </section>
 
-      {/* More farms on request */}
-      <section className="py-20" style={{ backgroundColor: '#2F4A3A' }}>
+      {/* More farms on request — awaiting final copy */}
+      {partnerFarmsPublished && <section className="py-20" style={{ backgroundColor: '#2F4A3A' }}>
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
           <span className="eyebrow text-white/70">Beyond our farms</span>
           <h2 className="text-4xl md:text-5xl text-white mt-4 mb-6">More farms on request</h2>
@@ -232,10 +236,10 @@ const Farms = () => {
             Request farm list &amp; spec sheets
           </a>
         </div>
-      </section>
+      </section>}
 
-      {/* Where our coffee comes from */}
-      <section className="py-20" style={{ backgroundColor: '#2F4A3A' }}>
+      {/* Where our coffee comes from — awaiting final copy */}
+      {originsPublished && <section className="py-20" style={{ backgroundColor: '#2F4A3A' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-14">
             <span className="eyebrow text-white/70">Our origins</span>
@@ -254,7 +258,7 @@ const Farms = () => {
                   {[
                     ["Altitude range", area.altitude],
                     ["Main varieties", area.varieties],
-                  ].map(([label, value]) => (
+                  ].filter(([, value]) => Boolean(value)).map(([label, value]) => (
                     <div key={label} className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-white/30">
                       <dt className="text-xs uppercase tracking-widest text-white/70 pt-1">{label}</dt>
                       <dd className="text-white">{value}</dd>
@@ -282,7 +286,7 @@ const Farms = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* Sample Request Section */}
       <section className="py-16 bg-amber-50">
