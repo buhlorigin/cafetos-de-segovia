@@ -1,0 +1,309 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "farms": "Our Farms",
+    "nicaragua": "Nicaragua",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "banner": {
+    "text": "This site is also available in Spanish.",
+    "switch": "Ver en español",
+    "dismiss": "Dismiss"
+  },
+  "meta": {
+    "home": { "title": "Cafetos de Segovia - Specialty Coffee Export Nicaragua | Premium Coffee Beans", "description": "Specialty Coffee Export Nicaragua - Cafetos de Segovia offers premium specialty coffee beans from Nueva Segovia highlands. Third-generation family business providing traceable, high-quality coffee export services worldwide." },
+    "about": { "title": "About Us | Cafetos de Segovia", "description": "Three generations of coffee excellence from the highlands of Nueva Segovia, Nicaragua: our heritage, values, drying and quality control." },
+    "services": { "title": "Services | Cafetos de Segovia", "description": "From origin to destination: growing with producers in Nueva Segovia and preparing export-ready specialty coffee at our own dry mill." },
+    "farms": { "title": "Our Farms | Cafetos de Segovia", "description": "15+ farms across Nueva Segovia, six of them run by our family. Altitudes, varieties, processes and harvest periods of each farm." },
+    "nicaragua": { "title": "Nicaragua | Cafetos de Segovia", "description": "What makes Nicaragua special as a coffee origin: the northern highlands, Nueva Segovia and Dipilto, varieties, processes and the road to export." },
+    "contact": { "title": "Contact | Cafetos de Segovia", "description": "Contact Cafetos de Segovia for samples, spec sheets and export inquiries. Visit our dry mill in Nueva Segovia, Nicaragua." },
+    "notFound": { "title": "Page not found | Cafetos de Segovia", "description": "This page could not be found." }
+  },
+  "hero": {
+    "eyebrow": "Specialty Coffee Export · Nicaragua",
+    "title": "Cafetos de Segovia is your partner in finding the best Specialty Coffees in Nueva Segovia",
+    "services": "Our Services",
+    "farms": "Our Farms"
+  },
+  "homeQuote": {
+    "alt": "The Albir Family - Three Generations at Cafetos de Segovia",
+    "quote": "At Cafetos de Segovia, we are committed to integrity, transparency, and excellence. From cultivation to export, every stage of our specialty green coffee process is traceable and intentional. The exceptional flavor in every cup reflects our passion for natural process coffees and the purity of the Nicaragua origin.",
+    "role": "Founders, Cafetos de Segovia"
+  },
+  "home": {
+    "beneficio": {
+      "eyebrow": "Our dry mill · Nueva Segovia",
+      "title": "From cherry to container, under one roof",
+      "text": "Every lot we export passes through our own beneficio in Nueva Segovia. Drying, milling, sorting, storage and cupping happen in one place, run by our own team, so we control each step and can tell you exactly where your coffee has been."
+    },
+    "steps": [
+      { "title": "Drying", "text": "Washed and honey coffees dry in parchment on raised beds, and naturals in the full cherry. Our team turns every bed by hand throughout the day for slow, even drying." },
+      { "title": "Milling & sorting", "text": "Hulling, size grading and optical color sorting remove defects before a lot is approved." },
+      { "title": "Lot storage", "text": "Each lot rests separately, tagged with its farm, process and date, so it stays traceable to export." },
+      { "title": "Cupping lab", "text": "Every lot is cupped in our own lab before it is offered, and again before it ships." }
+    ],
+    "strip": ["HACCP certified", "Full lot traceability", "In-house cupping lab", "Export-ready preparation"],
+    "coffee": {
+      "eyebrow": "Portfolio",
+      "title": "Our Coffee",
+      "greenTitle": "Green Export Coffee (Café Oro)",
+      "greenText": "Export-ready green coffee, milled and sorted at our beneficio.",
+      "lotsTitle": "Processed Lots",
+      "processes": ["Natural", "Honey", "Washed", "Experimental"]
+    },
+    "farms": {
+      "eyebrow": "Our farms",
+      "title": "15+ farms in the highlands of Nueva Segovia",
+      "text": "Our family farms and a close circle of partner producers in Dipilto, Mozonte and the surrounding mountains. Each has its own altitude, varieties and character.",
+      "prev": "Previous farms",
+      "next": "Next farms",
+      "partner": "+ {{count}} partner farms",
+      "more": "More farms on request",
+      "explore": "Explore our farms"
+    },
+    "numbers": {
+      "total": "15+",
+      "altitude": "1,150–1,800 m",
+      "farms": "Family and partner farms",
+      "altitudeLabel": "Altitude range",
+      "processes": "Processes: Natural, Honey, Washed, Experimental",
+      "mill": "Own dry mill, from drying to export"
+    },
+    "cta": {
+      "title": "Taste the harvest",
+      "text": "Request samples and spec sheets of our current lots.",
+      "samples": "Request samples",
+      "samplesSubject": "Sample request",
+      "contact": "Contact us"
+    }
+  },
+  "footer": {
+    "logoAlt": "Cafetos de Segovia logo",
+    "description": "Producers and exporters of specialty coffee from Nueva Segovia, Nicaragua.",
+    "rights": "All rights reserved.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "services": "Services",
+    "farms": "Farms & Traceability",
+    "contact": "Contact",
+    "contactInfo": "Contact Info",
+    "location": "Nueva Segovia, Nicaragua",
+    "social": "Follow Us on Social Media",
+    "crafted": "Crafted with passion in the mountains of Nueva Segovia"
+  },
+  "services": {
+    "eyebrow": "OUR SERVICES",
+    "title": "From origin to destination",
+    "intro": "We are producers ourselves, and we have been exporting Nicaraguan coffee for more than fifteen years. That experience lets us work on both ends of the chain: growing alongside the producers of Nueva Segovia, and preparing their coffee for roasters around the world. Everything in between happens at our own dry mill, with our own team.",
+    "journeyLabel": "Coffee journey",
+    "journey": ["Origin · Farms of Nueva Segovia", "Our dry mill", "Destination · Roasters worldwide"],
+    "producers": {
+      "eyebrow": "AT ORIGIN",
+      "title": "Growing with producers",
+      "text": "We grow coffee on our own family farms, so we know what each season asks of a producer. We share that experience with our partner producers, from the field to the cupping table, so every harvest can show its full potential.",
+      "alt": "Two women with a coffee seedling",
+      "items": [
+        ["Farm guidance", "Practical advice on harvest, shade, pruning and fertilization, based on what works on our own farms."],
+        ["Processing protocols", "Fermentation and drying methods we test on our farms first, then share."],
+        ["Cupping feedback", "An evaluation of every lot, to understand its profile and how to improve it."],
+        ["Access to markets", "Coffee presented to importers and roasters in Europe, the US, Asia, Australia and the Middle East."]
+      ]
+    },
+    "export": {
+      "eyebrow": "AT OUR DRY MILL",
+      "title": "Export-ready coffee",
+      "text": "Every lot that leaves our mill is separated, cupped and documented. From microlots to full containers, specialty and commercial, we take care of selection, preparation and export, so the coffee arrives as it was cupped at origin.",
+      "alt": "The Cafetos de Segovia team",
+      "items": [
+        ["Lot selection", "Lots from our family farms and partner producers, matched to each roaster's profile."],
+        ["Samples & cupping", "Pre-shipment samples and a cupping report for every lot."],
+        ["Traceability & EUDR", "Farm geolocation and a traceability sheet per lot, ready for the European market."],
+        ["Export logistics", "Packing, documentation, customs and shipping, with farm visits on request."]
+      ]
+    },
+    "certs": {
+      "titleA": "Our ",
+      "titleB": "Certifications",
+      "text": "Committed to quality standards and export excellence",
+      "haccp": "Hazard Analysis Critical Control Points",
+      "organicBadge": "ORGANIC",
+      "organic": "Organic",
+      "organicText": "Certified Organic Standards"
+    },
+    "closing": {
+      "title": "Let's work together",
+      "text": "Whether you grow coffee or roast it, we would love to hear from you.",
+      "harvest": "Talk to us about your harvest",
+      "harvestSubject": "Talk to us about your harvest",
+      "samples": "Request samples & spec sheets",
+      "samplesSubject": "Request samples & spec sheets"
+    }
+  },
+  "process": {
+    "eyebrow": "OUR PROCESS",
+    "title": "From cherry to container, step by step",
+    "exportAlt": "Coffee lots prepared at our dry mill for export",
+    "view": "View {{title}} photo",
+    "note": "Honey water from washing goes to treatment piles away from water sources, protecting the rivers of the Dipilto-Jalapa reserve.",
+    "steps": [
+      ["Selective picking", "Only fully ripe cherries are hand-picked, then sorted and floated in clean water to remove defects."],
+      ["Fermentation", "Washed coffees ferment 18 to 36 hours before washing in channels with clean water. Anaerobic lots rest in sealed barrels for 48 to 140 hours, with temperature and pH monitored throughout."],
+      ["Drying", "Slow drying on raised African beds, alternating sun and ventilated shade: about 12 days for washed coffees and 28 days for naturals, until the coffee reaches 12% moisture."],
+      ["Resting", "Lots rest in our warehouse to stabilize before milling, each one identified by farm, variety and process."],
+      ["Quality control", "Every lot is roasted, cupped and scored in our lab, and its moisture and physical quality are checked."],
+      ["Dry milling", "Hulling, screen-size grading, density sorting, optical color sorting and a final hand-picking of defects."],
+      ["Packing", "Coffee is packed to each roaster's specification and labeled for full traceability."],
+      ["Export", "Documentation, customs clearance, freight booking and follow-up until the coffee arrives."]
+    ]
+  },
+  "about": {
+    "titleA": "About ",
+    "subtitle": "Three generations of coffee excellence from the highlands of Nueva Segovia",
+    "values": [
+      { "title": "HERITAGE", "content": "Cafetos de Segovia was founded by Ana and Martha Albir, representing the third generation of their family's coffee legacy. We bridge tradition with innovation, providing transparent and socially responsible connections to Nicaraguan coffee farmers. Our passionate team of specialists ensures the highest quality standards throughout the entire production chain, building lasting relationships with partner farms and buyers worldwide." },
+      { "title": "OUR COFFEE", "content": "We partner with exceptional farmers to navigate changing environmental conditions while preserving traditional farming culture. Our collaboration with outstanding importers and roasters focuses on sustainability and quality excellence. Through innovative micro-milling and advanced processing techniques, we enhance flavors and maintain consistency. Every cup tells the story of dedicated farmers and our commitment to environmental stewardship." },
+      { "title": "SUSTAINABILITY", "content": "At Cafetos de Segovia, sustainability is our foundation. We cultivate coffee with deep reverence for the terroir, implementing practices that preserve our environment for future generations. Our connection with nature defines our identity and legacy, ensuring that every bean reflects our commitment to responsible farming and environmental protection." },
+      { "title": "INNOVATION", "content": "Innovation drives our pursuit of excellence in specialty coffee. We continuously explore cutting-edge processing methods and quality enhancement techniques. Our commitment to creativity and pioneering approaches ensures we deliver exceptional coffee experiences while maintaining the highest standards of consistency and flavor development." },
+      { "title": "DRYING & PROCESSING", "content": "Drying is where a good harvest is protected or lost, so we take it slowly. After processing, our coffee rests on raised beds in the open air, where it dries evenly with the sun and the mountain breeze. Our team turns every bed by hand several times a day and checks moisture until each lot reaches the right level for storage and export.\n\nNatural, honey and washed lots dry separately, and every bed is identified by farm and process. That way each lot keeps its own character and its own traceability, from the farm to the bag." },
+      { "title": "LABORATORY & QUALITY CONTROL", "content": "Every lot is evaluated in our own cupping lab before we offer it. We roast samples, cup them blind alongside our reference lots, and score each one, so we know exactly what is in every bag before a buyer tastes it.\n\nAlongside cupping, we check moisture and the physical quality of the green coffee, looking for defects, size and uniformity. Only lots that meet our standards are prepared for export, and we cup them again before they ship." }
+    ]
+  },
+  "farmsPage": {
+    "titleA": "Our ",
+    "titleB": "Farms",
+    "subtitle": "{{total}} farms across Nueva Segovia, six of them run by our family.",
+    "overviewEyebrow": "Overview",
+    "overviewTitle": "Our Farms at a glance",
+    "quote": "We value sustainability, innovation, and the people who make every harvest possible.",
+    "carousel": "Our farms",
+    "photo": "Photo {{n}}",
+    "farmCounter": "Farm {{n}} / {{total}}",
+    "labels": { "location": "Location", "altitude": "Altitude", "size": "Size", "varieties": "Varieties", "processing": "Processing", "harvest": "Harvest", "difference": "What makes it different" },
+    "prev": "Previous farm",
+    "next": "Next farm",
+    "partnerEyebrow": "Beyond our farms",
+    "partnerTitle": "More farms on request",
+    "partnerText": "Beyond our family farms, we work with a close circle of partner producers in Dipilto, Mozonte and San Fernando. Their coffee is processed and cupped at our own dry mill with the same care and traceability, and lots are available on request.",
+    "partnerButton": "Request farm list & spec sheets",
+    "partnerSubject": "Partner farms request",
+    "originsEyebrow": "Our origins",
+    "originsTitle": "Where our coffee comes from",
+    "areas": [
+      { "label": "Dipilto, Nueva Segovia", "heading": "The highlands of the Serranías de Dipilto y Jalapa" },
+      { "label": "Mozonte, Nueva Segovia", "heading": "The highlands of Mozonte" }
+    ],
+    "altitudeRange": "Altitude range",
+    "mainVarieties": "Main varieties",
+    "farmsLabel": "Farms",
+    "closingTitle": "Request samples",
+    "closingText": "Experience the exceptional quality of our farm-specific lots.",
+    "closingButton": "Request samples & spec sheets",
+    "closingSubject": "Request samples & spec sheets"
+  },
+  "farmData": {
+    "agua-sarca": {
+      "description": "Agua Sarca has been in the Albir family for more than thirty years. It is our largest farm, set on sandy-loam soils with steady rainfall and cool highland air, and planted under an agroforestry canopy of native trees, fruit trees and bananas. Native forest reserves are kept across the estate to protect water sources and wildlife.",
+      "location": "Las Manos, Dipilto, Nueva Segovia",
+      "altitude": "1,150–1,400 m",
+      "size": "67 ha, 56 ha under coffee",
+      "varieties": "Red & Yellow Catuaí, Caturra, Maracaturra, Pacamara, Ovata, Marsellesa, Parainema, Geisha",
+      "processing": "Washed, Natural, Anaerobic Natural",
+      "harvest": "December to March",
+      "difference": "Our widest collection of varieties, and a Cup of Excellence Nicaragua finalist repeatedly since 2017."
+    },
+    "la-picona": {
+      "description": "La Picona is the only coffee farm on Picona Mountain. Run by Martha Lucía Albir, it grows all its coffee under full shade of guaba, búcaro, cedar and banana trees, on sandy, mineral-rich volcanic soil. Cool breezes and wide swings between day and night temperatures slow down ripening, and organic certification is in progress.",
+      "location": "Picona Mountain, Dipilto, Nueva Segovia",
+      "altitude": "1,250–1,400 m",
+      "size": "7 ha, including 2 ha of conserved native forest",
+      "varieties": "Maracaturra, Parainema, Sidra, Java, Catuaí, young Geisha plants",
+      "processing": "Natural, Honey, Experimental fermentations",
+      "harvest": "December to March",
+      "difference": "2nd place in the Cup of Excellence Nicaragua 2021 with a Maracaturra anaerobic honey."
+    },
+    "mirjam": {
+      "description": "Mirjam carries the name of the family's legacy and is run by Martha Lucía Albir. Morning mist, a steady breeze and fertile volcanic-influenced soil shape its coffee, all grown under full shade. Organic certification is in progress, and a micro-lot program starts with the 2026 harvest.",
+      "location": "Dipilto, Nueva Segovia",
+      "altitude": "1,200–1,350 m",
+      "size": "27 ha, including 3.5 ha of conserved native forest",
+      "varieties": "Maracaturra, Red & Yellow Catuaí, Catimor",
+      "processing": "Washed, Experimental fermentations",
+      "harvest": "December to March",
+      "difference": "One of the richest bird populations in the region, with toucans, hummingbirds and tanagers among the coffee. Recognized several times in the Cup of Excellence Nicaragua."
+    },
+    "el-cipres": {
+      "description": "El Ciprés joined the family in 2013. About a third of the land is left as natural forest, protecting water sources, flora and wildlife, and the coffee grows within the Serranías de Dipilto-Jalapa Nature Reserve.",
+      "location": "Las Manos, Dipilto, Nueva Segovia",
+      "altitude": "1,300–1,450 m",
+      "size": "21 ha, about a third kept as natural forest",
+      "varieties": "Parainema, Marsellesa, Ovata",
+      "processing": "Natural, Anaerobic Natural, Washed",
+      "harvest": "November to March",
+      "difference": "Planted with newer, resilient varieties like Parainema, Marsellesa and Ovata, which we explore through natural and anaerobic processes."
+    },
+    "bethania": {
+      "description": "Bethania has passed from generation to generation in the Albir family and has been run by Martha Lucía Albir since 1991. Coffee grows under forest, fruit and banana shade, with regular pruning and shade management to bring light into the plantation.",
+      "location": "El Suyatal, Macuelizo, Nueva Segovia",
+      "altitude": "1,300–1,500 m",
+      "size": "25 ha",
+      "varieties": "Catimor, Red Catuaí, Java, Maracaturra, Pacamara",
+      "processing": "Washed, Anaerobic Natural",
+      "harvest": "January to April",
+      "difference": "Home to Java and Pacamara, and to long anaerobic naturals fermented in sealed barrels while temperature and pH are monitored."
+    },
+    "las-hortensias": {
+      "description": "A small farm run by Ana María Albir and kept in the family for more than fifty years. Coffee grows under forest, fruit and banana shade, picked only when fully ripe, then sorted and floated before processing.",
+      "location": "Buenos Aires, Dipilto, Nueva Segovia",
+      "altitude": "1,300–1,450 m",
+      "size": "4 ha",
+      "varieties": "Marsellesa, Maracaturra, Catimor",
+      "processing": "Washed, Anaerobic Natural",
+      "harvest": "November to March",
+      "difference": "Its Marsellesa is processed both washed and as a 96-hour anaerobic natural, showing how much process can change the same variety."
+    }
+  },
+  "nicaragua": {
+    "title": "Nicaragua",
+    "subtitle": "What makes Nicaragua special as a coffee origin",
+    "cta": "See how we work",
+    "sections": [
+      { "eyebrow": "The origin", "title": "A country shaped by coffee", "text": "Coffee is one of Nicaragua's most important exports and the livelihood of thousands of families, most of them small and medium producers. Almost all of it is arabica, grown in the cool mountains of the north, where altitude, volcanic soils and a clear dry season give the beans their density and sweetness." },
+      { "eyebrow": "Climate & altitude", "title": "Mountains, mist and a real dry season", "text": "The coffee regions of the north sit between roughly 1,000 and 1,800 metres. Cool nights slow the ripening of the cherry, which builds sugars and acidity, and a long dry season from November to April makes slow, careful sun drying possible. Most coffee here grows under shade, among native trees, fruit trees and bananas." },
+      { "eyebrow": "Where we grow", "title": "Nueva Segovia, the northernmost coffee region", "text": "Nueva Segovia borders Honduras and is home to the Serranías de Dipilto y Jalapa nature reserve, where many of our farms and partner producers grow coffee. The region is known for clean, sweet and structured cups, and its coffees regularly stand out in the Cup of Excellence Nicaragua, including lots from our own family farms.", "facts": ["Our farms: 1,150–1,800 m", "Harvest: November to April", "Municipalities: Dipilto, Mozonte, Macuelizo, San Fernando"] },
+      { "eyebrow": "In the cup", "title": "From classic varieties to new expressions", "text": "Caturra, Red and Yellow Catuaí and Maracaturra, the large-bean variety Nicaragua is known for, grow alongside newer and rarer varieties such as Java, Pacamara, Parainema, Marsellesa and Geisha. Washed coffee remains the tradition, while naturals, honeys and anaerobic fermentations open new profiles every harvest." },
+      { "eyebrow": "The journey", "title": "From the mountain to the port", "text": "Cherries are picked by hand, processed at the farm or the wet mill, and brought down as parchment to dry mills like ours. There the coffee is dried, rested, milled, sorted and cupped before it leaves by truck for the port and, from there, for roasters around the world." }
+    ]
+  },
+  "contact": {
+    "titleA": "Contact",
+    "titleB": " Us",
+    "subtitle": "Ready to source premium Nicaraguan specialty coffee?",
+    "address": "Address",
+    "addressLine1": "Km 231 carretera Ocotal-Jalapa",
+    "addressLine2": "Mozonte, Nueva Segovia, Nicaragua",
+    "phone": "Phone",
+    "general": "General Requests",
+    "hours": "Business Hours",
+    "hoursLine1": "Monday - Friday: 8:00 AM - 6:00 PM",
+    "hoursLine2": "Central Standard Time (CST)",
+    "offerTitle": "What We Offer",
+    "offer": ["Farm visits and origin tours", "Custom sample preparation", "Quality certificates and cup scores", "Complete traceability documentation", "Export logistics support", "Long-term partnership development"],
+    "visitTitle": "Visit our dry mill",
+    "millName": "Cafetos de Segovia, Beneficio Seco",
+    "millLocation": "Nueva Segovia, Nicaragua",
+    "mapTitle": "Cafetos de Segovia dry mill location",
+    "directions": "Get directions",
+    "ctaTitle": "Ready to Partner with Us?",
+    "ctaText": "Let's discuss how Cafetos de Segovia can meet your specialty coffee needs",
+    "ctaButton": "Send Us an Email"
+  },
+  "notFound": {
+    "text": "Oops! Page not found",
+    "back": "Return to Home"
+  }
+}
