@@ -2,8 +2,12 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
+import { useSearchParams } from 'react-router-dom';
 
 const Contact = () => {
+  const [searchParams] = useSearchParams();
+  const subject = searchParams.get('subject') || '';
+  const emailLink = `mailto:ana@cafetosdesegovia.com${subject ? `?subject=${encodeURIComponent(subject)}` : ''}`;
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -46,7 +50,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-stone-700 mb-2">General Requests</h3>
                   <a 
-                    href="mailto:ana@cafetosdesegovia.com" 
+                    href={emailLink} 
                     className="text-amber-700 hover:text-amber-800 transition-colors block"
                   >
                     ana@cafetosdesegovia.com
@@ -150,7 +154,7 @@ const Contact = () => {
             Let's discuss how Cafetos de Segovia can meet your specialty coffee needs
           </p>
           <a 
-            href="mailto:ana@cafetosdesegovia.com"
+            href={emailLink}
             className="bg-white text-amber-700 px-8 py-4 rounded-lg font-semibold hover:bg-stone-100 transition-colors duration-200 shadow-lg inline-block"
           >
             Send Us an Email
