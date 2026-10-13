@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ShieldCheck, Route, FlaskConical, PackageCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Sun, Factory, Snowflake, FlaskConical, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useFarms, farmNetwork } from '../data/farms';
 import { useTranslation } from 'react-i18next';
 import { useLocale } from '@/lib/locale';
@@ -14,7 +14,7 @@ const stepMedia = [
 ];
 type Step = typeof stepMedia[number] & { title: string; text: string };
 
-const stripIcons = [ShieldCheck, Route, FlaskConical, PackageCheck];
+const stripIcons = [Sun, Factory, Snowflake, FlaskConical, ShieldCheck];
 
 const useInView = <T extends Element>() => {
   const ref = useRef<T>(null);
@@ -64,7 +64,7 @@ const HomeExtraSections = () => {
   const numbers = [
     { value: null, display: t('home.numbers.total'), label: t('home.numbers.farms'), nowrap: false },
     { value: null, display: t('home.numbers.altitude'), label: t('home.numbers.altitudeLabel'), nowrap: true },
-    { value: 4, display: '4', label: t('home.numbers.processes'), nowrap: false },
+    { value: null, display: t('home.numbers.containersTotal'), label: t('home.numbers.containers'), nowrap: false },
     { value: 1, display: '1', label: t('home.numbers.mill'), nowrap: false },
   ];
   const row = useRef<HTMLDivElement>(null);
@@ -95,7 +95,7 @@ const HomeExtraSections = () => {
             ))}
           </div>
 
-          <div className="mt-10 border-y border-stone-300 py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="mt-10 border-y border-stone-300 py-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {strip.map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-3 text-coffee">
                 <Icon className="w-5 h-5 text-cherry shrink-0" />

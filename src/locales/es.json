@@ -47,7 +47,7 @@
       { "title": "Almacenamiento de lotes", "text": "Cada lote reposa por separado, identificado con su finca, proceso y fecha, para que siga siendo trazable hasta la exportación." },
       { "title": "Laboratorio de catación", "text": "Catamos cada lote en nuestro propio laboratorio antes de ofrecerlo, y de nuevo antes del embarque." }
     ],
-    "strip": ["Certificación HACCP", "Trazabilidad completa por lote", "Laboratorio de catación propio", "Preparación lista para exportar"],
+    "strip": ["Camas africanas y patios", "Secadora mecánica", "Cuarto frío para fermentación", "Laboratorio de catación", "Certificación HACCP"],
     "coffee": {
       "eyebrow": "Portafolio",
       "title": "Nuestro café",
@@ -71,7 +71,8 @@
       "altitude": "1.150–1.800 msnm",
       "farms": "Fincas familiares y aliadas",
       "altitudeLabel": "Rango de altitud",
-      "processes": "Procesos: natural, honey, lavado, experimental",
+      "containersTotal": "60+",
+      "containers": "Contenedores de café de especialidad exportados",
       "mill": "Beneficio seco propio, del secado a la exportación"
     },
     "cta": {
@@ -99,7 +100,7 @@
   "services": {
     "eyebrow": "NUESTROS SERVICIOS",
     "title": "Del origen al destino",
-    "intro": "Somos productores y llevamos más de quince años exportando café nicaragüense. Esa experiencia nos permite trabajar en ambos extremos de la cadena: cultivando junto a los productores de Nueva Segovia y preparando su café para tostadores de todo el mundo. Todo lo que ocurre en medio sucede en nuestro propio beneficio seco, con nuestro propio equipo.",
+    "intro": "Somos productores y llevamos más de doce años exportando café nicaragüense. Esa experiencia nos permite trabajar en ambos extremos de la cadena: cultivando junto a los productores de Nueva Segovia y preparando su café para tostadores de todo el mundo. Todo lo que ocurre en medio sucede en nuestro propio beneficio seco, con nuestro propio equipo.",
     "journeyLabel": "Recorrido del café",
     "journey": ["Origen · Fincas de Nueva Segovia", "Nuestro beneficio seco", "Destino · Tostadores en todo el mundo"],
     "producers": {

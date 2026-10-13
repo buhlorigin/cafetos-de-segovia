@@ -1,4 +1,5 @@
 # Requested updates
+- [x] Update export experience, exported-container statistic and five dry mill facts in English and Spanish; verify both versions.
 - [x] Update Services introduction, producer and export sections while retaining photos.
 - [x] Update seven-step process and contact-subject links; verify desktop and mobile.
 - [x] Replace family farm facts and preserve existing photos in shared data.
