@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Farms from "./pages/Farms";
 import Nicaragua from "./pages/Nicaragua";
 import Contact from "./pages/Contact";
+import ScrollEffects from "./components/ScrollEffects";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollEffects />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
