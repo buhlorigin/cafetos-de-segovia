@@ -67,13 +67,14 @@
       "explore": "Explore our farms"
     },
     "numbers": {
+      "years": "12+",
+      "yearsLabel": "Years exporting",
       "total": "15+",
-      "altitude": "1,150–1,800 m",
       "farms": "Family and partner farms",
-      "altitudeLabel": "Altitude range",
+      "altitude": "1,150–1,800",
+      "altitudeLabel": "Metres above sea level",
       "containersTotal": "60+",
-      "containers": "Specialty coffee containers exported",
-      "mill": "Own dry mill, from drying to export"
+      "containers": "Specialty coffee containers exported"
     },
     "cta": {
       "title": "Taste the harvest",
