@@ -67,13 +67,14 @@
       "explore": "Conozca nuestras fincas"
     },
     "numbers": {
+      "years": "12+",
+      "yearsLabel": "Años exportando",
       "total": "15+",
-      "altitude": "1.150–1.800 msnm",
       "farms": "Fincas familiares y aliadas",
-      "altitudeLabel": "Rango de altitud",
+      "altitude": "1.150–1.800",
+      "altitudeLabel": "Metros sobre el nivel del mar",
       "containersTotal": "60+",
-      "containers": "Contenedores de café de especialidad exportados",
-      "mill": "Beneficio seco propio, del secado a la exportación"
+      "containers": "Contenedores de café de especialidad exportados"
     },
     "cta": {
       "title": "Pruebe la cosecha",
