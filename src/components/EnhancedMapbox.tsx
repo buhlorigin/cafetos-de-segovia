@@ -22,13 +22,6 @@ const EnhancedMapbox = () => {
     }
   ];
 
-  const allOrigins = [
-    ...farmLocations,
-    ...["Finca Los Milagros", "Finca Agua Sarca", "Finca El Ciprés", "Finca Mirjam", "Finca La Picona"].map((name) => ({
-      name,
-      description: "Placeholder: specialty coffee farm in Nueva Segovia. Details coming soon.",
-    })),
-  ];
 
   const initializeMap = () => {
     if (!mapContainer.current || !apiKey) return;
@@ -158,7 +151,7 @@ const EnhancedMapbox = () => {
   // Remove the handleApiKeySubmit function since we auto-initialize
 
   return (
-    <section className="py-20 bg-gradient-to-br from-stone-900 via-stone-800 to-amber-900 relative overflow-hidden">
+    <section className="py-20 bg-stone-900 relative overflow-hidden">
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-gradient-to-br from-transparent via-amber-500/10 to-transparent"></div>
       </div>
@@ -180,19 +173,6 @@ const EnhancedMapbox = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          {allOrigins.map((farm, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-white font-bold">{index + 1}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white">{farm.name}</h3>
-              </div>
-              <p className="text-stone-300">{farm.description}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
