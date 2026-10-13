@@ -240,6 +240,36 @@ const Farms = () => {
         </div>
       </section>
 
+      {/* More farms on request */}
+      <section className="py-20" style={{ backgroundColor: '#2F4A3A' }}>
+        <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
+          <span className="eyebrow text-white/70">Beyond our farms</span>
+          <h2 className="text-4xl md:text-5xl text-white mt-4 mb-6">More farms on request</h2>
+          <p className="text-lg text-white/80 leading-relaxed max-w-3xl mx-auto mb-10">
+            Besides the farms shown above, we work with a network of partner producers across Nueva Segovia.
+            Lots from these farms are available on request, with the same traceability and quality control at our beneficio.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto">
+            {[
+              ["15+", "Partner producers"],
+              ["1,100–1,500m", "Altitude range"],
+              ["All processes", "Natural, Washed, Honey, Experimental"],
+            ].map(([value, label]) => (
+              <div key={label} className="border-t border-white/30 pt-4">
+                <p className="text-3xl font-serif text-white mb-1">{value}</p>
+                <p className="text-sm text-white/70">{label}</p>
+              </div>
+            ))}
+          </div>
+          <a
+            href="mailto:ana@cafetosdesegovia.com?subject=Partner%20farms%20request"
+            className="inline-block bg-white text-stone-900 px-8 py-4 font-semibold hover:bg-stone-100 transition-colors duration-200"
+          >
+            Request farm list &amp; spec sheets
+          </a>
+        </div>
+      </section>
+
       {/* Farm Locations Map */}
       <EnhancedMapbox />
 
