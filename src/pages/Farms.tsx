@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import EnhancedMapbox from '../components/EnhancedMapbox';
 
 type Farm = {
   name: string;
@@ -69,6 +68,37 @@ const farms: Farm[] = [
       difference: placeholderDiff,
     },
   })),
+];
+
+type CoffeeArea = {
+  label: string;
+  heading: string;
+  text: string;
+  image: string;
+  altitude: string;
+  varieties: string;
+  farmNames: string[];
+};
+
+const coffeeAreas: CoffeeArea[] = [
+  {
+    label: "Dipilto, Nueva Segovia",
+    heading: "The highlands of the Serranías de Dipilto y Jalapa",
+    text: "Placeholder text: our farms sit on the slopes of the Serranías de Dipilto y Jalapa nature reserve, where high altitude and cool mountain nights slow the ripening of the coffee cherries and build the sweetness and complexity these coffees are known for. Finca Bethania and Finca Las Hortensias grow here.",
+    image: "/lovable-uploads/c583d705-3f60-4df4-8cfa-ac3538d6d036.png",
+    altitude: "1,250–1,500m",
+    varieties: "Red & Yellow Catuai, Maracaturra, Geisha, Bourbon, Java",
+    farmNames: ["Finca Bethania", "Finca Las Hortensias"],
+  },
+  {
+    label: "Mozonte, Nueva Segovia",
+    heading: "The highlands of Mozonte",
+    text: "Placeholder text: the coffee area around Mozonte, close to our dry mill, combines fertile soils with a mild climate and altitudes that suit balanced, sweet cups. Finca Los Milagros, Finca Agua Sarca, Finca El Ciprés, Finca Mirjam and Finca La Picona grow here.",
+    image: "/lovable-uploads/4f4c2833-b318-4108-8165-924ad5cfb8c3.png",
+    altitude: "1,150–1,400m",
+    varieties: "To be confirmed",
+    farmNames: ["Finca Los Milagros", "Finca Agua Sarca", "Finca El Ciprés", "Finca Mirjam", "Finca La Picona"],
+  },
 ];
 
 const pad = (n: number) => String(n).padStart(2, '0');
@@ -270,8 +300,55 @@ const Farms = () => {
         </div>
       </section>
 
-      {/* Farm Locations Map */}
-      <EnhancedMapbox />
+      {/* Where our coffee comes from */}
+      <section className="py-20" style={{ backgroundColor: '#2F4A3A' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-14">
+            <span className="eyebrow text-white/70">Our origins</span>
+            <h2 className="text-4xl md:text-5xl text-white mt-4">Where our coffee comes from</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            {coffeeAreas.map((area) => (
+              <div key={area.label}>
+                <div className="aspect-[16/10] overflow-hidden mb-8">
+                  <img src={area.image} alt={area.label} className="w-full h-full object-cover" />
+                </div>
+                <span className="eyebrow text-white/70">{area.label}</span>
+                <h3 className="font-serif text-3xl md:text-4xl text-white mt-3 mb-4">{area.heading}</h3>
+                <p className="text-white/80 leading-relaxed mb-8">{area.text}</p>
+                <dl className="border-t border-white/30">
+                  {[
+                    ["Altitude range", area.altitude],
+                    ["Main varieties", area.varieties],
+                  ].map(([label, value]) => (
+                    <div key={label} className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-white/30">
+                      <dt className="text-xs uppercase tracking-widest text-white/70 pt-1">{label}</dt>
+                      <dd className="text-white">{value}</dd>
+                    </div>
+                  ))}
+                  <div className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-white/30">
+                    <dt className="text-xs uppercase tracking-widest text-white/70 pt-1">Farms</dt>
+                    <dd className="flex flex-wrap gap-2">
+                      {area.farmNames.map((name) => {
+                        const idx = farms.findIndex((f) => f.name === name);
+                        return (
+                          <button
+                            key={name}
+                            onClick={() => idx >= 0 && jumpTo(idx)}
+                            className="text-xs uppercase tracking-widest border border-white/40 px-3 py-1.5 text-white hover:bg-white/10 transition-colors"
+                          >
+                            {name.replace('Finca ', '')}
+                          </button>
+                        );
+                      })}
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Sample Request Section */}
       <section className="py-16 bg-amber-50">
