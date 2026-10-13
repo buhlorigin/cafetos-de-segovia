@@ -104,6 +104,40 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Visit our dry mill */}
+      <section className="py-16 bg-stone-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-stone-800 mb-4">Visit our dry mill</h2>
+            <p className="text-xl text-stone-600">Cafetos de Segovia, Beneficio Seco</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps?q=JGWW%2B4FJ+Ramamesa+Nicaragua&output=embed"
+                title="Cafetos de Segovia dry mill location"
+                className="w-full h-[300px] md:h-[400px] border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+            <div className="bg-white rounded-2xl p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-stone-800 mb-3">Cafetos de Segovia, Beneficio Seco</h3>
+              <p className="text-stone-600 mb-8">JGWW+4FJ, Ramamesa, Nueva Segovia, Nicaragua</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=CAFETOS+DE+SEGOVIA+JGWW%2B4FJ+Ramamesa+Nicaragua"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block self-start bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-800 transition-colors duration-200"
+              >
+                Get directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-16 bg-amber-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
