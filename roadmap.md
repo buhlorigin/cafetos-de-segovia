@@ -7,3 +7,6 @@
 - [x] Update slideshow facts, origin tags and partner request section.
 - [x] Verify farm navigation, contact subject, photo loading and narrow-screen numbers.- [x] Restructure farms around founders' two farms and 40+ partner network (EN/ES).
 - [x] Logo sizes, beneficio hero video, single farm list, Los Milagros, photo swap, farm data, Gabriela photo, Lexania contact (EN/ES).
+- [x] About page: remove Gabriela caption, show more of the cupping table, use the new hand-sorting cherries photo for "Our Coffee".
+- [x] Where our coffee comes from: region descriptions in EN/ES, extra Mozonte and Jinotega farm tags, tags wrap without breaking cards; verified in browser.
+

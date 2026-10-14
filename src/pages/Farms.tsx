@@ -29,7 +29,7 @@ const coffeeAreas: CoffeeArea[] = [
     image: "/lovable-uploads/4f4c2833-b318-4108-8165-924ad5cfb8c3.png",
     altitude: "",
     varieties: "",
-    farmNames: ["La Esperanza", "Ojo de Agua", "Quebrada Las Naranjas", "Las Naranjas", "El Esfuerzo"],
+    farmNames: ["La Esperanza", "Ojo de Agua", "Quebrada Las Naranjas", "Las Naranjas", "El Esfuerzo", "Montecristo", "Los Nubarrones", "Quebrada Las Nubes", "El Recuerdo", "San Antonio", "Montezumba"],
   },
   {
     text: "",
@@ -43,7 +43,7 @@ const coffeeAreas: CoffeeArea[] = [
     image: "/media/hero-poster.jpg",
     altitude: "",
     varieties: "",
-    farmNames: ["Finca Los Milagros"],
+    farmNames: ["Finca Los Milagros", "San Francisco"],
   },
 ];
 
@@ -58,7 +58,7 @@ const Farms = () => {
   const allFarms = useFarms();
   const farms = allFarms;
   const contact = (subject: string) => `${lp('/contact')}?subject=${encodeURIComponent(subject)}`;
-  const areas = coffeeAreas.map((a, i) => ({ ...a, ...(t('farmsPage.areas', { returnObjects: true }) as { label: string; heading: string }[])[i] }));
+  const areas = coffeeAreas.map((a, i) => ({ ...a, ...(t('farmsPage.areas', { returnObjects: true }) as { label: string; heading: string; text: string }[])[i] }));
   const [active, setActive] = useState(0);
   const [photo, setPhoto] = useState(0);
   const sliderRef = useRef<HTMLElement>(null);
@@ -269,12 +269,12 @@ const Farms = () => {
                     [t('farmsPage.altitudeRange'), area.altitude],
                     [t('farmsPage.mainVarieties'), area.varieties],
                   ].filter(([, value]) => Boolean(value)).map(([label, value]) => (
-                    <div key={label} className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
+                    <div key={label} className="grid grid-cols-1 sm:grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
                       <dt className="text-xs uppercase tracking-widest text-parchment pt-1">{label}</dt>
                       <dd className="text-parchment">{value}</dd>
                     </div>
                   ))}
-                  <div className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
+                  <div className="grid grid-cols-1 sm:grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
                     <dt className="text-xs uppercase tracking-widest text-parchment pt-1">{t('farmsPage.farmsLabel')}</dt>
                     <dd className="flex flex-wrap gap-2">
                       {area.farmNames.map((name) => {

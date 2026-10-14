@@ -289,8 +289,8 @@
         "title": "LABORATORY & QUALITY CONTROL",
         "content": "Every lot is evaluated in our own cupping lab before we offer it. We roast samples, cup them blind alongside our reference lots, and score each one, so we know exactly what is in every bag before a buyer tastes it.\n\nAlongside cupping, we check moisture and the physical quality of the green coffee, looking for defects, size and uniformity. Only lots that meet our standards are prepared for export, and we cup them again before they ship."
       }
-    ],
-    "labCaption": "Gabriela, cupping in our lab"
+    ]
+
   },
   "farmsPage": {
     "titleA": "Our ",
@@ -326,21 +326,26 @@
     "areas": [
       {
         "label": "Dipilto, Nueva Segovia",
-        "heading": "The highlands of the Serranías de Dipilto y Jalapa"
+        "heading": "The highlands of the Serranías de Dipilto y Jalapa",
+        "text": "On the border with Honduras, inside the Serranías de Dipilto y Jalapa Nature Reserve. Steep slopes, pine and cloud forest, and cool nights give slow-ripening cherries and clean, sweet, structured cups."
       },
       {
         "label": "Mozonte, Nueva Segovia",
-        "heading": "The highlands of Mozonte"
+        "heading": "The highlands of Mozonte",
+        "text": "East of Ocotal, where the land rises to more than 1,800 metres. Forested highlands that hold the springs of the Mozonte river and give dense beans with bright acidity."
       },
       {
         "label": "Macuelizo, Nueva Segovia",
-        "heading": "The highlands of Macuelizo"
+        "heading": "The highlands of Macuelizo",
+        "text": "West of Ocotal, in quieter highlands between 1,300 and 1,500 metres, where shade-grown coffee and family tradition go back generations."
       },
       {
         "label": "JINOTEGA, NICARAGUA",
-        "heading": "The mountains of Jinotega"
+        "heading": "The mountains of Jinotega",
+        "text": "One of Nicaragua's main coffee regions, in the central-northern highlands. Misty mountains and fertile soils produce balanced cups with body and sweetness."
       }
     ],
+
     "altitudeRange": "Altitude range",
     "mainVarieties": "Main varieties",
     "farmsLabel": "Farms",
