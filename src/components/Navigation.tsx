@@ -35,7 +35,7 @@ const Navigation = () => {
           solid ? 'bg-parchment/80 backdrop-blur-md border-b border-stone-200' : 'bg-transparent border-b border-transparent'
         }`}
       >
-        <div className="max-w-[90rem] mx-auto px-6 lg:px-10">
+        <div className="px-6 md:pl-[6vw] md:pr-[4vw]">
           <div className="flex justify-between items-center h-24">
             <a href={lp('/')} className="flex items-center gap-3">
               <img src={solid ? '/brand/cafetos-logo-transparent.png' : '/brand/cafetos-logo-light.png'} alt="Cafetos de Segovia" className="h-12 md:h-16 w-auto" />
