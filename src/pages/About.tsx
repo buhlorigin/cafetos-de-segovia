@@ -10,7 +10,7 @@ const About = () => {
             image: "/media/about-heritage-family.jpg"
     },
     {
-            image: "/lovable-uploads/61995db6-6905-4ef9-bd32-819b5d987166.png"
+            image: "/media/cherries-hand-sorting.jpg"
     },
     {
             image: "/lovable-uploads/ac750844-c94d-41fb-aa34-b940c2163cc6.png"
