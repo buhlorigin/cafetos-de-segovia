@@ -64,7 +64,7 @@ const HomeExtraSections = () => {
   const numbers = [
     { value: 12, suffix: '+', display: '', label: t('home.numbers.yearsLabel') },
     { value: 60, suffix: '+', display: '', label: t('home.numbers.containers') },
-    { value: 15, suffix: '+', display: '', label: t('home.numbers.farms') },
+    { value: 40, suffix: '+', display: '', label: t('home.numbers.farms') },
     { value: null, suffix: '', display: t('home.numbers.altitude'), label: t('home.numbers.altitudeLabel') },
   ];
   const row = useRef<HTMLDivElement>(null);
@@ -147,7 +147,8 @@ const HomeExtraSections = () => {
           <div ref={row} className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: 'none' }}>
             {farms.map((f) => (
               <a key={f.name} href={lp('/farms')} className="snap-start shrink-0 w-[75vw] sm:w-[45%] lg:w-[30%] group">
-                <div className="overflow-hidden aspect-[4/5] mb-4">
+                <div className="relative overflow-hidden aspect-[4/5] mb-4">
+                  <span className={`absolute top-3 left-3 z-10 text-[11px] uppercase tracking-widest px-2.5 py-1 ${f.type === 'own' ? 'bg-cherry text-parchment' : 'bg-parchment text-coffee'}`}>{t(f.type === 'own' ? 'home.farms.founderBadge' : 'home.farms.partnerBadge')}</span>
                   <img src={f.images[0]} alt={f.name} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-2xl text-coffee">{f.name}</h3>
