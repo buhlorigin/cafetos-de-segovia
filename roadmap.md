@@ -1,5 +1,5 @@
 # Requested updates
-- [ ] Standardize all farm tags; restore the About lab photo and caption; add bilingual team cards; verify Home keeps Gabriela.
+- [x] Standardize all farm tags; restore the About lab photo and caption; add bilingual team cards; verify Home keeps Gabriela.
 - [x] Update export experience, exported-container statistic and five dry mill facts in English and Spanish; verify both versions.
 - [x] Update Services introduction, producer and export sections while retaining photos.
 - [x] Update seven-step process and contact-subject links; verify desktop and mobile.
