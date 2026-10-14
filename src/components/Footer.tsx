@@ -55,7 +55,6 @@ const Footer = () => {
             <div className="space-y-2 text-stone-300">
               <p>{t('footer.location')}</p>
               <p>ana@cafetosdesegovia.com</p>
-              <p>martha@cafetosdesegovia.com</p>
               <p>{t('contact.management')}: gerencia@cafetosdesegovia.com</p>
               <p>+505 8733 1928</p>
             </div>

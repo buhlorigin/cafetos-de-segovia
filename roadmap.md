@@ -6,3 +6,4 @@
 - [x] Update home previews, partner link and 15+ totals.
 - [x] Update slideshow facts, origin tags and partner request section.
 - [x] Verify farm navigation, contact subject, photo loading and narrow-screen numbers.- [x] Restructure farms around founders' two farms and 40+ partner network (EN/ES).
+- [x] Logo sizes, beneficio hero video, single farm list, Los Milagros, photo swap, farm data, Gabriela photo, Lexania contact (EN/ES).
