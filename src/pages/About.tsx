@@ -72,7 +72,7 @@ const About = () => {
                   src={value.image}
                   alt={value.title}
                   style={index === 1 ? { objectPosition: 'center center' } : index === 5 ? { objectPosition: 'center 75%' } : undefined}
-                  className={`w-full object-cover rounded-sm ${index === 0 ? 'aspect-[1402/1072] h-auto object-top' : index >= 4 ? 'h-[320px] lg:h-[420px]' : 'h-80'}`}
+                  className={`w-full object-cover rounded-sm ${index === 0 ? 'aspect-[1402/1072] h-auto object-top' : index === 5 ? 'h-[320px] lg:h-[540px]' : index >= 4 ? 'h-[320px] lg:h-[420px]' : 'h-80'}`}
                 />
 
                 </figure>
