@@ -62,10 +62,10 @@ const HomeExtraSections = () => {
   const steps: Step[] = stepMedia.map((m, i) => ({ ...m, ...(t('home.steps', { returnObjects: true }) as { title: string; text: string }[])[i] }));
   const strip = (t('home.strip', { returnObjects: true }) as string[]).map((label, i) => ({ icon: stripIcons[i], label }));
   const numbers = [
-    { value: 12, suffix: '+', label: t('home.numbers.yearsLabel') },
-    { value: 60, suffix: '+', label: t('home.numbers.containers') },
-    { value: 15, suffix: '+', label: t('home.numbers.farms') },
-    { value: null, display: t('home.numbers.altitude'), label: t('home.numbers.altitudeLabel') },
+    { value: 12, suffix: '+', display: '', label: t('home.numbers.yearsLabel') },
+    { value: 60, suffix: '+', display: '', label: t('home.numbers.containers') },
+    { value: 15, suffix: '+', display: '', label: t('home.numbers.farms') },
+    { value: null, suffix: '', display: t('home.numbers.altitude'), label: t('home.numbers.altitudeLabel') },
   ];
   const row = useRef<HTMLDivElement>(null);
   const scroll = (d: number) => row.current?.scrollBy({ left: d * row.current.clientWidth * 0.8, behavior: 'smooth' });
@@ -170,7 +170,7 @@ const HomeExtraSections = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 text-center items-start gap-10 md:grid-cols-2 md:text-left md:gap-12 lg:grid-cols-4" style={{ containerType: 'inline-size' }}>
           {numbers.map((x) => (
             <div key={x.label}>
-              <div className="font-serif whitespace-nowrap leading-none mb-4 text-[clamp(2.25rem,4cqw,4.5rem)]"><CountUp n={x.value} display={x.display} /></div>
+              <div className="font-serif whitespace-nowrap leading-none mb-4 text-[clamp(2.25rem,4cqw,4.5rem)]"><CountUp n={x.value} display={x.display} suffix={x.suffix} /></div>
               <div className="text-sm leading-snug line-clamp-2 max-w-[16rem]" style={{ color: 'rgba(255,255,255,0.8)' }}>{x.label}</div>
             </div>
           ))}
