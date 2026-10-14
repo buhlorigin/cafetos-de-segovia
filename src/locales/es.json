@@ -102,8 +102,8 @@
     },
     "farms": {
       "eyebrow": "Nuestras fincas",
-      "title": "Nuestras fincas y 40+ fincas aliadas en Nueva Segovia",
-      "text": "Todo comienza con Bethania y Las Hortensias, las fincas de nuestras fundadoras, y crece en una red de más de 40 fincas aliadas.",
+      "title": "Nuestras fincas y más de 40 fincas aliadas en el norte de Nicaragua",
+      "text": "Cada finca tiene su propia altitud, sus variedades y su carácter. Aquí crece su café.",
       "prev": "Fincas anteriores",
       "next": "Fincas siguientes",
       "partner": "+ {{count}} fincas aliadas",
@@ -206,10 +206,7 @@
       "titleA": "Nuestras ",
       "titleB": "certificaciones",
       "text": "Comprometidos con los estándares de calidad y la excelencia en la exportación",
-      "haccp": "Análisis de Peligros y Puntos Críticos de Control",
-      "organicBadge": "ORGÁNICO",
-      "organic": "Orgánico",
-      "organicText": "Estándares orgánicos certificados"
+      "haccp": "Análisis de Peligros y Puntos Críticos de Control"
     },
     "closing": {
       "title": "Trabajemos juntos",
@@ -289,12 +286,13 @@
         "title": "LABORATORIO Y CONTROL DE CALIDAD",
         "content": "Evaluamos cada lote en nuestro propio laboratorio de catación antes de ofrecerlo. Tostamos muestras, las catamos a ciegas junto a nuestros lotes de referencia y calificamos cada una, para saber exactamente qué hay en cada saco antes de que un comprador lo pruebe.\n\nAdemás de la catación, revisamos la humedad y la calidad física del café oro: defectos, tamaño y uniformidad. Solo los lotes que cumplen nuestros estándares se preparan para exportar, y los volvemos a catar antes del embarque."
       }
-    ]
+    ],
+    "labCaption": "Gabriela, catando en nuestro laboratorio"
   },
   "farmsPage": {
     "titleA": "Nuestras ",
     "titleB": "fincas",
-    "subtitle": "Dos fincas propiedad de nuestras fundadoras y una red de más de 40 fincas aliadas en Nueva Segovia.",
+    "subtitle": "Una selección de las fincas con las que trabajamos, de una red de más de 40 en el norte de Nicaragua.",
     "overviewEyebrow": "Resumen",
     "overviewTitle": "Nuestras fincas de un vistazo",
     "quote": "Valoramos la sostenibilidad, la innovación y a las personas que hacen posible cada cosecha.",
@@ -308,7 +306,9 @@
       "varieties": "Variedades",
       "processing": "Procesos",
       "harvest": "Cosecha",
-      "difference": "Qué la hace diferente"
+      "difference": "Qué la hace diferente",
+      "development": "Variedades en desarrollo",
+      "practices": "Prácticas"
     },
     "prev": "Finca anterior",
     "next": "Finca siguiente",
@@ -355,7 +355,8 @@
       "varieties": "Catuaí rojo y amarillo, Caturra, Maracaturra, Pacamara, Ovata, Marsellesa, Parainema, Geisha",
       "processing": "Lavado, natural, natural anaeróbico",
       "harvest": "Diciembre a marzo",
-      "difference": "Su mayor colección de variedades, y finalista de la Taza de la Excelencia Nicaragua en varias ocasiones desde 2017."
+      "difference": "Su mayor colección de variedades, y finalista de la Taza de la Excelencia Nicaragua en varias ocasiones desde 2017.",
+      "practices": "Buenas Prácticas Agrícolas"
     },
     "la-picona": {
       "description": "La Picona es la única finca de café en el cerro La Picona. Es una finca dirigida por una mujer, y todo su café es cultivado bajo sombra completa de guaba, búcaro, cedro y banano, en suelo volcánico arenoso y rico en minerales. Las brisas frescas y la gran diferencia de temperatura entre el día y la noche hacen más lenta la maduración.",
@@ -365,17 +366,20 @@
       "varieties": "Maracaturra, Parainema, Sidra, Java, Catuaí, plantas jóvenes de Geisha",
       "processing": "Natural, honey, fermentaciones experimentales",
       "harvest": "Diciembre a marzo",
-      "difference": "Segundo lugar en la Taza de la Excelencia Nicaragua 2021 con un Maracaturra honey anaeróbico."
+      "difference": "Segundo lugar en la Taza de la Excelencia Nicaragua 2021 con un Maracaturra honey anaeróbico.",
+      "practices": "Buenas Prácticas Agrícolas"
     },
     "mirjam": {
-      "description": "La neblina de la mañana, una brisa constante y un suelo fértil de influencia volcánica dan forma al café de Mirjam, todo cultivado bajo sombra completa. La certificación orgánica está en proceso, y con la cosecha 2026 comienza un programa de microlotes.",
+      "description": "La neblina de la mañana, una brisa constante y un suelo fértil de influencia volcánica dan forma al café de Mirjam, todo cultivado bajo sombra completa. Con la cosecha 2026 comienza un programa de microlotes.",
       "location": "Dipilto, Nueva Segovia",
       "altitude": "1.200–1.350 msnm",
       "size": "27 ha, incluidas 3,5 ha de bosque nativo conservado",
       "varieties": "Maracaturra, Catuaí rojo y amarillo, Catimor",
       "processing": "Lavado, fermentaciones experimentales",
       "harvest": "Diciembre a marzo",
-      "difference": "Una de las mayores poblaciones de aves de la región, con tucanes, colibríes y tangaras entre el café. Reconocida varias veces en la Taza de la Excelencia Nicaragua."
+      "difference": "Una de las mayores poblaciones de aves de la región, con tucanes, colibríes y tangaras entre el café. Reconocida varias veces en la Taza de la Excelencia Nicaragua.",
+      "development": "Sidra, Geisha, Chiroso, Arará, Bourbon Rosado",
+      "practices": "Buenas Prácticas Agrícolas"
     },
     "el-cipres": {
       "description": "El Ciprés es manejada por su actual propietario desde 2013. Cerca de un tercio del terreno se conserva como bosque natural para proteger las fuentes de agua, la flora y la fauna, dentro de la Reserva Natural Serranías de Dipilto-Jalapa.",
@@ -385,29 +389,43 @@
       "varieties": "Parainema, Marsellesa, Ovata",
       "processing": "Natural, natural anaeróbico, lavado",
       "harvest": "Noviembre a marzo",
-      "difference": "Sembrada con variedades nuevas y resistentes como Parainema, Marsellesa y Ovata, que se exploran con procesos naturales y anaeróbicos."
+      "difference": "Sembrada con variedades nuevas y resistentes como Parainema, Marsellesa y Ovata, que se exploran con procesos naturales y anaeróbicos.",
+      "practices": "Buenas Prácticas Agrícolas"
     },
     "bethania": {
       "description": "Bethania pertenece a Martha Albir, cofundadora de Cafetos de Segovia. Ha pasado de generación en generación en la familia Albir, y ella la maneja desde 1991. El café crece bajo sombra de bosque, frutales y bananos, con poda regular y manejo de sombra para dar luz a la plantación.",
       "location": "El Suyatal, Macuelizo, Nueva Segovia",
       "altitude": "1.300–1.500 msnm",
       "size": "25 ha",
-      "varieties": "Catimor, Catuaí rojo, Java, Maracaturra, Pacamara",
+      "varieties": "Catimor, Catuaí rojo y amarillo, Java, Maracaturra, Pacamara",
       "processing": "Lavado, natural anaeróbico",
       "harvest": "Enero a abril",
       "difference": "Hogar de Java y Pacamara, y de naturales anaeróbicos largos fermentados en barriles sellados con control de temperatura y pH.",
-      "owner": "Martha Albir"
+      "owner": "Martha Albir",
+      "development": "Sidra, Geisha, Chiroso, Arará, Bourbon Rosado",
+      "practices": "Buenas Prácticas Agrícolas"
     },
     "las-hortensias": {
       "description": "Las Hortensias pertenece a Ana Albir, cofundadora de Cafetos de Segovia, y está en la familia desde hace más de cincuenta años. Es una finca pequeña donde el café crece bajo sombra de bosque, frutales y bananos; se corta solo cuando está completamente maduro y luego se clasifica y pasa por flotación antes del proceso.",
       "location": "Buenos Aires, Dipilto, Nueva Segovia",
       "altitude": "1.300–1.450 msnm",
       "size": "4 ha",
-      "varieties": "Marsellesa, Maracaturra, Catimor",
+      "varieties": "Marsellesa, Maracaturra, Catimor, Catuaí rojo",
       "processing": "Lavado, natural anaeróbico",
       "harvest": "Noviembre a marzo",
       "difference": "Su Marsellesa se procesa como lavado y como natural anaeróbico de 96 horas, y muestra cuánto puede cambiar el proceso una misma variedad.",
-      "owner": "Ana Albir"
+      "owner": "Ana Albir",
+      "practices": "Buenas Prácticas Agrícolas"
+    },
+    "los-milagros": {
+      "description": "",
+      "location": "Jinotega, Nicaragua",
+      "altitude": "Más información próximamente",
+      "size": "Más información próximamente",
+      "varieties": "Más información próximamente",
+      "processing": "Más información próximamente",
+      "harvest": "Más información próximamente",
+      "difference": "Más información próximamente"
     }
   },
   "nicaragua": {
@@ -475,7 +493,8 @@
     "directions": "Cómo llegar",
     "ctaTitle": "¿Trabajamos juntos?",
     "ctaText": "Conversemos sobre cómo Cafetos de Segovia puede responder a sus necesidades de café de especialidad",
-    "ctaButton": "Envíenos un correo"
+    "ctaButton": "Envíenos un correo",
+    "management": "Lexania · Gerencia"
   },
   "notFound": {
     "text": "Lo sentimos, no encontramos esta página",
