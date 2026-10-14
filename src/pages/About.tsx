@@ -70,11 +70,11 @@ const About = () => {
                 <figure>
                 <img
                   src={value.image}
-                  alt={index === 5 ? t('about.labCaption') : value.title}
-                  style={index === 5 ? { objectPosition: 'center 30%' } : undefined}
+                  alt={value.title}
+                  style={index === 1 ? { objectPosition: 'center center' } : index === 5 ? { objectPosition: 'center 75%' } : undefined}
                   className={`w-full object-cover rounded-sm ${index === 0 ? 'aspect-[1402/1072] h-auto object-top' : index >= 4 ? 'h-[320px] lg:h-[420px]' : 'h-80'}`}
                 />
-                {index === 5 && <figcaption className="mt-3 text-sm text-stone-600">{t('about.labCaption')}</figcaption>}
+
                 </figure>
               </div>
             </div>
