@@ -322,6 +322,7 @@
     "partnerSubject": "Solicitud de fincas aliadas",
     "originsEyebrow": "Nuestros orígenes",
     "originsTitle": "De dónde viene nuestro café",
+    "originsIntro": "De Nueva Segovia a Jinotega, en las montañas cafetaleras del norte de Nicaragua.",
     "areas": [
       {
         "label": "Dipilto, Nueva Segovia",
@@ -330,6 +331,14 @@
       {
         "label": "Mozonte, Nueva Segovia",
         "heading": "Las montañas de Mozonte"
+      },
+      {
+        "label": "Macuelizo, Nueva Segovia",
+        "heading": "Las montañas de Macuelizo"
+      },
+      {
+        "label": "JINOTEGA, NICARAGUA",
+        "heading": "Las montañas de Jinotega"
       }
     ],
     "altitudeRange": "Rango de altitud",
