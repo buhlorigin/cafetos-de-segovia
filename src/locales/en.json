@@ -322,6 +322,7 @@
     "partnerSubject": "Partner farms request",
     "originsEyebrow": "Our origins",
     "originsTitle": "Where our coffee comes from",
+    "originsIntro": "From Nueva Segovia to Jinotega, in the coffee highlands of northern Nicaragua.",
     "areas": [
       {
         "label": "Dipilto, Nueva Segovia",
@@ -330,6 +331,14 @@
       {
         "label": "Mozonte, Nueva Segovia",
         "heading": "The highlands of Mozonte"
+      },
+      {
+        "label": "Macuelizo, Nueva Segovia",
+        "heading": "The highlands of Macuelizo"
+      },
+      {
+        "label": "JINOTEGA, NICARAGUA",
+        "heading": "The mountains of Jinotega"
       }
     ],
     "altitudeRange": "Altitude range",
