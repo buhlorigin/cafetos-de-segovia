@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
-import { useFarms, farmNetwork } from '../data/farms';
+import { useFarms, type Farm } from '../data/farms';
 import { useTranslation } from 'react-i18next';
 import { useLocale } from '@/lib/locale';
 
@@ -41,7 +41,10 @@ const pad = (n: number) => String(n).padStart(2, '0');
 const Farms = () => {
   const { t } = useTranslation();
   const { lp } = useLocale();
-  const farms = useFarms();
+  const allFarms = useFarms();
+  const ownFarms = allFarms.filter((f) => f.type === 'own');
+  const farms = allFarms.filter((f) => f.type === 'partner');
+  const ownRef = useRef<HTMLElement>(null);
   const contact = (subject: string) => `${lp('/contact')}?subject=${encodeURIComponent(subject)}`;
   const areas = coffeeAreas.map((a, i) => ({ ...a, ...(t('farmsPage.areas', { returnObjects: true }) as { label: string; heading: string }[])[i] }));
   const [active, setActive] = useState(0);
@@ -63,6 +66,15 @@ const Farms = () => {
     return () => window.removeEventListener('keydown', onKey);
   }, [active]);
 
+  const badge = (f: Farm) => (
+    <span className={`inline-block text-[11px] uppercase tracking-widest px-2.5 py-1 ${f.type === 'own' ? 'bg-cherry text-parchment' : 'border border-stone-400 text-stone-800'}`}>
+      {t(f.type === 'own' ? 'farmsPage.founderBadge' : 'farmsPage.partnerBadge')}
+    </span>
+  );
+  const jumpToFarm = (f: Farm) => {
+    if (f.type === 'own') { ownRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+    jumpTo(farms.indexOf(f));
+  };
   const jumpTo = (i: number) => {
     go(i);
     sliderRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -79,7 +91,7 @@ const Farms = () => {
             {t('farmsPage.titleA')}<span className="text-amber-700">{t('farmsPage.titleB')}</span>
           </h1>
           <p className="text-2xl text-stone-600 leading-relaxed font-medium">
-            {t('farmsPage.subtitle', { total: farmNetwork.total })}
+            {t('farmsPage.subtitle')}
           </p>
         </div>
       </section>
@@ -90,20 +102,61 @@ const Farms = () => {
           <span className="eyebrow">{t('farmsPage.overviewEyebrow')}</span>
           <h2 className="text-4xl md:text-5xl text-stone-800 mb-10">{t('farmsPage.overviewTitle')}</h2>
           <ul className="border-t border-stone-300">
-            {farms.map((farm, i) => (
+            {allFarms.map((farm, i) => (
               <li key={farm.name}>
                 <button
-                  onClick={() => jumpTo(i)}
-                  className={`w-full grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1.5fr_1.5fr_1fr] gap-x-4 gap-y-1 items-baseline text-left py-5 border-b border-stone-300 transition-colors hover:bg-stone-100 px-2 ${active === i ? 'bg-stone-100' : ''}`}
+                  onClick={() => jumpToFarm(farm)}
+                  className="w-full grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1.5fr_1.5fr_1fr] gap-x-4 gap-y-1 items-baseline text-left py-5 border-b border-stone-300 transition-colors hover:bg-stone-100 px-2"
                 >
                   <span className="text-sm tracking-widest text-amber-700">{pad(i + 1)}</span>
-                  <span className="font-serif text-2xl text-stone-800">{farm.name}</span>
+                  <span className="flex flex-wrap items-center gap-3"><span className="font-serif text-2xl text-stone-800">{farm.name}</span>{badge(farm)}</span>
                   <span className="col-start-2 md:col-start-auto text-stone-600">{farm.details.location}</span>
                   <span className="col-start-2 md:col-start-auto text-stone-600 md:text-right">{farm.details.altitude}</span>
                 </button>
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Own farms */}
+      <section ref={ownRef} className="py-20 bg-stone-50 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-12">
+            <span className="eyebrow">{t('farmsPage.ownEyebrow')}</span>
+            <h2 className="text-4xl md:text-5xl text-stone-800 mb-6">{t('farmsPage.ownTitle')}</h2>
+            <p className="text-lg text-stone-600 leading-relaxed">{t('farmsPage.ownText')}</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {ownFarms.map((farm) => (
+              <article key={farm.name} className="bg-white">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img src={farm.images[0]} alt={farm.name} className="w-full h-full object-cover" />
+                  <div className="absolute top-4 left-4">{badge(farm)}</div>
+                </div>
+                <div className="p-6 md:p-8">
+                  <h3 className="font-serif text-3xl md:text-4xl text-stone-800 mb-4">{farm.name}</h3>
+                  {farm.description && <p className="text-stone-600 leading-relaxed mb-6">{farm.description}</p>}
+                  <dl className="border-t border-stone-300">
+                    {[
+                      [t('farmsPage.ownerLabel'), farm.owner],
+                      [t('farmsPage.labels.location'), farm.details.location],
+                      [t('farmsPage.labels.altitude'), farm.details.altitude],
+                      [t('farmsPage.labels.size'), farm.details.size],
+                      [t('farmsPage.labels.varieties'), farm.details.varieties],
+                      [t('farmsPage.labels.processing'), farm.details.processing],
+                      [t('farmsPage.labels.difference'), farm.details.difference],
+                    ].filter(([, v]) => Boolean(v)).map(([label, value]) => (
+                      <div key={label} className="grid grid-cols-[8rem_1fr] gap-4 py-3 border-b border-stone-300">
+                        <dt className="text-xs uppercase tracking-widest text-stone-600 pt-1">{label}</dt>
+                        <dd className="text-stone-800">{value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -120,6 +173,11 @@ const Farms = () => {
       {/* Farm slideshow */}
       <section ref={sliderRef} className="py-20 bg-white scroll-mt-20" aria-roledescription="carousel" aria-label={t('farmsPage.carousel')}>
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-12">
+            <span className="eyebrow">{t('farmsPage.networkEyebrow')}</span>
+            <h2 className="text-4xl md:text-5xl text-stone-800 mb-6">{t('farmsPage.networkTitle')}</h2>
+            <p className="text-lg text-stone-600 leading-relaxed">{t('farmsPage.networkText')}</p>
+          </div>
           {/* Tabs */}
           <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10 border-b border-stone-300 pb-4">
             {farms.map((farm, i) => (
@@ -167,7 +225,7 @@ const Farms = () => {
                     )}
                   </div>
                   <div className={photoLeft ? 'lg:order-2' : 'lg:order-1'}>
-                    <span className="eyebrow">{t('farmsPage.farmCounter', { n: pad(i + 1), total: pad(total) })}</span>
+                    <div className="flex items-center gap-4 mb-3"><span className="eyebrow !mb-0">{t('farmsPage.farmCounter', { n: pad(i + 1), total: pad(total) })}</span>{badge(farm)}</div>
                     <h2 className="text-4xl md:text-5xl text-stone-800 mb-6">{farm.name}</h2>
                     {farm.description && <p className="text-stone-600 leading-relaxed mb-8">{farm.description}</p>}
                     <dl className="border-t border-stone-300">
@@ -256,12 +314,12 @@ const Farms = () => {
                     <dt className="text-xs uppercase tracking-widest text-parchment pt-1">{t('farmsPage.farmsLabel')}</dt>
                     <dd className="flex flex-wrap gap-2">
                       {area.farmNames.map((name) => {
-                        const idx = farms.findIndex((f) => f.name === name);
-                        if (idx < 0) return <span key={name} className="text-xs uppercase tracking-widest border border-parchment/40 px-3 py-1.5 text-parchment">{name}</span>;
+                        const farm = allFarms.find((f) => f.name === name);
+                        if (!farm) return <span key={name} className="text-xs uppercase tracking-widest border border-parchment/40 px-3 py-1.5 text-parchment">{name}</span>;
                         return (
                           <Button variant="ghost"
                             key={name}
-                            onClick={() => idx >= 0 && jumpTo(idx)}
+                            onClick={() => jumpToFarm(farm)}
                             className="text-xs uppercase tracking-widest border border-parchment/40 px-3 py-1.5 text-parchment hover:bg-parchment/10 transition-colors"
                           >
                             {name.replace('Finca ', '')}
