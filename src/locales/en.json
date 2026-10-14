@@ -262,6 +262,15 @@
     ]
   },
   "about": {
+    "labCaption": "Carlos, our head of cupping",
+    "team": {
+      "eyebrow": "OUR TEAM",
+      "title": "The people behind every lot",
+      "members": {
+        "carlos": { "name": "Carlos", "role": "Head of cupping", "alt": "Carlos, our head of cupping, in the cupping lab" },
+        "gabriela": { "name": "Gabriela", "role": "Quality and cupping", "alt": "Gabriela cupping coffee in our lab" }
+      }
+    },
     "titleA": "About ",
     "subtitle": "Three generations of coffee excellence from the highlands of Nueva Segovia",
     "values": [
