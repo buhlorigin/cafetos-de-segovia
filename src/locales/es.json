@@ -16,13 +16,34 @@
     "dismiss": "Cerrar"
   },
   "meta": {
-    "home": { "title": "Cafetos de Segovia - Exportación de café de especialidad de Nicaragua", "description": "Cafetos de Segovia produce y exporta café de especialidad de las montañas de Nueva Segovia, Nicaragua. Empresa familiar de tercera generación con café trazable y de alta calidad para tostadores de todo el mundo." },
-    "about": { "title": "Nosotros | Cafetos de Segovia", "description": "Tres generaciones de excelencia cafetalera en las montañas de Nueva Segovia, Nicaragua: nuestra herencia, valores, secado y control de calidad." },
-    "services": { "title": "Servicios | Cafetos de Segovia", "description": "Del origen al destino: acompañamos a los productores de Nueva Segovia y preparamos café de especialidad listo para exportar en nuestro propio beneficio seco." },
-    "farms": { "title": "Nuestras fincas | Cafetos de Segovia", "description": "Más de 15 fincas en Nueva Segovia, seis de ellas manejadas por nuestra familia. Altitud, variedades, procesos y cosecha de cada finca." },
-    "nicaragua": { "title": "Nicaragua | Cafetos de Segovia", "description": "Lo que hace especial a Nicaragua como origen de café: las montañas del norte, Nueva Segovia y Dipilto, variedades, procesos y el camino a la exportación." },
-    "contact": { "title": "Contacto | Cafetos de Segovia", "description": "Contacte a Cafetos de Segovia para muestras, fichas técnicas y consultas de exportación. Visite nuestro beneficio seco en Nueva Segovia, Nicaragua." },
-    "notFound": { "title": "Página no encontrada | Cafetos de Segovia", "description": "No encontramos esta página." }
+    "home": {
+      "title": "Cafetos de Segovia - Exportación de café de especialidad de Nicaragua",
+      "description": "Cafetos de Segovia produce y exporta café de especialidad de las montañas de Nueva Segovia, Nicaragua. Empresa familiar de tercera generación con café trazable y de alta calidad para tostadores de todo el mundo."
+    },
+    "about": {
+      "title": "Nosotros | Cafetos de Segovia",
+      "description": "Tres generaciones de excelencia cafetalera en las montañas de Nueva Segovia, Nicaragua: nuestra herencia, valores, secado y control de calidad."
+    },
+    "services": {
+      "title": "Servicios | Cafetos de Segovia",
+      "description": "Del origen al destino: acompañamos a los productores de Nueva Segovia y preparamos café de especialidad listo para exportar en nuestro propio beneficio seco."
+    },
+    "farms": {
+      "title": "Nuestras fincas | Cafetos de Segovia",
+      "description": "Dos fincas propiedad de nuestras fundadoras y una red de más de 40 fincas aliadas en Nueva Segovia. Altitud, variedades, procesos y cosecha."
+    },
+    "nicaragua": {
+      "title": "Nicaragua | Cafetos de Segovia",
+      "description": "Lo que hace especial a Nicaragua como origen de café: las montañas del norte, Nueva Segovia y Dipilto, variedades, procesos y el camino a la exportación."
+    },
+    "contact": {
+      "title": "Contacto | Cafetos de Segovia",
+      "description": "Contacte a Cafetos de Segovia para muestras, fichas técnicas y consultas de exportación. Visite nuestro beneficio seco en Nueva Segovia, Nicaragua."
+    },
+    "notFound": {
+      "title": "Página no encontrada | Cafetos de Segovia",
+      "description": "No encontramos esta página."
+    }
   },
   "hero": {
     "eyebrow": "Exportación de café de especialidad · Nicaragua",
@@ -42,35 +63,60 @@
       "text": "Cada lote que exportamos pasa por nuestro propio beneficio en Nueva Segovia. El secado, el trillado, la clasificación, el almacenamiento y la catación se realizan en un solo lugar, con nuestro propio equipo, para controlar cada paso y decirle exactamente por dónde ha pasado su café."
     },
     "steps": [
-      { "title": "Secado", "text": "Los cafés lavados y honey se secan en pergamino sobre camas africanas, y los naturales en cereza entera. Nuestro equipo mueve cada cama a mano durante todo el día para lograr un secado lento y parejo." },
-      { "title": "Trillado y clasificación", "text": "El trillado, la clasificación por tamaño (zaranda) y la clasificación óptica por color eliminan los defectos antes de aprobar un lote." },
-      { "title": "Almacenamiento de lotes", "text": "Cada lote reposa por separado, identificado con su finca, proceso y fecha, para que siga siendo trazable hasta la exportación." },
-      { "title": "Laboratorio de catación", "text": "Catamos cada lote en nuestro propio laboratorio antes de ofrecerlo, y de nuevo antes del embarque." }
+      {
+        "title": "Secado",
+        "text": "Los cafés lavados y honey se secan en pergamino sobre camas africanas, y los naturales en cereza entera. Nuestro equipo mueve cada cama a mano durante todo el día para lograr un secado lento y parejo."
+      },
+      {
+        "title": "Trillado y clasificación",
+        "text": "El trillado, la clasificación por tamaño (zaranda) y la clasificación óptica por color eliminan los defectos antes de aprobar un lote."
+      },
+      {
+        "title": "Almacenamiento de lotes",
+        "text": "Cada lote reposa por separado, identificado con su finca, proceso y fecha, para que siga siendo trazable hasta la exportación."
+      },
+      {
+        "title": "Laboratorio de catación",
+        "text": "Catamos cada lote en nuestro propio laboratorio antes de ofrecerlo, y de nuevo antes del embarque."
+      }
     ],
-    "strip": ["Camas africanas y patios", "Secadora mecánica", "Cuarto frío para fermentación", "Laboratorio de catación", "Certificación HACCP"],
+    "strip": [
+      "Camas africanas y patios",
+      "Secadora mecánica",
+      "Cuarto frío para fermentación",
+      "Laboratorio de catación",
+      "Certificación HACCP"
+    ],
     "coffee": {
       "eyebrow": "Portafolio",
       "title": "Nuestro café",
       "greenTitle": "Café oro de exportación",
       "greenText": "Café oro listo para exportar, trillado y clasificado en nuestro beneficio.",
       "lotsTitle": "Lotes procesados",
-      "processes": ["Natural", "Honey", "Lavado", "Experimental"]
+      "processes": [
+        "Natural",
+        "Honey",
+        "Lavado",
+        "Experimental"
+      ]
     },
     "farms": {
       "eyebrow": "Nuestras fincas",
-      "title": "15+ fincas en las montañas de Nueva Segovia",
-      "text": "Nuestras fincas familiares y un grupo cercano de productores aliados en Dipilto, Mozonte y las montañas vecinas. Cada una tiene su propia altitud, sus variedades y su carácter.",
+      "title": "Nuestras fincas y 40+ fincas aliadas en Nueva Segovia",
+      "text": "Todo comienza con Bethania y Las Hortensias, las fincas de nuestras fundadoras, y crece en una red de más de 40 fincas aliadas.",
       "prev": "Fincas anteriores",
       "next": "Fincas siguientes",
       "partner": "+ {{count}} fincas aliadas",
       "more": "Más fincas a solicitud",
-      "explore": "Conozca nuestras fincas"
+      "explore": "Conozca nuestras fincas",
+      "founderBadge": "Finca de las fundadoras",
+      "partnerBadge": "Finca aliada"
     },
     "numbers": {
       "years": "12+",
       "yearsLabel": "Años exportando",
-      "total": "15+",
-      "farms": "Fincas familiares y aliadas",
+      "total": "40+",
+      "farms": "Fincas aliadas",
       "altitude": "1.150–1.800",
       "altitudeLabel": "Metros sobre el nivel del mar",
       "containersTotal": "60+",
@@ -103,17 +149,33 @@
     "title": "Del origen al destino",
     "intro": "Somos productores y llevamos más de doce años exportando café nicaragüense. Esa experiencia nos permite trabajar en ambos extremos de la cadena: cultivando junto a los productores de Nueva Segovia y preparando su café para tostadores de todo el mundo. Todo lo que ocurre en medio sucede en nuestro propio beneficio seco, con nuestro propio equipo.",
     "journeyLabel": "Recorrido del café",
-    "journey": ["Origen · Fincas de Nueva Segovia", "Nuestro beneficio seco", "Destino · Tostadores en todo el mundo"],
+    "journey": [
+      "Origen · Fincas de Nueva Segovia",
+      "Nuestro beneficio seco",
+      "Destino · Tostadores en todo el mundo"
+    ],
     "producers": {
       "eyebrow": "EN EL ORIGEN",
       "title": "Crecemos junto a los productores",
       "text": "Cultivamos café en nuestras propias fincas familiares, por eso sabemos lo que cada cosecha le exige a un productor. Compartimos esa experiencia con nuestros productores aliados, del campo a la mesa de catación, para que cada cosecha muestre todo su potencial.",
       "alt": "Dos mujeres con una plántula de café",
       "items": [
-        ["Asesoría en finca", "Consejos prácticos sobre cosecha, sombra, poda y fertilización, basados en lo que funciona en nuestras propias fincas."],
-        ["Protocolos de proceso", "Métodos de fermentación y secado que probamos primero en nuestras fincas y luego compartimos."],
-        ["Retroalimentación de catación", "Una evaluación de cada lote para entender su perfil y cómo mejorarlo."],
-        ["Acceso a mercados", "Presentamos el café a importadores y tostadores en Europa, Estados Unidos, Asia, Australia y Medio Oriente."]
+        [
+          "Asesoría en finca",
+          "Consejos prácticos sobre cosecha, sombra, poda y fertilización, basados en lo que funciona en nuestras propias fincas."
+        ],
+        [
+          "Protocolos de proceso",
+          "Métodos de fermentación y secado que probamos primero en nuestras fincas y luego compartimos."
+        ],
+        [
+          "Retroalimentación de catación",
+          "Una evaluación de cada lote para entender su perfil y cómo mejorarlo."
+        ],
+        [
+          "Acceso a mercados",
+          "Presentamos el café a importadores y tostadores en Europa, Estados Unidos, Asia, Australia y Medio Oriente."
+        ]
       ]
     },
     "export": {
@@ -122,10 +184,22 @@
       "text": "Cada lote que sale de nuestro beneficio está separado, catado y documentado. De microlotes a contenedores completos, de especialidad y comerciales, nos encargamos de la selección, la preparación y la exportación, para que el café llegue tal como se cató en origen.",
       "alt": "El equipo de Cafetos de Segovia",
       "items": [
-        ["Selección de lotes", "Lotes de nuestras fincas familiares y de productores aliados, elegidos según el perfil de cada tostador."],
-        ["Muestras y catación", "Muestras de preembarque y un informe de catación para cada lote."],
-        ["Trazabilidad y EUDR", "Geolocalización de la finca y una ficha de trazabilidad por lote, lista para el mercado europeo."],
-        ["Logística de exportación", "Empaque, documentación, aduana y embarque, con visitas a fincas a solicitud."]
+        [
+          "Selección de lotes",
+          "Lotes de nuestras fincas familiares y de productores aliados, elegidos según el perfil de cada tostador."
+        ],
+        [
+          "Muestras y catación",
+          "Muestras de preembarque y un informe de catación para cada lote."
+        ],
+        [
+          "Trazabilidad y EUDR",
+          "Geolocalización de la finca y una ficha de trazabilidad por lote, lista para el mercado europeo."
+        ],
+        [
+          "Logística de exportación",
+          "Empaque, documentación, aduana y embarque, con visitas a fincas a solicitud."
+        ]
       ]
     },
     "certs": {
@@ -153,51 +227,107 @@
     "view": "Ver foto de {{title}}",
     "note": "Las aguas mieles del lavado se llevan a pilas de tratamiento lejos de las fuentes de agua, para proteger los ríos de la reserva Dipilto-Jalapa.",
     "steps": [
-      ["Cosecha selectiva", "Solo cortamos a mano las cerezas completamente maduras; luego se clasifican y se pasan por flotación en agua limpia para eliminar defectos."],
-      ["Fermentación", "Los cafés lavados fermentan de 18 a 36 horas antes de lavarse en canales con agua limpia. Los lotes anaeróbicos reposan en barriles sellados de 48 a 140 horas, con control constante de temperatura y pH."],
-      ["Secado", "Secado lento en camas africanas, alternando sol y sombra ventilada: unos 12 días para los lavados y 28 días para los naturales, hasta que el café alcanza 12 % de humedad."],
-      ["Reposo", "Los lotes reposan en nuestra bodega para estabilizarse antes del trillado, cada uno identificado por finca, variedad y proceso."],
-      ["Control de calidad", "Cada lote se tuesta, se cata y se califica en nuestro laboratorio, y se revisan su humedad y su calidad física."],
-      ["Trillado", "Trillado, clasificación por tamaño (zaranda), clasificación por densidad, clasificación óptica por color y una selección final de defectos a mano."],
-      ["Empaque", "El café se empaca según las especificaciones de cada tostador y se etiqueta para una trazabilidad completa."],
-      ["Exportación", "Documentación, trámites aduaneros, reserva de flete y seguimiento hasta que el café llega a destino."]
+      [
+        "Cosecha selectiva",
+        "Solo cortamos a mano las cerezas completamente maduras; luego se clasifican y se pasan por flotación en agua limpia para eliminar defectos."
+      ],
+      [
+        "Fermentación",
+        "Los cafés lavados fermentan de 18 a 36 horas antes de lavarse en canales con agua limpia. Los lotes anaeróbicos reposan en barriles sellados de 48 a 140 horas, con control constante de temperatura y pH."
+      ],
+      [
+        "Secado",
+        "Secado lento en camas africanas, alternando sol y sombra ventilada: unos 12 días para los lavados y 28 días para los naturales, hasta que el café alcanza 12 % de humedad."
+      ],
+      [
+        "Reposo",
+        "Los lotes reposan en nuestra bodega para estabilizarse antes del trillado, cada uno identificado por finca, variedad y proceso."
+      ],
+      [
+        "Control de calidad",
+        "Cada lote se tuesta, se cata y se califica en nuestro laboratorio, y se revisan su humedad y su calidad física."
+      ],
+      [
+        "Trillado",
+        "Trillado, clasificación por tamaño (zaranda), clasificación por densidad, clasificación óptica por color y una selección final de defectos a mano."
+      ],
+      [
+        "Empaque",
+        "El café se empaca según las especificaciones de cada tostador y se etiqueta para una trazabilidad completa."
+      ],
+      [
+        "Exportación",
+        "Documentación, trámites aduaneros, reserva de flete y seguimiento hasta que el café llega a destino."
+      ]
     ]
   },
   "about": {
     "titleA": "Acerca de ",
     "subtitle": "Tres generaciones de excelencia cafetalera en las montañas de Nueva Segovia",
     "values": [
-      { "title": "HERENCIA", "content": "Cafetos de Segovia fue fundada por Ana y Martha Albir, tercera generación de una familia cafetalera. Unimos tradición e innovación y ofrecemos vínculos transparentes y socialmente responsables con los productores de café de Nicaragua. Nuestro equipo de especialistas cuida los más altos estándares de calidad en toda la cadena de producción y construye relaciones duraderas con fincas aliadas y compradores de todo el mundo." },
-      { "title": "NUESTRO CAFÉ", "content": "Trabajamos con productores excepcionales para enfrentar un clima cambiante sin perder la cultura cafetalera tradicional. Nuestra colaboración con importadores y tostadores destacados se centra en la sostenibilidad y la calidad. Con microbeneficiado y técnicas de proceso avanzadas realzamos los sabores y mantenemos la consistencia. Cada taza cuenta la historia de productores dedicados y de nuestro compromiso con el medio ambiente." },
-      { "title": "SOSTENIBILIDAD", "content": "En Cafetos de Segovia, la sostenibilidad es nuestra base. Cultivamos café con profundo respeto por el terroir y aplicamos prácticas que protegen el entorno para las futuras generaciones. Nuestra relación con la naturaleza define nuestra identidad y nuestro legado, y cada grano refleja nuestro compromiso con una agricultura responsable y la protección del medio ambiente." },
-      { "title": "INNOVACIÓN", "content": "La innovación impulsa nuestra búsqueda de excelencia en el café de especialidad. Exploramos de forma constante nuevos métodos de proceso y técnicas para mejorar la calidad. Nuestra creatividad y nuestro espíritu pionero nos permiten ofrecer cafés excepcionales, con los más altos estándares de consistencia y desarrollo de sabor." },
-      { "title": "SECADO Y PROCESO", "content": "En el secado se protege o se pierde una buena cosecha, por eso lo hacemos con calma. Después del proceso, nuestro café reposa al aire libre sobre camas africanas, donde se seca de forma pareja con el sol y la brisa de la montaña. Nuestro equipo mueve cada cama a mano varias veces al día y mide la humedad hasta que cada lote alcanza el nivel adecuado para el almacenamiento y la exportación.\n\nLos lotes naturales, honey y lavados se secan por separado, y cada cama se identifica por finca y proceso. Así cada lote conserva su propio carácter y su propia trazabilidad, de la finca al saco." },
-      { "title": "LABORATORIO Y CONTROL DE CALIDAD", "content": "Evaluamos cada lote en nuestro propio laboratorio de catación antes de ofrecerlo. Tostamos muestras, las catamos a ciegas junto a nuestros lotes de referencia y calificamos cada una, para saber exactamente qué hay en cada saco antes de que un comprador lo pruebe.\n\nAdemás de la catación, revisamos la humedad y la calidad física del café oro: defectos, tamaño y uniformidad. Solo los lotes que cumplen nuestros estándares se preparan para exportar, y los volvemos a catar antes del embarque." }
+      {
+        "title": "HERENCIA",
+        "content": "Cafetos de Segovia fue fundada por Ana y Martha Albir, tercera generación de una familia cafetalera. Unimos tradición e innovación y ofrecemos vínculos transparentes y socialmente responsables con los productores de café de Nicaragua. Nuestro equipo de especialistas cuida los más altos estándares de calidad en toda la cadena de producción y construye relaciones duraderas con fincas aliadas y compradores de todo el mundo."
+      },
+      {
+        "title": "NUESTRO CAFÉ",
+        "content": "Trabajamos con productores excepcionales para enfrentar un clima cambiante sin perder la cultura cafetalera tradicional. Nuestra colaboración con importadores y tostadores destacados se centra en la sostenibilidad y la calidad. Con microbeneficiado y técnicas de proceso avanzadas realzamos los sabores y mantenemos la consistencia. Cada taza cuenta la historia de productores dedicados y de nuestro compromiso con el medio ambiente."
+      },
+      {
+        "title": "SOSTENIBILIDAD",
+        "content": "En Cafetos de Segovia, la sostenibilidad es nuestra base. Cultivamos café con profundo respeto por el terroir y aplicamos prácticas que protegen el entorno para las futuras generaciones. Nuestra relación con la naturaleza define nuestra identidad y nuestro legado, y cada grano refleja nuestro compromiso con una agricultura responsable y la protección del medio ambiente."
+      },
+      {
+        "title": "INNOVACIÓN",
+        "content": "La innovación impulsa nuestra búsqueda de excelencia en el café de especialidad. Exploramos de forma constante nuevos métodos de proceso y técnicas para mejorar la calidad. Nuestra creatividad y nuestro espíritu pionero nos permiten ofrecer cafés excepcionales, con los más altos estándares de consistencia y desarrollo de sabor."
+      },
+      {
+        "title": "SECADO Y PROCESO",
+        "content": "En el secado se protege o se pierde una buena cosecha, por eso lo hacemos con calma. Después del proceso, nuestro café reposa al aire libre sobre camas africanas, donde se seca de forma pareja con el sol y la brisa de la montaña. Nuestro equipo mueve cada cama a mano varias veces al día y mide la humedad hasta que cada lote alcanza el nivel adecuado para el almacenamiento y la exportación.\n\nLos lotes naturales, honey y lavados se secan por separado, y cada cama se identifica por finca y proceso. Así cada lote conserva su propio carácter y su propia trazabilidad, de la finca al saco."
+      },
+      {
+        "title": "LABORATORIO Y CONTROL DE CALIDAD",
+        "content": "Evaluamos cada lote en nuestro propio laboratorio de catación antes de ofrecerlo. Tostamos muestras, las catamos a ciegas junto a nuestros lotes de referencia y calificamos cada una, para saber exactamente qué hay en cada saco antes de que un comprador lo pruebe.\n\nAdemás de la catación, revisamos la humedad y la calidad física del café oro: defectos, tamaño y uniformidad. Solo los lotes que cumplen nuestros estándares se preparan para exportar, y los volvemos a catar antes del embarque."
+      }
     ]
   },
   "farmsPage": {
     "titleA": "Nuestras ",
     "titleB": "fincas",
-    "subtitle": "{{total}} fincas en Nueva Segovia, seis de ellas manejadas por nuestra familia.",
+    "subtitle": "Dos fincas propiedad de nuestras fundadoras y una red de más de 40 fincas aliadas en Nueva Segovia.",
     "overviewEyebrow": "Resumen",
     "overviewTitle": "Nuestras fincas de un vistazo",
     "quote": "Valoramos la sostenibilidad, la innovación y a las personas que hacen posible cada cosecha.",
     "carousel": "Nuestras fincas",
     "photo": "Foto {{n}}",
-    "farmCounter": "Finca {{n}} / {{total}}",
-    "labels": { "location": "Ubicación", "altitude": "Altitud", "size": "Tamaño", "varieties": "Variedades", "processing": "Procesos", "harvest": "Cosecha", "difference": "Qué la hace diferente" },
+    "farmCounter": "{{n}} / {{total}}",
+    "labels": {
+      "location": "Ubicación",
+      "altitude": "Altitud",
+      "size": "Tamaño",
+      "varieties": "Variedades",
+      "processing": "Procesos",
+      "harvest": "Cosecha",
+      "difference": "Qué la hace diferente"
+    },
     "prev": "Finca anterior",
     "next": "Finca siguiente",
     "partnerEyebrow": "Más allá de nuestras fincas",
     "partnerTitle": "Más fincas a solicitud",
-    "partnerText": "Además de nuestras fincas familiares, trabajamos con un grupo cercano de productores aliados en Dipilto, Mozonte y San Fernando. Su café se procesa y se cata en nuestro propio beneficio seco con el mismo cuidado y la misma trazabilidad, y sus lotes están disponibles a solicitud.",
+    "partnerText": "Además de las fincas que se muestran aquí, nuestra red incluye más de 40 fincas aliadas en Dipilto, Mozonte, San Fernando y Macuelizo. Los lotes de estas fincas están disponibles a solicitud, con el mismo cuidado y la misma trazabilidad.",
     "partnerButton": "Solicitar lista de fincas y fichas técnicas",
     "partnerSubject": "Solicitud de fincas aliadas",
     "originsEyebrow": "Nuestros orígenes",
     "originsTitle": "De dónde viene nuestro café",
     "areas": [
-      { "label": "Dipilto, Nueva Segovia", "heading": "Las montañas de las Serranías de Dipilto y Jalapa" },
-      { "label": "Mozonte, Nueva Segovia", "heading": "Las montañas de Mozonte" }
+      {
+        "label": "Dipilto, Nueva Segovia",
+        "heading": "Las montañas de las Serranías de Dipilto y Jalapa"
+      },
+      {
+        "label": "Mozonte, Nueva Segovia",
+        "heading": "Las montañas de Mozonte"
+      }
     ],
     "altitudeRange": "Rango de altitud",
     "mainVarieties": "Variedades principales",
@@ -205,21 +335,30 @@
     "closingTitle": "Solicite muestras",
     "closingText": "Descubra la calidad excepcional de nuestros lotes por finca.",
     "closingButton": "Solicitar muestras y fichas técnicas",
-    "closingSubject": "Solicitud de muestras y fichas técnicas"
+    "closingSubject": "Solicitud de muestras y fichas técnicas",
+    "ownEyebrow": "Propiedad de nuestras fundadoras",
+    "ownTitle": "Bethania y Las Hortensias",
+    "ownText": "Estas dos fincas pertenecen a Ana y Martha Albir, las hermanas que fundaron Cafetos de Segovia. Allí comenzó la historia de nuestra familia con el café, y allí probamos primero nuevas variedades y procesos.",
+    "ownerLabel": "Propietaria",
+    "founderBadge": "Finca de las fundadoras",
+    "partnerBadge": "Finca aliada",
+    "networkEyebrow": "Nuestra red de fincas aliadas",
+    "networkTitle": "Algunas de nuestras 40+ fincas aliadas",
+    "networkText": "Trabajamos con más de 40 fincas aliadas en Nueva Segovia, muchas de ellas de familiares y vecinos de largo tiempo. Estas son algunas de ellas."
   },
   "farmData": {
     "agua-sarca": {
-      "description": "Agua Sarca pertenece a la familia Albir desde hace más de treinta años. Es nuestra finca más grande, con suelos franco arenosos, lluvias constantes y el aire fresco de la montaña, y su café está cultivado bajo sombra en un sistema agroforestal de árboles nativos, frutales y bananos. En toda la finca se conservan reservas de bosque nativo para proteger las fuentes de agua y la fauna.",
+      "description": "Agua Sarca es manejada por la misma familia desde hace más de treinta años. Con suelos franco arenosos, lluvias constantes y el aire fresco de la montaña, su café está cultivado bajo sombra en un sistema agroforestal de árboles nativos, frutales y bananos, y en toda la finca se conservan reservas de bosque nativo.",
       "location": "Las Manos, Dipilto, Nueva Segovia",
       "altitude": "1.150–1.400 msnm",
       "size": "67 ha, 56 ha en café",
       "varieties": "Catuaí rojo y amarillo, Caturra, Maracaturra, Pacamara, Ovata, Marsellesa, Parainema, Geisha",
       "processing": "Lavado, natural, natural anaeróbico",
       "harvest": "Diciembre a marzo",
-      "difference": "Nuestra mayor colección de variedades, y finalista de la Taza de la Excelencia Nicaragua en varias ocasiones desde 2017."
+      "difference": "Su mayor colección de variedades, y finalista de la Taza de la Excelencia Nicaragua en varias ocasiones desde 2017."
     },
     "la-picona": {
-      "description": "La Picona es la única finca de café en el cerro La Picona. Manejada por Martha Lucía Albir, todo su café es cultivado bajo sombra completa de guaba, búcaro, cedro y banano, en suelo volcánico arenoso y rico en minerales. Las brisas frescas y la gran diferencia de temperatura entre el día y la noche hacen más lenta la maduración, y la certificación orgánica está en proceso.",
+      "description": "La Picona es la única finca de café en el cerro La Picona. Es una finca dirigida por una mujer, y todo su café es cultivado bajo sombra completa de guaba, búcaro, cedro y banano, en suelo volcánico arenoso y rico en minerales. Las brisas frescas y la gran diferencia de temperatura entre el día y la noche hacen más lenta la maduración.",
       "location": "Cerro La Picona, Dipilto, Nueva Segovia",
       "altitude": "1.250–1.400 msnm",
       "size": "7 ha, incluidas 2 ha de bosque nativo conservado",
@@ -229,7 +368,7 @@
       "difference": "Segundo lugar en la Taza de la Excelencia Nicaragua 2021 con un Maracaturra honey anaeróbico."
     },
     "mirjam": {
-      "description": "Mirjam lleva el nombre del legado familiar y es manejada por Martha Lucía Albir. La neblina de la mañana, una brisa constante y un suelo fértil de influencia volcánica dan forma a su café, todo cultivado bajo sombra completa. La certificación orgánica está en proceso, y con la cosecha 2026 comienza un programa de microlotes.",
+      "description": "La neblina de la mañana, una brisa constante y un suelo fértil de influencia volcánica dan forma al café de Mirjam, todo cultivado bajo sombra completa. La certificación orgánica está en proceso, y con la cosecha 2026 comienza un programa de microlotes.",
       "location": "Dipilto, Nueva Segovia",
       "altitude": "1.200–1.350 msnm",
       "size": "27 ha, incluidas 3,5 ha de bosque nativo conservado",
@@ -239,34 +378,36 @@
       "difference": "Una de las mayores poblaciones de aves de la región, con tucanes, colibríes y tangaras entre el café. Reconocida varias veces en la Taza de la Excelencia Nicaragua."
     },
     "el-cipres": {
-      "description": "El Ciprés se unió a la familia en 2013. Cerca de un tercio del terreno se conserva como bosque natural para proteger las fuentes de agua, la flora y la fauna, y el café crece dentro de la Reserva Natural Serranías de Dipilto-Jalapa.",
+      "description": "El Ciprés es manejada por su actual propietario desde 2013. Cerca de un tercio del terreno se conserva como bosque natural para proteger las fuentes de agua, la flora y la fauna, dentro de la Reserva Natural Serranías de Dipilto-Jalapa.",
       "location": "Las Manos, Dipilto, Nueva Segovia",
       "altitude": "1.300–1.450 msnm",
       "size": "21 ha, cerca de un tercio conservado como bosque natural",
       "varieties": "Parainema, Marsellesa, Ovata",
       "processing": "Natural, natural anaeróbico, lavado",
       "harvest": "Noviembre a marzo",
-      "difference": "Sembrada con variedades nuevas y resistentes como Parainema, Marsellesa y Ovata, que exploramos con procesos naturales y anaeróbicos."
+      "difference": "Sembrada con variedades nuevas y resistentes como Parainema, Marsellesa y Ovata, que se exploran con procesos naturales y anaeróbicos."
     },
     "bethania": {
-      "description": "Bethania ha pasado de generación en generación en la familia Albir y es manejada por Martha Lucía Albir desde 1991. El café crece bajo sombra de bosque, frutales y bananos, con poda regular y manejo de sombra para dar luz a la plantación.",
+      "description": "Bethania pertenece a Martha Albir, cofundadora de Cafetos de Segovia. Ha pasado de generación en generación en la familia Albir, y ella la maneja desde 1991. El café crece bajo sombra de bosque, frutales y bananos, con poda regular y manejo de sombra para dar luz a la plantación.",
       "location": "El Suyatal, Macuelizo, Nueva Segovia",
       "altitude": "1.300–1.500 msnm",
       "size": "25 ha",
       "varieties": "Catimor, Catuaí rojo, Java, Maracaturra, Pacamara",
       "processing": "Lavado, natural anaeróbico",
       "harvest": "Enero a abril",
-      "difference": "Hogar de Java y Pacamara, y de naturales anaeróbicos largos fermentados en barriles sellados con control de temperatura y pH."
+      "difference": "Hogar de Java y Pacamara, y de naturales anaeróbicos largos fermentados en barriles sellados con control de temperatura y pH.",
+      "owner": "Martha Albir"
     },
     "las-hortensias": {
-      "description": "Una finca pequeña manejada por Ana María Albir, en la familia desde hace más de cincuenta años. El café crece bajo sombra de bosque, frutales y bananos; se corta solo cuando está completamente maduro y luego se clasifica y pasa por flotación antes del proceso.",
+      "description": "Las Hortensias pertenece a Ana Albir, cofundadora de Cafetos de Segovia, y está en la familia desde hace más de cincuenta años. Es una finca pequeña donde el café crece bajo sombra de bosque, frutales y bananos; se corta solo cuando está completamente maduro y luego se clasifica y pasa por flotación antes del proceso.",
       "location": "Buenos Aires, Dipilto, Nueva Segovia",
       "altitude": "1.300–1.450 msnm",
       "size": "4 ha",
       "varieties": "Marsellesa, Maracaturra, Catimor",
       "processing": "Lavado, natural anaeróbico",
       "harvest": "Noviembre a marzo",
-      "difference": "Su Marsellesa se procesa como lavado y como natural anaeróbico de 96 horas, y muestra cuánto puede cambiar el proceso una misma variedad."
+      "difference": "Su Marsellesa se procesa como lavado y como natural anaeróbico de 96 horas, y muestra cuánto puede cambiar el proceso una misma variedad.",
+      "owner": "Ana Albir"
     }
   },
   "nicaragua": {
@@ -274,11 +415,36 @@
     "subtitle": "Lo que hace especial a Nicaragua como origen de café",
     "cta": "Vea cómo trabajamos",
     "sections": [
-      { "eyebrow": "El origen", "title": "Un país marcado por el café", "text": "El café es una de las exportaciones más importantes de Nicaragua y el sustento de miles de familias, en su mayoría pequeños y medianos productores. Casi todo es arábica, cultivado en las frescas montañas del norte, donde la altitud, los suelos volcánicos y una estación seca bien definida le dan al grano su densidad y su dulzor." },
-      { "eyebrow": "Clima y altitud", "title": "Montañas, neblina y una verdadera estación seca", "text": "Las regiones cafetaleras del norte se encuentran aproximadamente entre 1.000 y 1.800 msnm. Las noches frescas hacen más lenta la maduración de la cereza, lo que desarrolla azúcares y acidez, y una larga estación seca de noviembre a abril permite un secado al sol lento y cuidadoso. La mayor parte del café es cultivado bajo sombra, entre árboles nativos, frutales y bananos." },
-      { "eyebrow": "Donde cultivamos", "title": "Nueva Segovia, la región cafetalera más al norte", "text": "Nueva Segovia limita con Honduras y alberga la reserva natural Serranías de Dipilto y Jalapa, donde muchas de nuestras fincas y productores aliados cultivan café. La región es conocida por tazas limpias, dulces y estructuradas, y sus cafés destacan con frecuencia en la Taza de la Excelencia Nicaragua, incluidos lotes de nuestras propias fincas familiares.", "facts": ["Nuestras fincas: 1.150–1.800 msnm", "Cosecha: noviembre a abril", "Municipios: Dipilto, Mozonte, Macuelizo, San Fernando"] },
-      { "eyebrow": "En la taza", "title": "De las variedades clásicas a nuevas expresiones", "text": "Caturra, Catuaí rojo y amarillo y Maracaturra, la variedad de grano grande por la que Nicaragua es conocida, crecen junto a variedades más nuevas y escasas como Java, Pacamara, Parainema, Marsellesa y Geisha. El lavado sigue siendo la tradición, mientras que los naturales, los honey y las fermentaciones anaeróbicas abren nuevos perfiles en cada cosecha." },
-      { "eyebrow": "El recorrido", "title": "De la montaña al puerto", "text": "Las cerezas se cortan a mano, se procesan en la finca o en el beneficio húmedo y bajan como pergamino a beneficios secos como el nuestro. Allí el café se seca, reposa, se trilla, se clasifica y se cata antes de salir en camión hacia el puerto y, desde allí, hacia tostadores de todo el mundo." }
+      {
+        "eyebrow": "El origen",
+        "title": "Un país marcado por el café",
+        "text": "El café es una de las exportaciones más importantes de Nicaragua y el sustento de miles de familias, en su mayoría pequeños y medianos productores. Casi todo es arábica, cultivado en las frescas montañas del norte, donde la altitud, los suelos volcánicos y una estación seca bien definida le dan al grano su densidad y su dulzor."
+      },
+      {
+        "eyebrow": "Clima y altitud",
+        "title": "Montañas, neblina y una verdadera estación seca",
+        "text": "Las regiones cafetaleras del norte se encuentran aproximadamente entre 1.000 y 1.800 msnm. Las noches frescas hacen más lenta la maduración de la cereza, lo que desarrolla azúcares y acidez, y una larga estación seca de noviembre a abril permite un secado al sol lento y cuidadoso. La mayor parte del café es cultivado bajo sombra, entre árboles nativos, frutales y bananos."
+      },
+      {
+        "eyebrow": "Donde cultivamos",
+        "title": "Nueva Segovia, la región cafetalera más al norte",
+        "text": "Nueva Segovia limita con Honduras y alberga la reserva natural Serranías de Dipilto y Jalapa, donde muchas de nuestras fincas y productores aliados cultivan café. La región es conocida por tazas limpias, dulces y estructuradas, y sus cafés destacan con frecuencia en la Taza de la Excelencia Nicaragua, incluidos lotes de nuestras propias fincas familiares.",
+        "facts": [
+          "Nuestras fincas: 1.150–1.800 msnm",
+          "Cosecha: noviembre a abril",
+          "Municipios: Dipilto, Mozonte, Macuelizo, San Fernando"
+        ]
+      },
+      {
+        "eyebrow": "En la taza",
+        "title": "De las variedades clásicas a nuevas expresiones",
+        "text": "Caturra, Catuaí rojo y amarillo y Maracaturra, la variedad de grano grande por la que Nicaragua es conocida, crecen junto a variedades más nuevas y escasas como Java, Pacamara, Parainema, Marsellesa y Geisha. El lavado sigue siendo la tradición, mientras que los naturales, los honey y las fermentaciones anaeróbicas abren nuevos perfiles en cada cosecha."
+      },
+      {
+        "eyebrow": "El recorrido",
+        "title": "De la montaña al puerto",
+        "text": "Las cerezas se cortan a mano, se procesan en la finca o en el beneficio húmedo y bajan como pergamino a beneficios secos como el nuestro. Allí el café se seca, reposa, se trilla, se clasifica y se cata antes de salir en camión hacia el puerto y, desde allí, hacia tostadores de todo el mundo."
+      }
     ]
   },
   "contact": {
@@ -294,7 +460,14 @@
     "hoursLine1": "Lunes a viernes: 8:00 a. m. a 6:00 p. m.",
     "hoursLine2": "Hora estándar central (CST)",
     "offerTitle": "Lo que ofrecemos",
-    "offer": ["Visitas a fincas y recorridos de origen", "Preparación de muestras a la medida", "Certificados de calidad y puntajes de catación", "Documentación completa de trazabilidad", "Apoyo en logística de exportación", "Relaciones comerciales a largo plazo"],
+    "offer": [
+      "Visitas a fincas y recorridos de origen",
+      "Preparación de muestras a la medida",
+      "Certificados de calidad y puntajes de catación",
+      "Documentación completa de trazabilidad",
+      "Apoyo en logística de exportación",
+      "Relaciones comerciales a largo plazo"
+    ],
     "visitTitle": "Visite nuestro beneficio seco",
     "millName": "Cafetos de Segovia, Beneficio Seco",
     "millLocation": "Nueva Segovia, Nicaragua",
