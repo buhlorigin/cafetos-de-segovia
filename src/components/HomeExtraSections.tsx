@@ -170,7 +170,7 @@ const HomeExtraSections = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 text-center items-start gap-10 md:grid-cols-2 md:text-left md:gap-12 lg:grid-cols-4" style={{ containerType: 'inline-size' }}>
           {numbers.map((x) => (
             <div key={x.label}>
-              <div className="font-serif whitespace-nowrap leading-none mb-4 text-[clamp(2.25rem,4cqw,4.5rem)]"><CountUp n={x.value} display={x.display} /></div>
+              <div className="font-serif whitespace-nowrap leading-none mb-4 text-[clamp(2.25rem,4cqw,4.5rem)]"><CountUp n={x.value} display={x.display} suffix={x.suffix} /></div>
               <div className="text-sm leading-snug line-clamp-2 max-w-[16rem]" style={{ color: 'rgba(255,255,255,0.8)' }}>{x.label}</div>
             </div>
           ))}
