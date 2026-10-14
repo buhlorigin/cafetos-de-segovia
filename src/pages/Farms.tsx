@@ -276,15 +276,15 @@ const Farms = () => {
                   ))}
                   <div className="grid grid-cols-1 sm:grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
                     <dt className="text-xs uppercase tracking-widest text-parchment pt-1">{t('farmsPage.farmsLabel')}</dt>
-                    <dd className="flex flex-wrap gap-2">
+                    <dd className="farm-tag-row">
                       {area.farmNames.map((name) => {
                         const farm = allFarms.find((f) => f.name === name);
-                        if (!farm) return <span key={name} className="text-xs uppercase tracking-widest border border-parchment/40 px-3 py-1.5 text-parchment">{name}</span>;
+                        if (!farm) return <span key={name} className="farm-tag text-parchment">{name}</span>;
                         return (
                           <Button variant="ghost"
                             key={name}
                             onClick={() => jumpToFarm(farm)}
-                            className="text-xs uppercase tracking-widest border border-parchment/40 px-3 py-1.5 text-parchment hover:bg-parchment/10 transition-colors"
+                            className="farm-tag text-parchment hover:bg-parchment/10 transition-colors"
                           >
                             {name.replace('Finca ', '')}
                           </Button>

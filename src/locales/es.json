@@ -262,6 +262,15 @@
     ]
   },
   "about": {
+    "labCaption": "Carlos, nuestro jefe de catación",
+    "team": {
+      "eyebrow": "NUESTRO EQUIPO",
+      "title": "Las personas detrás de cada lote",
+      "members": {
+        "carlos": { "name": "Carlos", "role": "Jefe de catación", "alt": "Carlos, nuestro jefe de catación, en el laboratorio de catación" },
+        "gabriela": { "name": "Gabriela", "role": "Calidad y catación", "alt": "Gabriela catando café en nuestro laboratorio" }
+      }
+    },
     "titleA": "Acerca de ",
     "subtitle": "Tres generaciones de excelencia cafetalera en las montañas de Nueva Segovia",
     "values": [

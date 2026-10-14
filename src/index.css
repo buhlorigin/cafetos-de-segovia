@@ -131,6 +131,26 @@ a.rounded-lg, a.rounded-full, button.rounded-lg { border-radius: 2px !important;
 section { padding-left: 0; }
 .eyebrow { display:block; font-family:'DM Sans',sans-serif; font-size:.75rem; letter-spacing:.25em; text-transform:uppercase; color:#9E2B25; margin-bottom:1rem; }
 
+/* Shared geometry for clickable and informational farm tags. */
+.farm-tag-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.farm-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0 16px;
+  line-height: 1;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+}
+
 /* Motion */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .7s ease-out, transform .7s ease-out; }
 .fade-up.in-view { opacity: 1; transform: none; }
