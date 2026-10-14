@@ -22,7 +22,7 @@ const coffeeAreas: CoffeeArea[] = [
     image: "/lovable-uploads/c583d705-3f60-4df4-8cfa-ac3538d6d036.png",
     altitude: "",
     varieties: "",
-    farmNames: ["Finca Agua Sarca", "Finca La Picona", "Finca Mirjam", "Finca El Ciprés", "Finca Las Hortensias", "Santa Isabel", "Santa Helena"],
+    farmNames: ["Finca Las Hortensias", "Finca Agua Sarca", "Finca La Picona", "Finca Mirjam", "Finca El Ciprés", "Santa Isabel", "Santa Helena"],
   },
   {
     text: "",
@@ -30,6 +30,20 @@ const coffeeAreas: CoffeeArea[] = [
     altitude: "",
     varieties: "",
     farmNames: ["La Esperanza", "Ojo de Agua", "Quebrada Las Naranjas", "Las Naranjas", "El Esfuerzo"],
+  },
+  {
+    text: "",
+    image: "/media/farm-bethania-1.jpg",
+    altitude: "",
+    varieties: "",
+    farmNames: ["Finca Bethania"],
+  },
+  {
+    text: "",
+    image: "/media/hero-poster.jpg",
+    altitude: "",
+    varieties: "",
+    farmNames: ["Finca Los Milagros"],
   },
 ];
 
@@ -239,6 +253,7 @@ const Farms = () => {
           <div className="text-center mb-14">
             <span className="eyebrow !text-parchment">{t('farmsPage.originsEyebrow')}</span>
             <h2 className="text-4xl md:text-5xl text-parchment mt-4">{t('farmsPage.originsTitle')}</h2>
+            <p className="text-parchment leading-relaxed max-w-2xl mx-auto mt-6">{t('farmsPage.originsIntro')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             {areas.map((area) => (
