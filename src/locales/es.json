@@ -47,7 +47,7 @@
   },
   "hero": {
     "eyebrow": "Exportación de café de especialidad · Nicaragua",
-    "title": "Cafetos de Segovia es su aliado para encontrar los mejores cafés de especialidad de Nueva Segovia",
+    "title": "Cafetos de Segovia es su aliado para encontrar los mejores cafés de especialidad de Nicaragua",
     "services": "Nuestros servicios",
     "farms": "Nuestras fincas"
   },
@@ -206,7 +206,10 @@
       "titleA": "Nuestras ",
       "titleB": "certificaciones",
       "text": "Comprometidos con los estándares de calidad y la excelencia en la exportación",
-      "haccp": "Análisis de Peligros y Puntos Críticos de Control"
+      "haccp": "Análisis de Peligros y Puntos Críticos de Control",
+      "gapBadge": "BPA",
+      "gap": "Buenas Prácticas Agrícolas (BPA)",
+      "gapText": "Certificación del IPSA, Instituto de Protección y Sanidad Agropecuaria de Nicaragua."
     },
     "closing": {
       "title": "Trabajemos juntos",
@@ -356,7 +359,7 @@
       "processing": "Lavado, natural, natural anaeróbico",
       "harvest": "Diciembre a marzo",
       "difference": "Su mayor colección de variedades, y finalista de la Taza de la Excelencia Nicaragua en varias ocasiones desde 2017.",
-      "practices": "Buenas Prácticas Agrícolas"
+      "practices": "Buenas Prácticas Agrícolas (BPA)"
     },
     "la-picona": {
       "description": "La Picona es la única finca de café en el cerro La Picona. Es una finca dirigida por una mujer, y todo su café es cultivado bajo sombra completa de guaba, búcaro, cedro y banano, en suelo volcánico arenoso y rico en minerales. Las brisas frescas y la gran diferencia de temperatura entre el día y la noche hacen más lenta la maduración.",
@@ -367,7 +370,7 @@
       "processing": "Natural, honey, fermentaciones experimentales",
       "harvest": "Diciembre a marzo",
       "difference": "Segundo lugar en la Taza de la Excelencia Nicaragua 2021 con un Maracaturra honey anaeróbico.",
-      "practices": "Buenas Prácticas Agrícolas"
+      "practices": "Buenas Prácticas Agrícolas (BPA)"
     },
     "mirjam": {
       "description": "La neblina de la mañana, una brisa constante y un suelo fértil de influencia volcánica dan forma al café de Mirjam, todo cultivado bajo sombra completa. Con la cosecha 2026 comienza un programa de microlotes.",
@@ -379,7 +382,7 @@
       "harvest": "Diciembre a marzo",
       "difference": "Una de las mayores poblaciones de aves de la región, con tucanes, colibríes y tangaras entre el café. Reconocida varias veces en la Taza de la Excelencia Nicaragua.",
       "development": "Sidra, Geisha, Chiroso, Arará, Bourbon Rosado",
-      "practices": "Buenas Prácticas Agrícolas"
+      "practices": "Buenas Prácticas Agrícolas (BPA)"
     },
     "el-cipres": {
       "description": "El Ciprés es manejada por su actual propietario desde 2013. Cerca de un tercio del terreno se conserva como bosque natural para proteger las fuentes de agua, la flora y la fauna, dentro de la Reserva Natural Serranías de Dipilto-Jalapa.",
@@ -390,7 +393,7 @@
       "processing": "Natural, natural anaeróbico, lavado",
       "harvest": "Noviembre a marzo",
       "difference": "Sembrada con variedades nuevas y resistentes como Parainema, Marsellesa y Ovata, que se exploran con procesos naturales y anaeróbicos.",
-      "practices": "Buenas Prácticas Agrícolas"
+      "practices": "Buenas Prácticas Agrícolas (BPA)"
     },
     "bethania": {
       "description": "Bethania pertenece a Martha Albir, cofundadora de Cafetos de Segovia. Ha pasado de generación en generación en la familia Albir, y ella la maneja desde 1991. El café crece bajo sombra de bosque, frutales y bananos, con poda regular y manejo de sombra para dar luz a la plantación.",
@@ -403,7 +406,7 @@
       "difference": "Hogar de Java y Pacamara, y de naturales anaeróbicos largos fermentados en barriles sellados con control de temperatura y pH.",
       "owner": "Martha Albir",
       "development": "Sidra, Geisha, Chiroso, Arará, Bourbon Rosado",
-      "practices": "Buenas Prácticas Agrícolas"
+      "practices": "Buenas Prácticas Agrícolas (BPA)"
     },
     "las-hortensias": {
       "description": "Las Hortensias pertenece a Ana Albir, cofundadora de Cafetos de Segovia, y está en la familia desde hace más de cincuenta años. Es una finca pequeña donde el café crece bajo sombra de bosque, frutales y bananos; se corta solo cuando está completamente maduro y luego se clasifica y pasa por flotación antes del proceso.",
@@ -415,7 +418,7 @@
       "harvest": "Noviembre a marzo",
       "difference": "Su Marsellesa se procesa como lavado y como natural anaeróbico de 96 horas, y muestra cuánto puede cambiar el proceso una misma variedad.",
       "owner": "Ana Albir",
-      "practices": "Buenas Prácticas Agrícolas"
+      "practices": "Buenas Prácticas Agrícolas (BPA)"
     },
     "los-milagros": {
       "description": "",

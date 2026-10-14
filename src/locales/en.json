@@ -47,7 +47,7 @@
   },
   "hero": {
     "eyebrow": "Specialty Coffee Export · Nicaragua",
-    "title": "Cafetos de Segovia is your partner in finding the best Specialty Coffees in Nueva Segovia",
+    "title": "Cafetos de Segovia is your partner in finding the best specialty coffees of Nicaragua",
     "services": "Our Services",
     "farms": "Our Farms"
   },
@@ -206,7 +206,10 @@
       "titleA": "Our ",
       "titleB": "Certifications",
       "text": "Committed to quality standards and export excellence",
-      "haccp": "Hazard Analysis Critical Control Points"
+      "haccp": "Hazard Analysis Critical Control Points",
+      "gapBadge": "GAP",
+      "gap": "Good Agricultural Practices (GAP)",
+      "gapText": "Certified by IPSA, Nicaragua's Institute of Agricultural Protection and Health."
     },
     "closing": {
       "title": "Let's work together",
@@ -356,7 +359,7 @@
       "processing": "Washed, Natural, Anaerobic Natural",
       "harvest": "December to March",
       "difference": "Its widest collection of varieties, and a Cup of Excellence Nicaragua finalist repeatedly since 2017.",
-      "practices": "Good Agricultural Practices"
+      "practices": "Good Agricultural Practices (GAP)"
     },
     "la-picona": {
       "description": "La Picona is the only coffee farm on Picona Mountain. A woman-led farm, it grows all its coffee under full shade of guaba, búcaro, cedar and banana trees, on sandy, mineral-rich volcanic soil. Cool breezes and wide swings between day and night temperatures slow down ripening.",
@@ -367,7 +370,7 @@
       "processing": "Natural, Honey, Experimental fermentations",
       "harvest": "December to March",
       "difference": "2nd place in the Cup of Excellence Nicaragua 2021 with a Maracaturra anaerobic honey.",
-      "practices": "Good Agricultural Practices"
+      "practices": "Good Agricultural Practices (GAP)"
     },
     "mirjam": {
       "description": "Morning mist, a steady breeze and fertile volcanic-influenced soil shape the coffee at Mirjam, all grown under full shade. A micro-lot program starts with the 2026 harvest.",
@@ -379,7 +382,7 @@
       "harvest": "December to March",
       "difference": "One of the richest bird populations in the region, with toucans, hummingbirds and tanagers among the coffee. Recognized several times in the Cup of Excellence Nicaragua.",
       "development": "Sidra, Geisha, Chiroso, Arará, Pink Bourbon",
-      "practices": "Good Agricultural Practices"
+      "practices": "Good Agricultural Practices (GAP)"
     },
     "el-cipres": {
       "description": "El Ciprés has been run by its current owner since 2013. About a third of the land is left as natural forest, protecting water sources, flora and wildlife, within the Serranías de Dipilto-Jalapa Nature Reserve.",
@@ -390,7 +393,7 @@
       "processing": "Natural, Anaerobic Natural, Washed",
       "harvest": "November to March",
       "difference": "Planted with newer, resilient varieties like Parainema, Marsellesa and Ovata, explored through natural and anaerobic processes.",
-      "practices": "Good Agricultural Practices"
+      "practices": "Good Agricultural Practices (GAP)"
     },
     "bethania": {
       "description": "Bethania belongs to Martha Albir, co-founder of Cafetos de Segovia. It has passed from generation to generation in the Albir family, and she has run it since 1991. Coffee grows under forest, fruit and banana shade, with regular pruning and shade management to bring light into the plantation.",
@@ -403,7 +406,7 @@
       "difference": "Home to Java and Pacamara, and to long anaerobic naturals fermented in sealed barrels while temperature and pH are monitored.",
       "owner": "Martha Albir",
       "development": "Sidra, Geisha, Chiroso, Arará, Pink Bourbon",
-      "practices": "Good Agricultural Practices"
+      "practices": "Good Agricultural Practices (GAP)"
     },
     "las-hortensias": {
       "description": "Las Hortensias belongs to Ana Albir, co-founder of Cafetos de Segovia, and has been in the family for more than fifty years. A small farm where coffee grows under forest, fruit and banana shade, picked only when fully ripe, then sorted and floated before processing.",
@@ -415,7 +418,7 @@
       "harvest": "November to March",
       "difference": "Its Marsellesa is processed both washed and as a 96-hour anaerobic natural, showing how much process can change the same variety.",
       "owner": "Ana Albir",
-      "practices": "Good Agricultural Practices"
+      "practices": "Good Agricultural Practices (GAP)"
     },
     "los-milagros": {
       "description": "",
