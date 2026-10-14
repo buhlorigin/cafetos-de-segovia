@@ -22,7 +22,7 @@ const About = () => {
             image: "/media/about-drying-parchment.jpg"
     },
     {
-            image: "/media/beneficio-cupping-lab.jpg"
+            image: "/media/gabriela-cupping.jpg"
     }
   ];
 
@@ -67,11 +67,15 @@ const About = () => {
                 </div>
               </div>
               <div className={index % 2 === 1 ? 'order-1 lg:order-none lg:col-start-1 lg:row-start-1' : 'order-1 lg:order-none lg:col-start-2 lg:row-start-1'}>
+                <figure>
                 <img
                   src={value.image}
-                  alt={value.title}
+                  alt={index === 5 ? t('about.labCaption') : value.title}
+                  style={index === 5 ? { objectPosition: 'center 30%' } : undefined}
                   className={`w-full object-cover rounded-sm ${index === 0 ? 'aspect-[1402/1072] h-auto object-top' : index >= 4 ? 'h-[320px] lg:h-[420px]' : 'h-80'}`}
                 />
+                {index === 5 && <figcaption className="mt-3 text-sm text-stone-600">{t('about.labCaption')}</figcaption>}
+                </figure>
               </div>
             </div>
           </div>

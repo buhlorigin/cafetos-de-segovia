@@ -10,7 +10,7 @@ const stepMedia = [
   { n: '01', src: '/media/beneficio-parchment-drying.jpg', pos: 'center 30%' },
   { n: '02', src: '/media/beneficio-color-sorter.jpg', pos: 'center' },
   { n: '03', src: '/media/beneficio-lot-storage.jpg', pos: 'center' },
-  { n: '04', src: '/media/beneficio-cupping-lab.jpg', pos: 'center' },
+  { n: '04', src: '/media/gabriela-cupping.jpg', pos: 'center 30%' },
 ];
 type Step = typeof stepMedia[number] & { title: string; text: string };
 
@@ -148,7 +148,6 @@ const HomeExtraSections = () => {
             {farms.map((f) => (
               <a key={f.name} href={lp('/farms')} className="snap-start shrink-0 w-[75vw] sm:w-[45%] lg:w-[30%] group">
                 <div className="relative overflow-hidden aspect-[4/5] mb-4">
-                  <span className={`absolute top-3 left-3 z-10 text-[11px] uppercase tracking-widest px-2.5 py-1 ${f.type === 'own' ? 'bg-cherry text-parchment' : 'bg-parchment text-coffee'}`}>{t(f.type === 'own' ? 'home.farms.founderBadge' : 'home.farms.partnerBadge')}</span>
                   <img src={f.images[0]} alt={f.name} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-2xl text-coffee">{f.name}</h3>

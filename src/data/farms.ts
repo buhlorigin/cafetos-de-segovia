@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-export type FarmDetails = { location: string; altitude: string; size: string; varieties: string; processing: string; harvest: string; difference: string };
+export type FarmDetails = { location: string; altitude: string; size: string; varieties: string; processing: string; harvest: string; difference: string; development: string; practices: string };
 export type FarmRecord = { name: string; slug: string; type: 'own' | 'partner'; hidden?: boolean; images: string[] };
 export type Farm = FarmRecord & { description: string; owner: string; details: FarmDetails };
 
@@ -12,16 +12,16 @@ export const farmNetwork = { partnerTotal: '40+', partnerCount: 40 };
 export const farmRecords: FarmRecord[] = [
   { name: "Finca Bethania", slug: 'bethania', type: 'own', images: ["/media/farm-bethania-1.jpg", "/media/farm-bethania-2.jpg", "/media/farm-bethania-3.jpg", "/media/farm-bethania-4.jpg", "/media/farm-bethania-5.jpg"] },
   { name: "Finca Las Hortensias", slug: 'las-hortensias', type: 'own', images: ["/media/farm-las-hortensias-1.jpg", "/media/farm-las-hortensias-2.jpg", "/media/farm-las-hortensias-3.jpg", "/media/farm-las-hortensias-4.jpg", "/media/farm-las-hortensias-5.jpg"] },
-  { name: "Finca Agua Sarca", slug: 'agua-sarca', type: 'partner', images: ["/media/farm-agua-sarca-1.jpg"] },
-  { name: "Finca Mirjam", slug: 'mirjam', type: 'partner', images: ["/media/farm-mirjam-1.jpg"] },
+  { name: "Finca Agua Sarca", slug: 'agua-sarca', type: 'partner', images: ["/media/farm-mirjam-1.jpg"] },
+  { name: "Finca Mirjam", slug: 'mirjam', type: 'partner', images: ["/media/farm-agua-sarca-1.jpg"] },
   { name: "Finca La Picona", slug: 'la-picona', type: 'partner', images: ["/media/farm-la-picona-1.jpg"] },
   { name: "Finca El Ciprés", slug: 'el-cipres', type: 'partner', images: ["/media/farm-el-cipres-1.jpg"] },
-  { name: "Finca Los Milagros", slug: 'los-milagros', type: 'partner', hidden: true, images: ["/media/farm-los-milagros-1.jpg"] },
+  { name: "Finca Los Milagros", slug: 'los-milagros', type: 'partner', images: ["/media/beneficio-poster.jpg"] },
 ];
 
 const visibleRecords = farmRecords.filter((farm) => !farm.hidden);
 
-const empty: FarmDetails = { location: '', altitude: '', size: '', varieties: '', processing: '', harvest: '', difference: '' };
+const empty: FarmDetails = { location: '', altitude: '', size: '', varieties: '', processing: '', harvest: '', difference: '', development: '', practices: '' };
 
 /** Visible farms with copy in the current language. */
 export const useFarms = (): Farm[] => {

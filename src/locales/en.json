@@ -102,8 +102,8 @@
     },
     "farms": {
       "eyebrow": "Our farms",
-      "title": "Our farms and 40+ partner farms in Nueva Segovia",
-      "text": "It starts with Bethania and Las Hortensias, the farms of our founders, and grows into a network of more than 40 partner farms.",
+      "title": "Our farms and 40+ partner farms in northern Nicaragua",
+      "text": "Each farm has its own altitude, varieties and character. Here is where your coffee grows.",
       "prev": "Previous farms",
       "next": "Next farms",
       "partner": "+ {{count}} partner farms",
@@ -206,10 +206,7 @@
       "titleA": "Our ",
       "titleB": "Certifications",
       "text": "Committed to quality standards and export excellence",
-      "haccp": "Hazard Analysis Critical Control Points",
-      "organicBadge": "ORGANIC",
-      "organic": "Organic",
-      "organicText": "Certified Organic Standards"
+      "haccp": "Hazard Analysis Critical Control Points"
     },
     "closing": {
       "title": "Let's work together",
@@ -289,12 +286,13 @@
         "title": "LABORATORY & QUALITY CONTROL",
         "content": "Every lot is evaluated in our own cupping lab before we offer it. We roast samples, cup them blind alongside our reference lots, and score each one, so we know exactly what is in every bag before a buyer tastes it.\n\nAlongside cupping, we check moisture and the physical quality of the green coffee, looking for defects, size and uniformity. Only lots that meet our standards are prepared for export, and we cup them again before they ship."
       }
-    ]
+    ],
+    "labCaption": "Gabriela, cupping in our lab"
   },
   "farmsPage": {
     "titleA": "Our ",
     "titleB": "Farms",
-    "subtitle": "Two farms owned by our founders, and a network of more than 40 partner farms across Nueva Segovia.",
+    "subtitle": "A selection of the farms we work with, from a network of more than 40 in northern Nicaragua.",
     "overviewEyebrow": "Overview",
     "overviewTitle": "Our Farms at a glance",
     "quote": "We value sustainability, innovation, and the people who make every harvest possible.",
@@ -308,7 +306,9 @@
       "varieties": "Varieties",
       "processing": "Processing",
       "harvest": "Harvest",
-      "difference": "What makes it different"
+      "difference": "What makes it different",
+      "development": "Varieties in development",
+      "practices": "Practices"
     },
     "prev": "Previous farm",
     "next": "Next farm",
@@ -355,7 +355,8 @@
       "varieties": "Red & Yellow Catuaí, Caturra, Maracaturra, Pacamara, Ovata, Marsellesa, Parainema, Geisha",
       "processing": "Washed, Natural, Anaerobic Natural",
       "harvest": "December to March",
-      "difference": "Its widest collection of varieties, and a Cup of Excellence Nicaragua finalist repeatedly since 2017."
+      "difference": "Its widest collection of varieties, and a Cup of Excellence Nicaragua finalist repeatedly since 2017.",
+      "practices": "Good Agricultural Practices"
     },
     "la-picona": {
       "description": "La Picona is the only coffee farm on Picona Mountain. A woman-led farm, it grows all its coffee under full shade of guaba, búcaro, cedar and banana trees, on sandy, mineral-rich volcanic soil. Cool breezes and wide swings between day and night temperatures slow down ripening.",
@@ -365,17 +366,20 @@
       "varieties": "Maracaturra, Parainema, Sidra, Java, Catuaí, young Geisha plants",
       "processing": "Natural, Honey, Experimental fermentations",
       "harvest": "December to March",
-      "difference": "2nd place in the Cup of Excellence Nicaragua 2021 with a Maracaturra anaerobic honey."
+      "difference": "2nd place in the Cup of Excellence Nicaragua 2021 with a Maracaturra anaerobic honey.",
+      "practices": "Good Agricultural Practices"
     },
     "mirjam": {
-      "description": "Morning mist, a steady breeze and fertile volcanic-influenced soil shape the coffee at Mirjam, all grown under full shade. Organic certification is in progress, and a micro-lot program starts with the 2026 harvest.",
+      "description": "Morning mist, a steady breeze and fertile volcanic-influenced soil shape the coffee at Mirjam, all grown under full shade. A micro-lot program starts with the 2026 harvest.",
       "location": "Dipilto, Nueva Segovia",
       "altitude": "1,200–1,350 m",
       "size": "27 ha, including 3.5 ha of conserved native forest",
       "varieties": "Maracaturra, Red & Yellow Catuaí, Catimor",
       "processing": "Washed, Experimental fermentations",
       "harvest": "December to March",
-      "difference": "One of the richest bird populations in the region, with toucans, hummingbirds and tanagers among the coffee. Recognized several times in the Cup of Excellence Nicaragua."
+      "difference": "One of the richest bird populations in the region, with toucans, hummingbirds and tanagers among the coffee. Recognized several times in the Cup of Excellence Nicaragua.",
+      "development": "Sidra, Geisha, Chiroso, Arará, Pink Bourbon",
+      "practices": "Good Agricultural Practices"
     },
     "el-cipres": {
       "description": "El Ciprés has been run by its current owner since 2013. About a third of the land is left as natural forest, protecting water sources, flora and wildlife, within the Serranías de Dipilto-Jalapa Nature Reserve.",
@@ -385,29 +389,43 @@
       "varieties": "Parainema, Marsellesa, Ovata",
       "processing": "Natural, Anaerobic Natural, Washed",
       "harvest": "November to March",
-      "difference": "Planted with newer, resilient varieties like Parainema, Marsellesa and Ovata, explored through natural and anaerobic processes."
+      "difference": "Planted with newer, resilient varieties like Parainema, Marsellesa and Ovata, explored through natural and anaerobic processes.",
+      "practices": "Good Agricultural Practices"
     },
     "bethania": {
       "description": "Bethania belongs to Martha Albir, co-founder of Cafetos de Segovia. It has passed from generation to generation in the Albir family, and she has run it since 1991. Coffee grows under forest, fruit and banana shade, with regular pruning and shade management to bring light into the plantation.",
       "location": "El Suyatal, Macuelizo, Nueva Segovia",
       "altitude": "1,300–1,500 m",
       "size": "25 ha",
-      "varieties": "Catimor, Red Catuaí, Java, Maracaturra, Pacamara",
+      "varieties": "Catimor, Red & Yellow Catuaí, Java, Maracaturra, Pacamara",
       "processing": "Washed, Anaerobic Natural",
       "harvest": "January to April",
       "difference": "Home to Java and Pacamara, and to long anaerobic naturals fermented in sealed barrels while temperature and pH are monitored.",
-      "owner": "Martha Albir"
+      "owner": "Martha Albir",
+      "development": "Sidra, Geisha, Chiroso, Arará, Pink Bourbon",
+      "practices": "Good Agricultural Practices"
     },
     "las-hortensias": {
       "description": "Las Hortensias belongs to Ana Albir, co-founder of Cafetos de Segovia, and has been in the family for more than fifty years. A small farm where coffee grows under forest, fruit and banana shade, picked only when fully ripe, then sorted and floated before processing.",
       "location": "Buenos Aires, Dipilto, Nueva Segovia",
       "altitude": "1,300–1,450 m",
       "size": "4 ha",
-      "varieties": "Marsellesa, Maracaturra, Catimor",
+      "varieties": "Marsellesa, Maracaturra, Catimor, Red Catuaí",
       "processing": "Washed, Anaerobic Natural",
       "harvest": "November to March",
       "difference": "Its Marsellesa is processed both washed and as a 96-hour anaerobic natural, showing how much process can change the same variety.",
-      "owner": "Ana Albir"
+      "owner": "Ana Albir",
+      "practices": "Good Agricultural Practices"
+    },
+    "los-milagros": {
+      "description": "",
+      "location": "Jinotega, Nicaragua",
+      "altitude": "More information coming soon",
+      "size": "More information coming soon",
+      "varieties": "More information coming soon",
+      "processing": "More information coming soon",
+      "harvest": "More information coming soon",
+      "difference": "More information coming soon"
     }
   },
   "nicaragua": {
@@ -475,7 +493,8 @@
     "directions": "Get directions",
     "ctaTitle": "Ready to Partner with Us?",
     "ctaText": "Let's discuss how Cafetos de Segovia can meet your specialty coffee needs",
-    "ctaButton": "Send Us an Email"
+    "ctaButton": "Send Us an Email",
+    "management": "Lexania · Management"
   },
   "notFound": {
     "text": "Oops! Page not found",

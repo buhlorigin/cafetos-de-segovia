@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src="/brand/cafetos-logo-light.png" alt={t('footer.logoAlt')} className="h-14 w-auto" />
+              <img src="/brand/cafetos-logo-light.png" alt={t('footer.logoAlt')} className="h-[120px] w-auto" />
               <h3 className="text-2xl font-bold">Cafetos de Segovia</h3>
             </div>
             <p className="text-stone-300 mb-4">
@@ -55,6 +55,7 @@ const Footer = () => {
             <div className="space-y-2 text-stone-300">
               <p>{t('footer.location')}</p>
               <p>ana@cafetosdesegovia.com</p>
+              <p>{t('contact.management')}: gerencia@cafetosdesegovia.com</p>
               <p>+505 8733 1928</p>
             </div>
           </div>
