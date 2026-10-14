@@ -1,4 +1,5 @@
 # Requested updates
+- [x] About page: remove the "Our team" section and the "Carlos, our head of cupping" caption under the lab photo.
 - [x] Standardize all farm tags; restore the About lab photo and caption; add bilingual team cards; verify Home keeps Gabriela.
 - [x] Update export experience, exported-container statistic and five dry mill facts in English and Spanish; verify both versions.
 - [x] Update Services introduction, producer and export sections while retaining photos.
