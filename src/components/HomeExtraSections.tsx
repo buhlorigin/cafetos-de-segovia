@@ -62,10 +62,10 @@ const HomeExtraSections = () => {
   const steps: Step[] = stepMedia.map((m, i) => ({ ...m, ...(t('home.steps', { returnObjects: true }) as { title: string; text: string }[])[i] }));
   const strip = (t('home.strip', { returnObjects: true }) as string[]).map((label, i) => ({ icon: stripIcons[i], label }));
   const numbers = [
-    { value: 12, suffix: '+', label: t('home.numbers.yearsLabel') },
-    { value: 60, suffix: '+', label: t('home.numbers.containers') },
-    { value: 15, suffix: '+', label: t('home.numbers.farms') },
-    { value: null, display: t('home.numbers.altitude'), label: t('home.numbers.altitudeLabel') },
+    { value: 12, suffix: '+', display: '', label: t('home.numbers.yearsLabel') },
+    { value: 60, suffix: '+', display: '', label: t('home.numbers.containers') },
+    { value: 15, suffix: '+', display: '', label: t('home.numbers.farms') },
+    { value: null, suffix: '', display: t('home.numbers.altitude'), label: t('home.numbers.altitudeLabel') },
   ];
   const row = useRef<HTMLDivElement>(null);
   const scroll = (d: number) => row.current?.scrollBy({ left: d * row.current.clientWidth * 0.8, behavior: 'smooth' });
