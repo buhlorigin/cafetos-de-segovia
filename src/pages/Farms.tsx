@@ -269,12 +269,12 @@ const Farms = () => {
                     [t('farmsPage.altitudeRange'), area.altitude],
                     [t('farmsPage.mainVarieties'), area.varieties],
                   ].filter(([, value]) => Boolean(value)).map(([label, value]) => (
-                    <div key={label} className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
+                    <div key={label} className="grid grid-cols-1 sm:grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
                       <dt className="text-xs uppercase tracking-widest text-parchment pt-1">{label}</dt>
                       <dd className="text-parchment">{value}</dd>
                     </div>
                   ))}
-                  <div className="grid grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
+                  <div className="grid grid-cols-1 sm:grid-cols-[9rem_1fr] gap-4 py-3 border-b border-parchment/30">
                     <dt className="text-xs uppercase tracking-widest text-parchment pt-1">{t('farmsPage.farmsLabel')}</dt>
                     <dd className="flex flex-wrap gap-2">
                       {area.farmNames.map((name) => {
