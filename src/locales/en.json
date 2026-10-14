@@ -326,21 +326,26 @@
     "areas": [
       {
         "label": "Dipilto, Nueva Segovia",
-        "heading": "The highlands of the Serranías de Dipilto y Jalapa"
+        "heading": "The highlands of the Serranías de Dipilto y Jalapa",
+        "text": "On the border with Honduras, inside the Serranías de Dipilto y Jalapa Nature Reserve. Steep slopes, pine and cloud forest, and cool nights give slow-ripening cherries and clean, sweet, structured cups."
       },
       {
         "label": "Mozonte, Nueva Segovia",
-        "heading": "The highlands of Mozonte"
+        "heading": "The highlands of Mozonte",
+        "text": "East of Ocotal, where the land rises to more than 1,800 metres. Forested highlands that hold the springs of the Mozonte river and give dense beans with bright acidity."
       },
       {
         "label": "Macuelizo, Nueva Segovia",
-        "heading": "The highlands of Macuelizo"
+        "heading": "The highlands of Macuelizo",
+        "text": "West of Ocotal, in quieter highlands between 1,300 and 1,500 metres, where shade-grown coffee and family tradition go back generations."
       },
       {
         "label": "JINOTEGA, NICARAGUA",
-        "heading": "The mountains of Jinotega"
+        "heading": "The mountains of Jinotega",
+        "text": "One of Nicaragua's main coffee regions, in the central-northern highlands. Misty mountains and fertile soils produce balanced cups with body and sweetness."
       }
     ],
+
     "altitudeRange": "Altitude range",
     "mainVarieties": "Main varieties",
     "farmsLabel": "Farms",

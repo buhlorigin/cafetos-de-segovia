@@ -326,21 +326,26 @@
     "areas": [
       {
         "label": "Dipilto, Nueva Segovia",
-        "heading": "Las montañas de las Serranías de Dipilto y Jalapa"
+        "heading": "Las montañas de las Serranías de Dipilto y Jalapa",
+        "text": "En la frontera con Honduras, dentro de la Reserva Natural Serranías de Dipilto y Jalapa. Laderas empinadas, bosque de pino y nuboso, y noches frescas que dan cerezas de maduración lenta y tazas limpias, dulces y estructuradas."
       },
       {
         "label": "Mozonte, Nueva Segovia",
-        "heading": "Las montañas de Mozonte"
+        "heading": "Las montañas de Mozonte",
+        "text": "Al este de Ocotal, donde la montaña supera los 1.800 metros. Tierras altas boscosas, donde nace el río Mozonte, que dan granos densos y de acidez brillante."
       },
       {
         "label": "Macuelizo, Nueva Segovia",
-        "heading": "Las montañas de Macuelizo"
+        "heading": "Las montañas de Macuelizo",
+        "text": "Al oeste de Ocotal, en tierras altas más tranquilas entre 1.300 y 1.500 metros, donde el café bajo sombra y la tradición familiar vienen de generaciones."
       },
       {
         "label": "JINOTEGA, NICARAGUA",
-        "heading": "Las montañas de Jinotega"
+        "heading": "Las montañas de Jinotega",
+        "text": "Una de las principales regiones cafetaleras de Nicaragua, en las montañas del centro norte. Montañas con neblina y suelos fértiles que dan tazas equilibradas, con cuerpo y dulzor."
       }
     ],
+
     "altitudeRange": "Rango de altitud",
     "mainVarieties": "Variedades principales",
     "farmsLabel": "Fincas",
