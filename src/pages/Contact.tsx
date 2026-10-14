@@ -63,6 +63,10 @@ const Contact = () => {
                   >
                     martha@cafetosdesegovia.com
                   </a>
+                  <p className="text-stone-600 mt-3">{t('contact.management')}</p>
+                  <a href="mailto:gerencia@cafetosdesegovia.com" className="text-amber-700 hover:text-amber-800 transition-colors block">
+                    gerencia@cafetosdesegovia.com
+                  </a>
                 </div>
                 
                 <div>
