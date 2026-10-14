@@ -3,11 +3,6 @@ import { useTranslation } from 'react-i18next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const teamMedia = [
-  { id: 'carlos', image: '/media/beneficio-cupping-lab.jpg', position: 'object-left' },
-  { id: 'gabriela', image: '/media/gabriela-cupping.jpg', position: 'object-[center_30%]' },
-];
-
 const About = () => {
   const { t } = useTranslation();
   const media = [
@@ -78,29 +73,12 @@ const About = () => {
                   alt={value.title}
                   className={`w-full object-cover object-center rounded-sm ${index === 0 ? 'aspect-[1402/1072] h-auto object-top' : index >= 4 ? 'h-[320px] lg:h-[420px]' : 'h-80'}`}
                 />
-                {index === 5 && <figcaption className="mt-3 text-sm text-stone-600">{t('about.labCaption')}</figcaption>}
                 </figure>
               </div>
             </div>
           </div>
         </section>
       ))}
-
-      <section className="py-16 bg-parchment" aria-labelledby="team-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="eyebrow">{t('about.team.eyebrow')}</span>
-          <h2 id="team-heading" className="text-3xl md:text-5xl text-coffee mb-10">{t('about.team.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl">
-            {teamMedia.map((member) => (
-              <article key={member.id}>
-                <img src={member.image} alt={t(`about.team.members.${member.id}.alt`)} loading="lazy" className={`w-full aspect-[4/5] object-cover rounded-sm ${member.position}`} />
-                <h3 className="text-2xl text-coffee mt-5 mb-2">{t(`about.team.members.${member.id}.name`)}</h3>
-                <p className="text-stone-600">{t(`about.team.members.${member.id}.role`)}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
