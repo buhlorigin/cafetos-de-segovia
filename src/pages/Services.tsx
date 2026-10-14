@@ -89,11 +89,11 @@ const Services = () => {
               <p className="text-stone-600 text-sm mt-2">{t('services.certs.haccp')}</p>
             </div>
             <div className="bg-stone-50 rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 text-center ">
-              <div className="w-32 h-32 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-green-700 text-lg font-bold">{t('services.certs.organicBadge')}</span>
+              <div className="w-32 h-32 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-amber-700 text-2xl font-bold">{t('services.certs.gapBadge')}</span>
               </div>
-              <h3 className="font-bold text-stone-800 text-lg">{t('services.certs.organic')}</h3>
-              <p className="text-stone-600 text-sm mt-2">{t('services.certs.organicText')}</p>
+              <h3 className="font-bold text-stone-800 text-lg">{t('services.certs.gap')}</h3>
+              <p className="text-stone-600 text-sm mt-2">{t('services.certs.gapText')}</p>
             </div>
           </div>
         </div>
