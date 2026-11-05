@@ -192,7 +192,6 @@ const Farms = () => {
                       {[
                         [t('farmsPage.labels.location'), farm.details.location],
                         [t('farmsPage.labels.altitude'), farm.details.altitude],
-                        [t('farmsPage.labels.size'), farm.details.size],
                         ...(farm.owner ? [[t('farmsPage.ownerLabel'), farm.owner]] : []),
                         [t('farmsPage.labels.varieties'), farm.details.varieties],
                         [t('farmsPage.labels.development'), farm.details.development],
