@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-export type FarmDetails = { location: string; altitude: string; size: string; varieties: string; processing: string; harvest: string; difference: string; development: string; practices: string };
+export type FarmDetails = { location: string; altitude: string; varieties: string; processing: string; harvest: string; difference: string; development: string; practices: string };
 export type FarmRecord = { name: string; slug: string; type: 'own' | 'partner'; hidden?: boolean; images: string[] };
 export type Farm = FarmRecord & { description: string; owner: string; details: FarmDetails };
 
@@ -21,7 +21,7 @@ export const farmRecords: FarmRecord[] = [
 
 const visibleRecords = farmRecords.filter((farm) => !farm.hidden);
 
-const empty: FarmDetails = { location: '', altitude: '', size: '', varieties: '', processing: '', harvest: '', difference: '', development: '', practices: '' };
+const empty: FarmDetails = { location: '', altitude: '', varieties: '', processing: '', harvest: '', difference: '', development: '', practices: '' };
 
 /** Visible farms with copy in the current language. */
 export const useFarms = (): Farm[] => {
